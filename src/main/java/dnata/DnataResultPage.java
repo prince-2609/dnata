@@ -194,6 +194,7 @@ public class DnataResultPage
 			
 			QaRobot.ClickOnElement("ModifySearchMF");
 			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Modified Search</i></b>");
+			QaExtentReport.extentScreenshot("Modified Search");
 		}
 		Thread.sleep(10000);
 		
@@ -237,6 +238,7 @@ public class DnataResultPage
 				}
 			  }
 			QaRobot.ScreenshotMethod("Applyfilter","<b><i>Screenshot for Apply filter</i></b>");
+			QaExtentReport.extentScreenshot("Apply filter");
 		}
 		QaExtentReport.extentScreenshot("Result Page");
 		
@@ -688,8 +690,9 @@ public class DnataResultPage
 			}
 			QaRobot.ClickOnElement("ModifiedSearchMH");
 			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Modified Search</i></b>");
+			QaExtentReport.extentScreenshot("Modified Search");
 		}
-		Thread.sleep(15000);
+		Thread.sleep(25000);
 		
 		if(ModifySearch.equalsIgnoreCase("No"))
 		{
@@ -705,7 +708,7 @@ public class DnataResultPage
 		else
 		{
 			JavascriptExecutor mo = (JavascriptExecutor) QaBrowser.driver;
-			mo.executeScript("window.scrollBy(0,500)", "");
+			mo.executeScript("window.scrollBy(0,700)", "");
 			
 			QaRobot.ClickOnElement("SelectRoom");
 			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on SelectRoom</i></b>");

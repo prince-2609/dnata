@@ -22,7 +22,7 @@ public class DnataFlight
 	@DataProvider
 	public Object[][] getexceldata() throws Exception 
 	{
-		return QaDataProvider.getTestdata("v12StagingFlight", "Sheet4");
+		return QaDataProvider.getTestdata("dnataFlight", "TestCases");
 	}
 	
 	@Test(dataProvider = "getexceldata")

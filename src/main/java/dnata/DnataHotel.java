@@ -22,7 +22,7 @@ public class DnataHotel
 	@DataProvider
 	public Object[][] getexceldata() throws Exception 
 	{
-		return QaDataProvider.getTestdata("v12StagingHotel","Sheet3");
+		return QaDataProvider.getTestdata("dnataHotel","TestCases");
 	}
 	
 	@Test(dataProvider = "getexceldata")

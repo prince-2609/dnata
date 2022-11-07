@@ -148,7 +148,7 @@ public class DnataConfirmPage
 			Thread.sleep(5000);
 			
 			QaBrowser.driver.switchTo().alert().accept();
-			Thread.sleep(8000);
+			Thread.sleep(10000);
 			
 			QaBrowser.driver.switchTo().window(ParentWindow8);
 			
@@ -158,7 +158,7 @@ public class DnataConfirmPage
 			
 			QaRobot.ClickOnElement("BookandQuoteBook");
 			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Book Button</i></b>");
-			Thread.sleep(8000);
+			Thread.sleep(10000);
 			
 			JavascriptExecutor mo = (JavascriptExecutor) QaBrowser.driver;
 			mo.executeScript("window.scrollBy(0,400)", "");
