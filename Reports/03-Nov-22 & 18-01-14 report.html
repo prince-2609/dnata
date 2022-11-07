@@ -1,0 +1,4199 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Dnata UAT</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Dnata</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Nov 3, 2022 06:01:14 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test Hotel 1-Verify the Hotel(Individual) with Add to cart functionality</p>
+            <p class="text-sm">
+              <span>6:01:17 pm</span> / <span>00:05:36:376</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Test Hotel 1-Verify the Hotel(Individual) with Add to cart functionality</h5>
+<span class='badge badge-success'>11.03.2022 6:01:17 pm</span>
+<span class='badge badge-danger'>11.03.2022 6:06:53 pm</span>
+<span class='badge badge-default'>00:05:36:376</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:01:17 pm</td>
+        <td>
+          <b><i>Clicked on Advance Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:01:17 pm</td>
+        <td>
+          <b><i>Clicked on Proceed Link</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:01:21 pm</td>
+        <td>
+          <b><i>Write Company Code</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:01:21 pm</td>
+        <td>
+          <b><i>Write Username</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:01:21 pm</td>
+        <td>
+          <b><i>Write Password</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:01:21 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-01-21 Sigh In Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-01-21 Sigh In Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:01:36 pm</td>
+        <td>
+          <b><i>Clicked on LogIn</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:01:36 pm</td>
+        <td>
+          <b><i>Clicked on CallCenter</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:01:36 pm</td>
+        <td>
+          <b><i>Clicked on Product Search Fare Branding</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:01:40 pm</td>
+        <td>
+          <b><i>Search Corporate or Traveller Name </i></b>Thrilok Nadha Rachapalli
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:01:54 pm</td>
+        <td>
+          <b><i>Clicked on Hotel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:01:55 pm</td>
+        <td>
+          <b><i>Clicked on BusinessTravel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:00 pm</td>
+        <td>
+          <b><i>Clicked on Individual</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:05 pm</td>
+        <td>
+          <b><i>Select Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:06 pm</td>
+        <td>
+          <b><i>City Name : </i></b>dxb-Dubai, United Arab Emirates (DXB)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:10 pm</td>
+        <td>
+          <b><i>Select Departure Date  </i></b>14-Dec-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:10 pm</td>
+        <td>
+          <b><i>Select Return Date  </i></b>17-Dec-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:15 pm</td>
+        <td>
+          <b><i>Select adult for booking</i></b>  FOP - Cash
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:18 pm</td>
+        <td>
+          <b><i>Select Supplier</i></b> YALAGO
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:18 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-02-18 Search Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-02-18 Search Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:18 pm</td>
+        <td>
+          <b><i>Clicked on FinalSearch</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:18 pm</td>
+        <td>
+          <b><i>Screenshot for Hotel Trip</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:38 pm</td>
+        <td>
+          <b><i>Clicked on SelectRoom</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:41 pm</td>
+        <td>
+          <b><i>Clicked on CancellationPolicy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:45 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-02-44 CancellationPolicy.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-02-44 CancellationPolicy.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:45 pm</td>
+        <td>
+          <b><i>Screenshot for Cancellation Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:45 pm</td>
+        <td>
+          <b><i>Clicked on CancellationPolicyClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:47 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakup</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:49 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakup</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:52 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-02-52 CustomerCost.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-02-52 CustomerCost.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:53 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakup</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:56 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-02-56 CompanyCost.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-02-56 CompanyCost.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:56 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakupClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:02:58 pm</td>
+        <td>
+          <b><i>Clicked on Add To Cart</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:03:10 pm</td>
+        <td>
+          <b><i>Clicked on View Cart</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:03:15 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-03-15 View Cart.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-03-15 View Cart.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:03:15 pm</td>
+        <td>
+          <b><i>Pass Quotation Title</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:03:15 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-03-15 Quotation.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-03-15 Quotation.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:03:15 pm</td>
+        <td>
+          <b><i>Pass Remark Title</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:03:15 pm</td>
+        <td>
+          <b><i>Clicked on Send Quote</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:03:25 pm</td>
+        <td>
+          <b><i>Enquiry id is </i></b>205362
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:03:28 pm</td>
+        <td>
+          <b><i>Clicked on Quote Close</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:03:28 pm</td>
+        <td>
+          <b><i>Clicked on Bookings</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:03:29 pm</td>
+        <td>
+          <b><i>Clicked on Booking Queues</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:03:44 pm</td>
+        <td>
+          <b><i>Enter Enquiry Id</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:03:56 pm</td>
+        <td>
+          <b><i>Clicked on Search Enquiry Id </i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:04:00 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-03-59 Search Enquiry Id.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-03-59 Search Enquiry Id.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:04:11 pm</td>
+        <td>
+          <b><i>Clicked on Enquiry View Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:04:16 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-04-16 Quotation View.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-04-16 Quotation View.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:04:26 pm</td>
+        <td>
+          <b><i>Clicked on Approve Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:04:42 pm</td>
+        <td>
+          <b><i>Select Itinerary</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:04:43 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-04-42 Itinerary View.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-04-42 Itinerary View.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:04:43 pm</td>
+        <td>
+          <b><i>Clicked on Final Approve Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:04:43 pm</td>
+        <td>
+          <b><i>Click on Text Area</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:04:43 pm</td>
+        <td>
+          <b><i>Clicked on OK Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:05:12 pm</td>
+        <td>
+          <b><i>Clicked on Final Book Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:05:42 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-05-42 Checkout Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-05-42 Checkout Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:05:43 pm</td>
+        <td>
+          <b><i>Click on Fare Breakup</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:05:46 pm</td>
+        <td>
+          <b><i>Click on Customer Cost</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:05:46 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-05-46 CustomerCost.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-05-46 CustomerCost.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:05:46 pm</td>
+        <td>
+          <b><i>Click on Company Cost</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:05:49 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-05-49 CompanyCost.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-05-49 CompanyCost.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:05:49 pm</td>
+        <td>
+          <b><i>Click on Fare Breakup Close</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:05:55 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-05-55 Checkout page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-05-55 Checkout page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:06:17 pm</td>
+        <td>
+          <b><i>Clicked on FulfilmentF Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:06:22 pm</td>
+        <td>
+          <b><i>Clicked on OK Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:06:22 pm</td>
+        <td>
+          <b><i>Pass Receipt No</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:06:33 pm</td>
+        <td>
+          <b><i>Clicked on Proceed Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:06:33 pm</td>
+        <td>
+          <b><i>Booking id is </i></b>ID:DT127831
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:06:33 pm</td>
+        <td>
+          <b><i>Booking Status is </i></b>Confirmed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:06:33 pm</td>
+        <td>
+          <b><i>Confirming Status Number is </i></b>YAC/17297263
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:06:53 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-06-53 Confirm Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-06-53 Confirm Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:06:53 pm</td>
+        <td>
+          <b><i>Screenshot for Successful Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:06:53 pm</td>
+        <td>
+          <b><i>Successful Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:06:53 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-06-53 Successful Test.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-06-53 Successful Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test Hotel 2-Verify the Hotel(Individual) with Quote functionality</p>
+            <p class="text-sm">
+              <span>6:06:56 pm</span> / <span>00:05:40:704</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Test Hotel 2-Verify the Hotel(Individual) with Quote functionality</h5>
+<span class='badge badge-success'>11.03.2022 6:06:56 pm</span>
+<span class='badge badge-danger'>11.03.2022 6:12:36 pm</span>
+<span class='badge badge-default'>00:05:40:704</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:06:56 pm</td>
+        <td>
+          <b><i>Clicked on Advance Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:06:56 pm</td>
+        <td>
+          <b><i>Clicked on Proceed Link</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:07:01 pm</td>
+        <td>
+          <b><i>Write Company Code</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:07:01 pm</td>
+        <td>
+          <b><i>Write Username</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:07:01 pm</td>
+        <td>
+          <b><i>Write Password</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:07:01 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-07-01 Sigh In Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-07-01 Sigh In Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:07:16 pm</td>
+        <td>
+          <b><i>Clicked on LogIn</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:07:17 pm</td>
+        <td>
+          <b><i>Clicked on CallCenter</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:07:17 pm</td>
+        <td>
+          <b><i>Clicked on Product Search Fare Branding</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:07:20 pm</td>
+        <td>
+          <b><i>Search Corporate or Traveller Name </i></b>Thrilok Nadha Rachapalli
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:07:34 pm</td>
+        <td>
+          <b><i>Clicked on Hotel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:07:34 pm</td>
+        <td>
+          <b><i>Clicked on BusinessTravel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:07:40 pm</td>
+        <td>
+          <b><i>Clicked on Individual</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:07:45 pm</td>
+        <td>
+          <b><i>Select Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:07:46 pm</td>
+        <td>
+          <b><i>City Name : </i></b>dxb-Dubai, United Arab Emirates (DXB)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:07:50 pm</td>
+        <td>
+          <b><i>Select Departure Date  </i></b>14-Dec-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:07:50 pm</td>
+        <td>
+          <b><i>Select Return Date  </i></b>17-Dec-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:07:55 pm</td>
+        <td>
+          <b><i>Select adult for booking</i></b>  FOP - Cash
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:07:57 pm</td>
+        <td>
+          <b><i>Select Supplier</i></b> YALAGO
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:07:58 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-07-57 Search Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-07-57 Search Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:07:58 pm</td>
+        <td>
+          <b><i>Clicked on FinalSearch</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:07:58 pm</td>
+        <td>
+          <b><i>Screenshot for Hotel Trip</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:08:18 pm</td>
+        <td>
+          <b><i>Clicked on SelectRoom</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:08:21 pm</td>
+        <td>
+          <b><i>Clicked on CancellationPolicy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:08:24 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-08-24 CancellationPolicy.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-08-24 CancellationPolicy.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:08:24 pm</td>
+        <td>
+          <b><i>Screenshot for Cancellation Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:08:24 pm</td>
+        <td>
+          <b><i>Clicked on CancellationPolicyClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:08:27 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakup</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:08:29 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakup</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:08:32 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-08-32 CustomerCost.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-08-32 CustomerCost.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:08:32 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakup</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:08:35 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-08-35 CompanyCost.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-08-35 CompanyCost.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:08:35 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakupClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:08:48 pm</td>
+        <td>
+          <b><i>Clicked on Book</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:08:59 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-08-58 Checkout Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-08-58 Checkout Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:08:59 pm</td>
+        <td>
+          <b><i>Click on Fare Breakup</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:09:02 pm</td>
+        <td>
+          <b><i>Click on Customer Cost</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:09:02 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-09-02 CustomerCost.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-09-02 CustomerCost.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:09:02 pm</td>
+        <td>
+          <b><i>Click on Company Cost</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:09:05 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-09-05 CompanyCost.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-09-05 CompanyCost.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:09:05 pm</td>
+        <td>
+          <b><i>Click on Fare Breakup Close</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:09:11 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-09-11 Checkout page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-09-11 Checkout page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:09:12 pm</td>
+        <td>
+          <b><i>Clicked on Quote Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:09:17 pm</td>
+        <td>
+          <b><i>Pass Quotation Title</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:09:17 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-09-17 Quotation.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-09-17 Quotation.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:09:17 pm</td>
+        <td>
+          <b><i>Pass Remark Title</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:09:18 pm</td>
+        <td>
+          <b><i>Clicked on Send Quote</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:09:28 pm</td>
+        <td>
+          <b><i>Enquiry id is </i></b>205363
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:09:28 pm</td>
+        <td>
+          <b><i>Clicked on Bookings</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:09:28 pm</td>
+        <td>
+          <b><i>Clicked on Booking Queues</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:09:44 pm</td>
+        <td>
+          <b><i>Enter Enquiry Id</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:09:57 pm</td>
+        <td>
+          <b><i>Clicked on Search Enquiry Id </i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:10:00 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-10-00 Search Enquiry Id.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-10-00 Search Enquiry Id.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:10:11 pm</td>
+        <td>
+          <b><i>Clicked on Enquiry View Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:10:16 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-10-16 Quotation View.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-10-16 Quotation View.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:10:28 pm</td>
+        <td>
+          <b><i>Clicked on Approve Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:10:47 pm</td>
+        <td>
+          <b><i>Select Itinerary</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:10:47 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-10-47 Itinerary View.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-10-47 Itinerary View.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:10:47 pm</td>
+        <td>
+          <b><i>Clicked on Final Approve Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:10:47 pm</td>
+        <td>
+          <b><i>Click on Text Area</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:10:47 pm</td>
+        <td>
+          <b><i>Clicked on OK Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:11:19 pm</td>
+        <td>
+          <b><i>Clicked on Final Book Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:11:34 pm</td>
+        <td>
+          <b><i>Clicked on SelectRoom</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:11:47 pm</td>
+        <td>
+          <b><i>Clicked on Book</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:11:54 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-11-54 Checkout page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-11-54 Checkout page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:12:01 pm</td>
+        <td>
+          <b><i>Clicked on FulfilmentF Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:12:04 pm</td>
+        <td>
+          <b><i>Clicked on OK Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:12:04 pm</td>
+        <td>
+          <b><i>Pass Receipt No</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:12:16 pm</td>
+        <td>
+          <b><i>Clicked on Proceed Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:12:16 pm</td>
+        <td>
+          <b><i>Booking id is </i></b>ID:DT127832
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:12:16 pm</td>
+        <td>
+          <b><i>Booking Status is </i></b>Confirmed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:12:16 pm</td>
+        <td>
+          <b><i>Confirming Status Number is </i></b>YAC/17297265
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:12:36 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-12-36 Confirm Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-12-36 Confirm Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:12:36 pm</td>
+        <td>
+          <b><i>Screenshot for Successful Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:12:36 pm</td>
+        <td>
+          <b><i>Successful Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:12:36 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-12-36 Successful Test.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-12-36 Successful Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test Hotel 3-Verify the Hotel(Individual) with Fulfilment functionality</p>
+            <p class="text-sm">
+              <span>6:12:38 pm</span> / <span>00:03:23:645</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Test Hotel 3-Verify the Hotel(Individual) with Fulfilment functionality</h5>
+<span class='badge badge-success'>11.03.2022 6:12:38 pm</span>
+<span class='badge badge-danger'>11.03.2022 6:16:02 pm</span>
+<span class='badge badge-default'>00:03:23:645</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:12:38 pm</td>
+        <td>
+          <b><i>Clicked on Advance Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:12:38 pm</td>
+        <td>
+          <b><i>Clicked on Proceed Link</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:12:42 pm</td>
+        <td>
+          <b><i>Write Company Code</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:12:42 pm</td>
+        <td>
+          <b><i>Write Username</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:12:42 pm</td>
+        <td>
+          <b><i>Write Password</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:12:42 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-12-42 Sigh In Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-12-42 Sigh In Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:12:57 pm</td>
+        <td>
+          <b><i>Clicked on LogIn</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:12:57 pm</td>
+        <td>
+          <b><i>Clicked on CallCenter</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:12:58 pm</td>
+        <td>
+          <b><i>Clicked on Product Search Fare Branding</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:13:00 pm</td>
+        <td>
+          <b><i>Search Corporate or Traveller Name </i></b>Thrilok Nadha Rachapalli
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:13:14 pm</td>
+        <td>
+          <b><i>Clicked on Hotel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:13:14 pm</td>
+        <td>
+          <b><i>Clicked on BusinessTravel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:13:20 pm</td>
+        <td>
+          <b><i>Clicked on Individual</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:13:25 pm</td>
+        <td>
+          <b><i>Select Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:13:25 pm</td>
+        <td>
+          <b><i>City Name : </i></b>dxb-Dubai, United Arab Emirates (DXB)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:13:30 pm</td>
+        <td>
+          <b><i>Select Departure Date  </i></b>14-Dec-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:13:30 pm</td>
+        <td>
+          <b><i>Select Return Date  </i></b>17-Dec-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:13:35 pm</td>
+        <td>
+          <b><i>Select adult for booking</i></b>  FOP - Cash
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:13:37 pm</td>
+        <td>
+          <b><i>Select Supplier</i></b> YALAGO
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:13:37 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-13-37 Search Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-13-37 Search Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:13:37 pm</td>
+        <td>
+          <b><i>Clicked on FinalSearch</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:13:37 pm</td>
+        <td>
+          <b><i>Screenshot for Hotel Trip</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:14:07 pm</td>
+        <td>
+          <b><i>Clicked on SelectRoom</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:14:11 pm</td>
+        <td>
+          <b><i>Clicked on CancellationPolicy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:14:14 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-14-14 CancellationPolicy.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-14-14 CancellationPolicy.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:14:14 pm</td>
+        <td>
+          <b><i>Screenshot for Cancellation Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:14:14 pm</td>
+        <td>
+          <b><i>Clicked on CancellationPolicyClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:14:17 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakup</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:14:19 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakup</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:14:22 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-14-22 CustomerCost.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-14-22 CustomerCost.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:14:22 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakup</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:14:25 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-14-25 CompanyCost.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-14-25 CompanyCost.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:14:25 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakupClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:14:37 pm</td>
+        <td>
+          <b><i>Clicked on Book</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:14:48 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-14-47 Checkout Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-14-47 Checkout Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:14:48 pm</td>
+        <td>
+          <b><i>Click on Fare Breakup</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:14:51 pm</td>
+        <td>
+          <b><i>Click on Customer Cost</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:14:51 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-14-51 CustomerCost.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-14-51 CustomerCost.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:14:51 pm</td>
+        <td>
+          <b><i>Click on Company Cost</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:14:54 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-14-54 CompanyCost.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-14-54 CompanyCost.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:14:54 pm</td>
+        <td>
+          <b><i>Click on Fare Breakup Close</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:15:00 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-15-00 Checkout page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-15-00 Checkout page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:15:22 pm</td>
+        <td>
+          <b><i>Clicked on FulfilmentF Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:15:28 pm</td>
+        <td>
+          <b><i>Clicked on OK Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:15:28 pm</td>
+        <td>
+          <b><i>Pass Receipt No</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:15:41 pm</td>
+        <td>
+          <b><i>Clicked on Proceed Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:15:41 pm</td>
+        <td>
+          <b><i>Booking id is </i></b>ID:DT127833
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:15:41 pm</td>
+        <td>
+          <b><i>Booking Status is </i></b>Confirmed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:15:42 pm</td>
+        <td>
+          <b><i>Confirming Status Number is </i></b>YAC/17297267
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:16:02 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-16-02 Confirm Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-16-02 Confirm Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:16:02 pm</td>
+        <td>
+          <b><i>Screenshot for Successful Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:16:02 pm</td>
+        <td>
+          <b><i>Successful Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:16:02 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-16-02 Successful Test.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-16-02 Successful Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test Hotel 4-Verify the Hotel(Dependent) with Add to cart functionality</p>
+            <p class="text-sm">
+              <span>6:16:04 pm</span> / <span>00:05:19:372</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Test Hotel 4-Verify the Hotel(Dependent) with Add to cart functionality</h5>
+<span class='badge badge-success'>11.03.2022 6:16:04 pm</span>
+<span class='badge badge-danger'>11.03.2022 6:21:23 pm</span>
+<span class='badge badge-default'>00:05:19:372</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:16:04 pm</td>
+        <td>
+          <b><i>Clicked on Advance Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:16:04 pm</td>
+        <td>
+          <b><i>Clicked on Proceed Link</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:16:09 pm</td>
+        <td>
+          <b><i>Write Company Code</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:16:09 pm</td>
+        <td>
+          <b><i>Write Username</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:16:09 pm</td>
+        <td>
+          <b><i>Write Password</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:16:09 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-16-09 Sigh In Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-16-09 Sigh In Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:16:20 pm</td>
+        <td>
+          <b><i>Clicked on LogIn</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:16:21 pm</td>
+        <td>
+          <b><i>Clicked on CallCenter</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:16:21 pm</td>
+        <td>
+          <b><i>Clicked on Product Search Fare Branding</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:16:24 pm</td>
+        <td>
+          <b><i>Search Corporate or Traveller Name </i></b>Thrilok Nadha Rachapalli
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:16:38 pm</td>
+        <td>
+          <b><i>Clicked on Hotel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:16:38 pm</td>
+        <td>
+          <b><i>Clicked on BusinessTravel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:16:44 pm</td>
+        <td>
+          <b><i>Clicked on Dependent</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:16:49 pm</td>
+        <td>
+          <b><i>Select Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:16:50 pm</td>
+        <td>
+          <b><i>City Name : </i></b>dxb-Dubai, United Arab Emirates (DXB)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:16:54 pm</td>
+        <td>
+          <b><i>Select Departure Date  </i></b>14-Dec-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:16:54 pm</td>
+        <td>
+          <b><i>Select Return Date  </i></b>17-Dec-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:17:14 pm</td>
+        <td>
+          <b><i>Select adult for booking</i></b>  FOP - Cash
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:17:16 pm</td>
+        <td>
+          <b><i>Select Supplier</i></b> YALAGO
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:17:16 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-17-16 Search Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-17-16 Search Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:17:16 pm</td>
+        <td>
+          <b><i>Clicked on FinalSearch</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:17:16 pm</td>
+        <td>
+          <b><i>Screenshot for Hotel Trip</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:17:45 pm</td>
+        <td>
+          <b><i>Clicked on SelectRoom</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:17:48 pm</td>
+        <td>
+          <b><i>Clicked on CancellationPolicy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:17:51 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-17-51 CancellationPolicy.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-17-51 CancellationPolicy.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:17:51 pm</td>
+        <td>
+          <b><i>Screenshot for Cancellation Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:17:51 pm</td>
+        <td>
+          <b><i>Clicked on CancellationPolicyClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:17:54 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakup</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:17:57 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakup</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:18:00 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-18-00 CustomerCost.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-18-00 CustomerCost.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:18:00 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakup</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:18:03 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-18-03 CompanyCost.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-18-03 CompanyCost.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:18:04 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakupClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:18:06 pm</td>
+        <td>
+          <b><i>Clicked on Add To Cart</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:18:17 pm</td>
+        <td>
+          <b><i>Clicked on View Cart</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:18:22 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-18-22 View Cart.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-18-22 View Cart.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:18:22 pm</td>
+        <td>
+          <b><i>Pass Quotation Title</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:18:23 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-18-22 Quotation.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-18-22 Quotation.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:18:23 pm</td>
+        <td>
+          <b><i>Pass Remark Title</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:18:23 pm</td>
+        <td>
+          <b><i>Clicked on Send Quote</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:18:33 pm</td>
+        <td>
+          <b><i>Enquiry id is </i></b>205364
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:18:36 pm</td>
+        <td>
+          <b><i>Clicked on Quote Close</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:18:36 pm</td>
+        <td>
+          <b><i>Clicked on Bookings</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:18:36 pm</td>
+        <td>
+          <b><i>Clicked on Booking Queues</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:18:52 pm</td>
+        <td>
+          <b><i>Enter Enquiry Id</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:19:04 pm</td>
+        <td>
+          <b><i>Clicked on Search Enquiry Id </i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:19:07 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-19-07 Search Enquiry Id.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-19-07 Search Enquiry Id.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:19:18 pm</td>
+        <td>
+          <b><i>Clicked on Enquiry View Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:19:23 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-19-23 Quotation View.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-19-23 Quotation View.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:19:34 pm</td>
+        <td>
+          <b><i>Clicked on Approve Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:19:50 pm</td>
+        <td>
+          <b><i>Select Itinerary</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:19:50 pm</td>
+        <td>
+          <b><i>Select Itinerary</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:19:50 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-19-50 Itinerary View.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-19-50 Itinerary View.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:19:50 pm</td>
+        <td>
+          <b><i>Clicked on Final Approve Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:19:50 pm</td>
+        <td>
+          <b><i>Click on Text Area</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:19:50 pm</td>
+        <td>
+          <b><i>Clicked on OK Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:20:23 pm</td>
+        <td>
+          <b><i>Clicked on Final Book Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:21:23 pm</td>
+        <td>
+          <textarea readonly class="code-block">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=107.0.5304.88)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'SHUBHAM', ip: '192.168.111.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [171e83872bce41131423ae9ea226f6f6, clickElement {id=56cb1975-9f82-4e52-ae86-dd2af2459fb7}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.88, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\SHUBHA~1.NAT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58509}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58509/devtoo..., se:cdpVersion: 107.0.5304.88, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (171e83872bce41131423ae9ea226f6f6)] -> xpath: //a[@class='asso_pax']]
+Session ID: 171e83872bce41131423ae9ea226f6f6
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at utilities.QaRobot.ClickOnElement(QaRobot.java:106)
+	at dnata.DnataCheckoutPage.CheckoutForHotelDependent(DnataCheckoutPage.java:261)
+	at dnata.DnataCheckoutPage.individualforHotel(DnataCheckoutPage.java:1215)
+	at dnata.DnataResultPage.ResultPageForHotel(DnataResultPage.java:900)
+	at dnata.DnataHotel.dnataforhotel(DnataHotel.java:127)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+          
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:21:23 pm</td>
+        <td>
+          <b><i>Screenshot for Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:21:23 pm</td>
+        <td>
+          <b><i>Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:21:23 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-21-23 Fail Test.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-21-23 Fail Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test Hotel 5-Verify the Hotel(Dependent) with Quote functionality</p>
+            <p class="text-sm">
+              <span>6:21:25 pm</span> / <span>00:02:50:089</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Test Hotel 5-Verify the Hotel(Dependent) with Quote functionality</h5>
+<span class='badge badge-success'>11.03.2022 6:21:25 pm</span>
+<span class='badge badge-danger'>11.03.2022 6:24:15 pm</span>
+<span class='badge badge-default'>00:02:50:089</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:21:25 pm</td>
+        <td>
+          <b><i>Clicked on Advance Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:21:25 pm</td>
+        <td>
+          <b><i>Clicked on Proceed Link</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:21:29 pm</td>
+        <td>
+          <b><i>Write Company Code</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:21:29 pm</td>
+        <td>
+          <b><i>Write Username</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:21:29 pm</td>
+        <td>
+          <b><i>Write Password</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:21:29 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-21-29 Sigh In Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-21-29 Sigh In Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:21:41 pm</td>
+        <td>
+          <b><i>Clicked on LogIn</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:21:41 pm</td>
+        <td>
+          <b><i>Clicked on CallCenter</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:21:41 pm</td>
+        <td>
+          <b><i>Clicked on Product Search Fare Branding</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:21:44 pm</td>
+        <td>
+          <b><i>Search Corporate or Traveller Name </i></b>Thrilok Nadha Rachapalli
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:21:59 pm</td>
+        <td>
+          <b><i>Clicked on Hotel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:21:59 pm</td>
+        <td>
+          <b><i>Clicked on BusinessTravel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:22:04 pm</td>
+        <td>
+          <b><i>Clicked on Dependent</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:22:09 pm</td>
+        <td>
+          <b><i>Select Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:22:10 pm</td>
+        <td>
+          <b><i>City Name : </i></b>dxb-Dubai, United Arab Emirates (DXB)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:22:14 pm</td>
+        <td>
+          <b><i>Select Departure Date  </i></b>14-Dec-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:22:14 pm</td>
+        <td>
+          <b><i>Select Return Date  </i></b>17-Dec-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:22:34 pm</td>
+        <td>
+          <b><i>Select adult for booking</i></b>  FOP - Cash
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:22:37 pm</td>
+        <td>
+          <b><i>Select Supplier</i></b> YALAGO
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:22:37 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-22-37 Search Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-22-37 Search Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:22:37 pm</td>
+        <td>
+          <b><i>Clicked on FinalSearch</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:22:37 pm</td>
+        <td>
+          <b><i>Screenshot for Hotel Trip</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:23:06 pm</td>
+        <td>
+          <b><i>Clicked on SelectRoom</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:23:09 pm</td>
+        <td>
+          <b><i>Clicked on CancellationPolicy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:23:13 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-23-12 CancellationPolicy.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-23-12 CancellationPolicy.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:23:13 pm</td>
+        <td>
+          <b><i>Screenshot for Cancellation Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:23:13 pm</td>
+        <td>
+          <b><i>Clicked on CancellationPolicyClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:23:15 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakup</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:23:17 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakup</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:23:20 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-23-20 CustomerCost.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-23-20 CustomerCost.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:23:21 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakup</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:23:24 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-23-24 CompanyCost.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-23-24 CompanyCost.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:23:24 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakupClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:23:35 pm</td>
+        <td>
+          <b><i>Clicked on Book</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:24:15 pm</td>
+        <td>
+          <textarea readonly class="code-block">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=107.0.5304.88)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'SHUBHAM', ip: '192.168.111.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8f4e6701bab31a7be77238800a4a2d98, clickElement {id=9197da83-808a-46bd-90c7-fe741effb6d7}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.88, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\SHUBHA~1.NAT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58684}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58684/devtoo..., se:cdpVersion: 107.0.5304.88, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (8f4e6701bab31a7be77238800a4a2d98)] -> xpath: //a[@class='asso_pax']]
+Session ID: 8f4e6701bab31a7be77238800a4a2d98
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at utilities.QaRobot.ClickOnElement(QaRobot.java:106)
+	at dnata.DnataCheckoutPage.CheckoutForHotelDependent(DnataCheckoutPage.java:261)
+	at dnata.DnataCheckoutPage.individualforHotel(DnataCheckoutPage.java:1215)
+	at dnata.DnataResultPage.ResultPageForHotel(DnataResultPage.java:912)
+	at dnata.DnataHotel.dnataforhotel(DnataHotel.java:127)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+          
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:24:15 pm</td>
+        <td>
+          <b><i>Screenshot for Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:24:15 pm</td>
+        <td>
+          <b><i>Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:24:15 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-24-15 Fail Test.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-24-15 Fail Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test Hotel 6-Verify the Hotel(Dependent) with Fulfilment functionality</p>
+            <p class="text-sm">
+              <span>6:24:17 pm</span> / <span>00:02:42:404</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Test Hotel 6-Verify the Hotel(Dependent) with Fulfilment functionality</h5>
+<span class='badge badge-success'>11.03.2022 6:24:17 pm</span>
+<span class='badge badge-danger'>11.03.2022 6:27:00 pm</span>
+<span class='badge badge-default'>00:02:42:404</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:24:17 pm</td>
+        <td>
+          <b><i>Clicked on Advance Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:24:17 pm</td>
+        <td>
+          <b><i>Clicked on Proceed Link</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:24:21 pm</td>
+        <td>
+          <b><i>Write Company Code</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:24:21 pm</td>
+        <td>
+          <b><i>Write Username</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:24:21 pm</td>
+        <td>
+          <b><i>Write Password</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:24:21 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-24-21 Sigh In Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-24-21 Sigh In Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:24:35 pm</td>
+        <td>
+          <b><i>Clicked on LogIn</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:24:35 pm</td>
+        <td>
+          <b><i>Clicked on CallCenter</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:24:35 pm</td>
+        <td>
+          <b><i>Clicked on Product Search Fare Branding</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:24:38 pm</td>
+        <td>
+          <b><i>Search Corporate or Traveller Name </i></b>Thrilok Nadha Rachapalli
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:24:52 pm</td>
+        <td>
+          <b><i>Clicked on Hotel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:24:52 pm</td>
+        <td>
+          <b><i>Clicked on BusinessTravel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:24:58 pm</td>
+        <td>
+          <b><i>Clicked on Dependent</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:25:03 pm</td>
+        <td>
+          <b><i>Select Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:25:04 pm</td>
+        <td>
+          <b><i>City Name : </i></b>dxb-Dubai, United Arab Emirates (DXB)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:25:08 pm</td>
+        <td>
+          <b><i>Select Departure Date  </i></b>14-Dec-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:25:08 pm</td>
+        <td>
+          <b><i>Select Return Date  </i></b>17-Dec-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:25:28 pm</td>
+        <td>
+          <b><i>Select adult for booking</i></b>  FOP - Cash
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:25:30 pm</td>
+        <td>
+          <b><i>Select Supplier</i></b> YALAGO
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:25:30 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-25-30 Search Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-25-30 Search Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:25:31 pm</td>
+        <td>
+          <b><i>Clicked on FinalSearch</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:25:31 pm</td>
+        <td>
+          <b><i>Screenshot for Hotel Trip</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:25:51 pm</td>
+        <td>
+          <b><i>Clicked on SelectRoom</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:25:54 pm</td>
+        <td>
+          <b><i>Clicked on CancellationPolicy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:25:57 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-25-57 CancellationPolicy.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-25-57 CancellationPolicy.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:25:57 pm</td>
+        <td>
+          <b><i>Screenshot for Cancellation Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:25:57 pm</td>
+        <td>
+          <b><i>Clicked on CancellationPolicyClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:26:00 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakup</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:26:02 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakup</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:26:05 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-26-05 CustomerCost.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-26-05 CustomerCost.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:26:05 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakup</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:26:08 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-26-08 CompanyCost.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-26-08 CompanyCost.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:26:08 pm</td>
+        <td>
+          <b><i>Clicked on FareBreakupClose</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:26:19 pm</td>
+        <td>
+          <b><i>Clicked on Book</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:26:59 pm</td>
+        <td>
+          <textarea readonly class="code-block">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=107.0.5304.88)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'SHUBHAM', ip: '192.168.111.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b623f19e9af64645eecb45adc8eb084c, clickElement {id=56e3737d-70f7-49d6-93c7-701ab490bda5}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.88, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\SHUBHA~1.NAT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58830}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58830/devtoo..., se:cdpVersion: 107.0.5304.88, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (b623f19e9af64645eecb45adc8eb084c)] -> xpath: //a[@class='asso_pax']]
+Session ID: b623f19e9af64645eecb45adc8eb084c
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at utilities.QaRobot.ClickOnElement(QaRobot.java:106)
+	at dnata.DnataCheckoutPage.CheckoutForHotelDependent(DnataCheckoutPage.java:261)
+	at dnata.DnataCheckoutPage.individualforHotel(DnataCheckoutPage.java:1215)
+	at dnata.DnataResultPage.ResultPageForHotel(DnataResultPage.java:912)
+	at dnata.DnataHotel.dnataforhotel(DnataHotel.java:127)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+          
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:27:00 pm</td>
+        <td>
+          <b><i>Screenshot for Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:27:00 pm</td>
+        <td>
+          <b><i>Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:27:00 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-27-00 Fail Test.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-27-00 Fail Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test Hotel 7-Verify the Hotel(Individual) with Add to cart and modify destination city in result page using modify search</p>
+            <p class="text-sm">
+              <span>6:27:02 pm</span> / <span>00:01:39:440</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Test Hotel 7-Verify the Hotel(Individual) with Add to cart and modify destination city in result page using modify search</h5>
+<span class='badge badge-success'>11.03.2022 6:27:02 pm</span>
+<span class='badge badge-danger'>11.03.2022 6:28:41 pm</span>
+<span class='badge badge-default'>00:01:39:440</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:27:02 pm</td>
+        <td>
+          <b><i>Clicked on Advance Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:27:02 pm</td>
+        <td>
+          <b><i>Clicked on Proceed Link</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:27:06 pm</td>
+        <td>
+          <b><i>Write Company Code</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:27:06 pm</td>
+        <td>
+          <b><i>Write Username</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:27:06 pm</td>
+        <td>
+          <b><i>Write Password</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:27:06 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-27-06 Sigh In Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-27-06 Sigh In Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:27:20 pm</td>
+        <td>
+          <b><i>Clicked on LogIn</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:27:20 pm</td>
+        <td>
+          <b><i>Clicked on CallCenter</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:27:21 pm</td>
+        <td>
+          <b><i>Clicked on Product Search Fare Branding</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:27:23 pm</td>
+        <td>
+          <b><i>Search Corporate or Traveller Name </i></b>Thrilok Nadha Rachapalli
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:27:37 pm</td>
+        <td>
+          <b><i>Clicked on Hotel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:27:37 pm</td>
+        <td>
+          <b><i>Clicked on BusinessTravel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:27:43 pm</td>
+        <td>
+          <b><i>Clicked on Individual</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:27:48 pm</td>
+        <td>
+          <b><i>Select Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:27:49 pm</td>
+        <td>
+          <b><i>City Name : </i></b>dxb-Dubai, United Arab Emirates (DXB)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:27:53 pm</td>
+        <td>
+          <b><i>Select Departure Date  </i></b>14-Dec-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:27:53 pm</td>
+        <td>
+          <b><i>Select Return Date  </i></b>17-Dec-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:27:58 pm</td>
+        <td>
+          <b><i>Select adult for booking</i></b>  FOP - Cash
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:28:00 pm</td>
+        <td>
+          <b><i>Select Supplier</i></b> YALAGO
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:28:00 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-28-00 Search Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-28-00 Search Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:28:01 pm</td>
+        <td>
+          <b><i>Clicked on FinalSearch</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:28:01 pm</td>
+        <td>
+          <b><i>Screenshot for Hotel Trip</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:28:41 pm</td>
+        <td>
+          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@id='aTag']//div[@class='refine_head']"}
+  (Session info: chrome=107.0.5304.88)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'SHUBHAM', ip: '192.168.111.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [60fd1df15a30dce0bd2972c94dec1397, findElement {using=xpath, value=//a[@id='aTag']//div[@class='refine_head']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.88, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\SHUBHA~1.NAT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58940}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58940/devtoo..., se:cdpVersion: 107.0.5304.88, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 60fd1df15a30dce0bd2972c94dec1397
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at utilities.QaRobot.getLocator(QaRobot.java:51)
+	at utilities.QaRobot.getWebElement(QaRobot.java:83)
+	at utilities.QaRobot.ClickOnElement(QaRobot.java:105)
+	at dnata.DnataResultPage.ResultPageForHotel(DnataResultPage.java:566)
+	at dnata.DnataHotel.dnataforhotel(DnataHotel.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+          
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:28:41 pm</td>
+        <td>
+          <b><i>Screenshot for Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:28:41 pm</td>
+        <td>
+          <b><i>Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:28:41 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-28-41 Fail Test.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-28-41 Fail Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test Hotel 8-Verify the Hotel(Individual) with Add to cart and modify trip date in result page using modify search</p>
+            <p class="text-sm">
+              <span>6:28:43 pm</span> / <span>00:01:48:615</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Test Hotel 8-Verify the Hotel(Individual) with Add to cart and modify trip date in result page using modify search</h5>
+<span class='badge badge-success'>11.03.2022 6:28:43 pm</span>
+<span class='badge badge-danger'>11.03.2022 6:30:32 pm</span>
+<span class='badge badge-default'>00:01:48:615</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:28:43 pm</td>
+        <td>
+          <b><i>Clicked on Advance Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:28:43 pm</td>
+        <td>
+          <b><i>Clicked on Proceed Link</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:28:47 pm</td>
+        <td>
+          <b><i>Write Company Code</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:28:47 pm</td>
+        <td>
+          <b><i>Write Username</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:28:47 pm</td>
+        <td>
+          <b><i>Write Password</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:28:47 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-28-47 Sigh In Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-28-47 Sigh In Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:29:10 pm</td>
+        <td>
+          <b><i>Clicked on LogIn</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:29:10 pm</td>
+        <td>
+          <b><i>Clicked on CallCenter</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:29:11 pm</td>
+        <td>
+          <b><i>Clicked on Product Search Fare Branding</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:29:13 pm</td>
+        <td>
+          <b><i>Search Corporate or Traveller Name </i></b>Thrilok Nadha Rachapalli
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:29:28 pm</td>
+        <td>
+          <b><i>Clicked on Hotel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:29:28 pm</td>
+        <td>
+          <b><i>Clicked on BusinessTravel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:29:33 pm</td>
+        <td>
+          <b><i>Clicked on Individual</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:29:38 pm</td>
+        <td>
+          <b><i>Select Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:29:39 pm</td>
+        <td>
+          <b><i>City Name : </i></b>dxb-Dubai, United Arab Emirates (DXB)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:29:43 pm</td>
+        <td>
+          <b><i>Select Departure Date  </i></b>14-Dec-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:29:43 pm</td>
+        <td>
+          <b><i>Select Return Date  </i></b>17-Dec-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:29:48 pm</td>
+        <td>
+          <b><i>Select adult for booking</i></b>  FOP - Cash
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:29:51 pm</td>
+        <td>
+          <b><i>Select Supplier</i></b> YALAGO
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:29:51 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-29-51 Search Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-29-51 Search Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:29:51 pm</td>
+        <td>
+          <b><i>Clicked on FinalSearch</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:29:51 pm</td>
+        <td>
+          <b><i>Screenshot for Hotel Trip</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:30:31 pm</td>
+        <td>
+          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@id='aTag']//div[@class='refine_head']"}
+  (Session info: chrome=107.0.5304.88)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'SHUBHAM', ip: '192.168.111.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9b51aa45934cea4e02ba0bf1ca4bfd21, findElement {using=xpath, value=//a[@id='aTag']//div[@class='refine_head']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.88, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\SHUBHA~1.NAT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:59051}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59051/devtoo..., se:cdpVersion: 107.0.5304.88, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9b51aa45934cea4e02ba0bf1ca4bfd21
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at utilities.QaRobot.getLocator(QaRobot.java:51)
+	at utilities.QaRobot.getWebElement(QaRobot.java:83)
+	at utilities.QaRobot.ClickOnElement(QaRobot.java:105)
+	at dnata.DnataResultPage.ResultPageForHotel(DnataResultPage.java:566)
+	at dnata.DnataHotel.dnataforhotel(DnataHotel.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+          
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:30:32 pm</td>
+        <td>
+          <b><i>Screenshot for Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:30:32 pm</td>
+        <td>
+          <b><i>Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:30:32 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-30-32 Fail Test.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-30-32 Fail Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="9"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test Hotel 9-Verify the Hotel(Individual) with Add to cart and modify rooms in result page using modify search</p>
+            <p class="text-sm">
+              <span>6:30:34 pm</span> / <span>00:01:40:624</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Test Hotel 9-Verify the Hotel(Individual) with Add to cart and modify rooms in result page using modify search</h5>
+<span class='badge badge-success'>11.03.2022 6:30:34 pm</span>
+<span class='badge badge-danger'>11.03.2022 6:32:14 pm</span>
+<span class='badge badge-default'>00:01:40:624</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:30:34 pm</td>
+        <td>
+          <b><i>Clicked on Advance Button</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:30:34 pm</td>
+        <td>
+          <b><i>Clicked on Proceed Link</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:30:37 pm</td>
+        <td>
+          <b><i>Write Company Code</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:30:37 pm</td>
+        <td>
+          <b><i>Write Username</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:30:37 pm</td>
+        <td>
+          <b><i>Write Password</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:30:37 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-30-37 Sigh In Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-30-37 Sigh In Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:30:53 pm</td>
+        <td>
+          <b><i>Clicked on LogIn</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:30:53 pm</td>
+        <td>
+          <b><i>Clicked on CallCenter</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:30:53 pm</td>
+        <td>
+          <b><i>Clicked on Product Search Fare Branding</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:30:56 pm</td>
+        <td>
+          <b><i>Search Corporate or Traveller Name </i></b>Thrilok Nadha Rachapalli
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:31:10 pm</td>
+        <td>
+          <b><i>Clicked on Hotel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:31:10 pm</td>
+        <td>
+          <b><i>Clicked on BusinessTravel</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:31:16 pm</td>
+        <td>
+          <b><i>Clicked on Individual</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:31:21 pm</td>
+        <td>
+          <b><i>Select Policy</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:31:22 pm</td>
+        <td>
+          <b><i>City Name : </i></b>dxb-Dubai, United Arab Emirates (DXB)
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:31:26 pm</td>
+        <td>
+          <b><i>Select Departure Date  </i></b>14-Dec-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:31:26 pm</td>
+        <td>
+          <b><i>Select Return Date  </i></b>17-Dec-2022
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:31:31 pm</td>
+        <td>
+          <b><i>Select adult for booking</i></b>  FOP - Cash
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:31:33 pm</td>
+        <td>
+          <b><i>Select Supplier</i></b> YALAGO
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:31:33 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-31-33 Search Page.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-31-33 Search Page.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:31:34 pm</td>
+        <td>
+          <b><i>Clicked on FinalSearch</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:31:34 pm</td>
+        <td>
+          <b><i>Screenshot for Hotel Trip</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:32:14 pm</td>
+        <td>
+          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@id='aTag']//div[@class='refine_head']"}
+  (Session info: chrome=107.0.5304.88)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'SHUBHAM', ip: '192.168.111.71', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bf81e52a9d10cf1801f19e9197940977, findElement {using=xpath, value=//a[@id='aTag']//div[@class='refine_head']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.88, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\SHUBHA~1.NAT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:59162}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59162/devtoo..., se:cdpVersion: 107.0.5304.88, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bf81e52a9d10cf1801f19e9197940977
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at utilities.QaRobot.getLocator(QaRobot.java:51)
+	at utilities.QaRobot.getWebElement(QaRobot.java:83)
+	at utilities.QaRobot.ClickOnElement(QaRobot.java:105)
+	at dnata.DnataResultPage.ResultPageForHotel(DnataResultPage.java:566)
+	at dnata.DnataHotel.dnataforhotel(DnataHotel.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</textarea>
+          
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:32:14 pm</td>
+        <td>
+          <b><i>Screenshot for Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:32:14 pm</td>
+        <td>
+          <b><i>Fail Test</i></b>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>6:32:14 pm</td>
+        <td>
+          
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='D:\Automation\Dnata\Screenshot\03-11-22 & 18-32-14 Fail Test.jpg' src="D:\Automation\Dnata\Screenshot\03-11-22 & 18-32-14 Fail Test.jpg">
+    
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>3</span>
+</span>
+<p class="name">org.openqa.selenium.NoSuchElementException</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.NoSuchElementException</h4>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>18:27:02 pm</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>Test Hotel 7-Verify the Hotel(Individual) with Add to cart and modify destination city in result page using modify search</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>18:28:43 pm</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>Test Hotel 8-Verify the Hotel(Individual) with Add to cart and modify trip date in result page using modify search</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>18:30:34 pm</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>Test Hotel 9-Verify the Hotel(Individual) with Add to cart and modify rooms in result page using modify search</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>3</span>
+</span>
+<p class="name">org.openqa.selenium.ElementNotInteractableException</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.ElementNotInteractableException</h4>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>18:16:04 pm</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>Test Hotel 4-Verify the Hotel(Dependent) with Add to cart functionality</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>18:21:25 pm</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>Test Hotel 5-Verify the Hotel(Dependent) with Quote functionality</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>18:24:17 pm</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>Test Hotel 6-Verify the Hotel(Dependent) with Fulfilment functionality</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Nov 3, 2022 06:01:14 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Nov 3, 2022 06:32:14 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>3</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>6</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='33%'>
+<b>3</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='66%'><b>6</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='1%'><b>6</b> events passed</small></div>
+<div>
+<small data-tooltip='5%'><b>24</b> events failed,
+<b data-tooltip='%'>389</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Test Hotel 1-Verify the Hotel(Individual) with Add to cart functionality":336.376,"Test Hotel 2-Verify the Hotel(Individual) with Quote functionality":340.704,"Test Hotel 3-Verify the Hotel(Individual) with Fulfilment functionality":203.645,"Test Hotel 4-Verify the Hotel(Dependent) with Add to cart functionality":319.372,"Test Hotel 5-Verify the Hotel(Dependent) with Quote functionality":170.089,"Test Hotel 6-Verify the Hotel(Dependent) with Fulfilment functionality":162.404,"Test Hotel 7-Verify the Hotel(Individual) with Add to cart and modify destination city in result page using modify search":99.44,"Test Hotel 8-Verify the Hotel(Individual) with Add to cart and modify trip date in result page using modify search":108.615,"Test Hotel 9-Verify the Hotel(Individual) with Add to cart and modify rooms in result page using modify search":100.624
+};
+</script>
+<div class="row">
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 3,
+failParent: 6,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 6,
+failEvents: 24,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 389
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
