@@ -22,8 +22,8 @@ public class DnataFlight
 	@DataProvider
 	public Object[][] getexceldata() throws Exception 
 	{
-		return QaDataProvider.getTestdata("dnataFlight", "TestCases");
-	}
+		return QaDataProvider.getTestdata("dnataFlight", "Sheet1");
+	}	
 	
 	@Test(dataProvider = "getexceldata")
 	public static void dnataforflight (String TestCaseId,String TestCaseType,String TestScenario,String Source,String URL,String CompanyCode,
@@ -100,7 +100,7 @@ public class DnataFlight
 			{
 				QaRobot.ClickOnElement("Individual");
 				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Individual</i></b>");
-				Thread.sleep(5000);
+				Thread.sleep(15000);
 				
 				WebElement element = QaBrowser.driver.findElement(By.xpath("//div[@id='divTravelCategory']/div/div/div/div/div/div/select"));
 				Select s = new Select(element);
@@ -120,7 +120,7 @@ public class DnataFlight
 			{
 				QaRobot.ClickOnElement("Dependent");
 				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Dependent</i></b>");
-				Thread.sleep(5000);
+				Thread.sleep(15000);
 				
 				WebElement element = QaBrowser.driver.findElement(By.xpath("//div[@id='divTravelCategory']/div/div/div/div/div/div/select"));
 				Select s = new Select(element);
