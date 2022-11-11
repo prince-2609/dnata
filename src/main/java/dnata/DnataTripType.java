@@ -1,7 +1,6 @@
 package dnata;
 
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -10,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import com.aventstack.extentreports.Status;
 import Base.TestBase;
@@ -253,7 +253,7 @@ public class DnataTripType
 			
 			if(room>5)
 			{
-				throw new DnataExceptionClass("Invalid Number of Rooms provided "+" : "+room);
+				throw new Exception("Invalid Number of Rooms provided "+" : "+room);
 			}
 			else
 			{
@@ -291,7 +291,7 @@ public class DnataTripType
 							if(ac1>17)
 							{
 								QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Child Age Selection</i></b>"+" : "+ac1);
-								throw new DnataExceptionClass("Invalid Child Age Selection"+" : "+ac1);
+								throw new Exception("Invalid Child Age Selection"+" : "+ac1);
 							}
 							else
 							{
@@ -374,7 +374,7 @@ public class DnataTripType
 			
 			if(room>5)
 			{
-				throw new DnataExceptionClass("Invalid Number of Rooms provided "+" : "+room);
+				throw new Exception("Invalid Number of Rooms provided "+" : "+room);
 			}
 			else
 			{
@@ -414,7 +414,7 @@ public class DnataTripType
 						if(ac1>17)
 						{
 							QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Child Age Selection</i></b>"+" : "+ac1);
-							throw new DnataExceptionClass("Invalid Child Age Selection"+" : "+ac1);
+							throw new Exception("Invalid Child Age Selection"+" : "+ac1);
 						}
 						else
 						{
@@ -438,7 +438,7 @@ public class DnataTripType
 						if(ai1>2)
 						{
 							QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Infant Age Selection</i></b>"+" : "+ai1);
-							throw new DnataExceptionClass("Invalid Infant Age Selection"+" : "+ai1);
+							throw new Exception("Invalid Infant Age Selection"+" : "+ai1);
 						}
 						else
 						{
@@ -508,7 +508,7 @@ public class DnataTripType
 			}
 	 }
 	
-	public static void selectDateInCalendarOneWay(String Day,String Month,String Year) throws ParseException
+	public static void selectDateInCalendarOneWay(String Day,String Month,String Year) throws Exception
 	 {
 		Date date = new Date();
 		DateFormat d = new SimpleDateFormat("dd-MM-yyyy");
@@ -548,32 +548,39 @@ public class DnataTripType
 		
 		QaExtentReport.test.log(Status.INFO, "<b><i>Select Date  </i></b>"+Day+"-"+Month+"-"+Year);
 		
-		if(Integer.parseInt(Day)>31)
-		{
-			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"-"+Month+"-"+Year);
-		}
+		Assert.assertFalse(Integer.parseInt(Day)>31, "Invalid date provided "+Day+"-"+Month+"-"+Year);
 		
-		if(Month.equals("Feb") && Integer.parseInt(Day)>28)
-		{
-			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"/"+Month+"/"+Year);
-		}
+//		if(Integer.parseInt(Day)>31)
+//		{
+//			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
+//			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
+//			throw new Exception("Invalid date provided "+Day+"-"+Month+"-"+Year);
+//		}
+		
+		Assert.assertFalse(Month.equals("Feb") && Integer.parseInt(Day)>28, "Invalid date provided "+Day+"-"+Month+"-"+Year);
+		
+//		if(Month.equals("Feb") && Integer.parseInt(Day)>28)
+//		{
+//			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
+//			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
+//			throw new Exception("Invalid date provided "+Day+"/"+Month+"/"+Year);
+//		}
+		
 		String monthYear = QaBrowser.driver.findElement (By.xpath("/html/body/div[3]/div/div[2]/div[1]/div")).getText();
 		
 		String month = monthYear.split(" ")[0];
 		String year = monthYear.split(" ")[1];
 		
-		if(date2.before(date1))
-		{
-			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"-"+Month+"-"+Year);
-		}
-		else
-		{
+		Assert.assertFalse(date2.before(date1), "Invalid date provided "+Day+"-"+Month+"-"+Year);
+		
+//		if(date2.before(date1))
+//		{
+//			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
+//			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
+//			throw new Exception("Invalid date provided "+Day+"-"+Month+"-"+Year);
+//		}
+//		else
+//		{
 			while(!(month.equals(Month) && year.equals(Year)))
 			{
 				QaBrowser.driver.findElement(By.xpath("/html/body/div[3]/div/div[1]/a[3]")).click();
@@ -596,10 +603,10 @@ public class DnataTripType
 						break;
 					}
 				}
-		}
+//		}
 	  }
 	
-	public static void selectDateInCalendarRoundTrip(String Day,String Month,String Year,String Day1,String Month1,String Year1) throws InterruptedException, ParseException
+	public static void selectDateInCalendarRoundTrip(String Day,String Month,String Year,String Day1,String Month1,String Year1) throws Exception
 	 {
 		Date date = new Date();
 		DateFormat d = new SimpleDateFormat("dd-MM-yyyy");
@@ -670,112 +677,74 @@ public class DnataTripType
 		QaExtentReport.test.log(Status.INFO, "<b><i>Select Departure Date  </i></b>"+Day+"-"+Month+"-"+Year);
 		QaExtentReport.test.log(Status.INFO, "<b><i>Select Return Date  </i></b>"+Day1+"-"+Month1+"-"+Year1);
 		
-		if(Integer.parseInt(Day)>31)
-		{
-			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"/"+Month+"/"+Year);
-		}
-		
-		if(Month.equals("Feb") && Integer.parseInt(Day)>28)
-		{
-			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"-"+Month+"-"+Year);
-		}
-		
-		if(Integer.parseInt(Day1)>31)
-		{
-			System.out.println("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-			throw new DnataExceptionClass("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
-		}
-		
-		if(Month.equals("Feb") && Integer.parseInt(Day1)>28)
-		{
-			System.out.println("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-			throw new DnataExceptionClass("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
-		}
-		
+		Assert.assertFalse(Integer.parseInt(Day)>31, "Invalid date provided "+Day+"-"+Month+"-"+Year);
+		Assert.assertFalse(Month.equals("Feb") && Integer.parseInt(Day)>28, "Invalid date provided "+Day+"-"+Month+"-"+Year);
+		Assert.assertFalse(Integer.parseInt(Day1)>31, "Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
+		Assert.assertFalse(Month.equals("Feb") && Integer.parseInt(Day1)>28, "Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
+
 		String monthYear = QaBrowser.driver.findElement (By.xpath("/html/body/div[3]/div/div[2]/div[1]/div")).getText();
 		
 		String month = monthYear.split(" ")[0];
 		String year = monthYear.split(" ")[1];
 		
-		if(date2.before(date1))
+		Assert.assertFalse(date2.before(date1), "Invalid date provided "+Day+"-"+Month+"-"+Year);
+		while(!(month.equals(Month) && year.equals(Year)))
 		{
-			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"-"+Month+"-"+Year);
+			QaBrowser.driver.findElement(By.xpath("/html/body/div[3]/div/div[1]/a[3]")).click();
+			
+			monthYear = QaBrowser.driver.findElement (By.xpath("/html/body/div[3]/div/div[2]/div[1]/div")).getText();
+			
+			month = monthYear.split(" ")[0];
+			year = monthYear.split(" ")[1];
 		}
-		else
-		{
-			while(!(month.equals(Month) && year.equals(Year)))
+		
+			List<WebElement> allDates = QaBrowser.driver.findElements(By.xpath("/html/body/div[3]/div/div[2]/div[1]/table/tbody/tr/td"));
+			
+			for(WebElement ele : allDates)
+			{
+				String dt = ele.getText();
+				
+				if(dt.equalsIgnoreCase(Day))
+				{
+					ele.click();
+					break;
+				}
+			}
+			
+//			QaBrowser.driver.findElement(By.xpath("//div[@id='divReturnDate']/div/div[1]/label/span[2]/a/img")).click();
+			Thread.sleep(2000);
+			
+			String monthYear1 = QaBrowser.driver.findElement (By.xpath("/html/body/div[3]/div/div[2]/div[1]/div")).getText();
+			
+			String month1 = monthYear1.split(" ")[0];
+			String year1 = monthYear1.split(" ")[1];
+			
+			Assert.assertFalse(date3.before(date2), "Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
+			while(!(month1.equals(Month1) && year1.equals(Year1)))
 			{
 				QaBrowser.driver.findElement(By.xpath("/html/body/div[3]/div/div[1]/a[3]")).click();
 				
-				monthYear = QaBrowser.driver.findElement (By.xpath("/html/body/div[3]/div/div[2]/div[1]/div")).getText();
+				monthYear1 = QaBrowser.driver.findElement (By.xpath("/html/body/div[3]/div/div[2]/div[1]/div")).getText();
 				
-				month = monthYear.split(" ")[0];
-				year = monthYear.split(" ")[1];
+				month1 = monthYear1.split(" ")[0];
+				year1 = monthYear1.split(" ")[1];
 			}
 			
-				List<WebElement> allDates = QaBrowser.driver.findElements(By.xpath("/html/body/div[3]/div/div[2]/div[1]/table/tbody/tr/td"));
+				List<WebElement> allDates1 = QaBrowser.driver.findElements(By.xpath("/html/body/div[3]/div/div[2]/div[1]/table/tbody/tr/td"));
 				
-				for(WebElement ele : allDates)
+				for(WebElement ele1 : allDates1)
 				{
-					String dt = ele.getText();
+					String dt1 = ele1.getText();
 					
-					if(dt.equalsIgnoreCase(Day))
+					if(dt1.equalsIgnoreCase(Day1))
 					{
-						ele.click();
+						ele1.click();
 						break;
 					}
 				}
-				
-//				QaBrowser.driver.findElement(By.xpath("//div[@id='divReturnDate']/div/div[1]/label/span[2]/a/img")).click();
-				Thread.sleep(2000);
-				
-				String monthYear1 = QaBrowser.driver.findElement (By.xpath("/html/body/div[3]/div/div[2]/div[1]/div")).getText();
-				
-				String month1 = monthYear1.split(" ")[0];
-				String year1 = monthYear1.split(" ")[1];
-				
-				if(date3.before(date2))
-				{
-					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Return date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-					throw new DnataExceptionClass("Invalid Return date provided "+Day1+"-"+Month1+"-"+Year1);
-				}
-				else
-				{
-					while(!(month1.equals(Month1) && year1.equals(Year1)))
-					{
-						QaBrowser.driver.findElement(By.xpath("/html/body/div[3]/div/div[1]/a[3]")).click();
-						
-						monthYear1 = QaBrowser.driver.findElement (By.xpath("/html/body/div[3]/div/div[2]/div[1]/div")).getText();
-						
-						month1 = monthYear1.split(" ")[0];
-						year1 = monthYear1.split(" ")[1];
-					}
-					
-						List<WebElement> allDates1 = QaBrowser.driver.findElements(By.xpath("/html/body/div[3]/div/div[2]/div[1]/table/tbody/tr/td"));
-						
-						for(WebElement ele1 : allDates1)
-						{
-							String dt1 = ele1.getText();
-							
-							if(dt1.equalsIgnoreCase(Day1))
-							{
-								ele1.click();
-								break;
-							}
-						}
-				}
-		}
 	  }
 	
-	public static void selectDateInCalendarHotel(String Day,String Month,String Year,String Day1,String Month1,String Year1) throws InterruptedException, ParseException
+	public static void selectDateInCalendarHotel(String Day,String Month,String Year,String Day1,String Month1,String Year1) throws Exception
 	 {
 		Date date = new Date();
 		DateFormat d = new SimpleDateFormat("dd-MM-yyyy");
@@ -846,48 +815,18 @@ public class DnataTripType
 		QaExtentReport.test.log(Status.INFO, "<b><i>Select Departure Date  </i></b>"+Day+"-"+Month+"-"+Year);
 		QaExtentReport.test.log(Status.INFO, "<b><i>Select Return Date  </i></b>"+Day1+"-"+Month1+"-"+Year1);
 		
-		if(Integer.parseInt(Day)>31)
-		{
-			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"-"+Month+"-"+Year);
-		}
-		
-		if(Month.equals("Feb") && Integer.parseInt(Day)>28)
-		{
-			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"-"+Month+"-"+Year);
-		}
-		
-		if(Integer.parseInt(Day1)>31)
-		{
-			System.out.println("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-			throw new DnataExceptionClass("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
-		}
-		
-		if(Month.equals("Feb") && Integer.parseInt(Day1)>28)
-		{
-			System.out.println("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-			throw new DnataExceptionClass("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
-		}
+		Assert.assertFalse(Integer.parseInt(Day)>31, "Invalid date provided "+Day+"-"+Month+"-"+Year);
+		Assert.assertFalse(Month.equals("Feb") && Integer.parseInt(Day)>28, "Invalid date provided "+Day+"-"+Month+"-"+Year);
+		Assert.assertFalse(Integer.parseInt(Day1)>31, "Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
+		Assert.assertFalse(Month.equals("Feb") && Integer.parseInt(Day1)>28, "Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
 		
 		String monthYear = QaBrowser.driver.findElement (By.xpath("/html/body/div[3]/div/div[2]/div[1]/div")).getText();
 		
 		String month = monthYear.split(" ")[0];
 		String year = monthYear.split(" ")[1];
 		
-		if(date2.before(date1))
-		{
-			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"-"+Month+"-"+Year);
-		}
-		else
-		{
-			while(!(month.equals(Month) && year.equals(Year)))
+		Assert.assertFalse(date2.before(date1), "Invalid date provided "+Day+"-"+Month+"-"+Year);
+		while(!(month.equals(Month) && year.equals(Year)))
 			{
 				QaBrowser.driver.findElement(By.xpath("/html/body/div[3]/div/div[1]/a[3]")).click();
 				
@@ -916,14 +855,8 @@ public class DnataTripType
 				String month1 = monthYear1.split(" ")[0];
 				String year1 = monthYear1.split(" ")[1];
 				
-				if(date3.before(date2))
-				{
-					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Check out date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-					throw new DnataExceptionClass("Invalid Check out date provided "+Day1+"-"+Month1+"-"+Year1);
-				}
-				else
-				{
-					while(!(month1.equals(Month1) && year1.equals(Year1)))
+				Assert.assertFalse(date3.before(date2), "Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
+				while(!(month1.equals(Month1) && year1.equals(Year1)))
 					{
 						QaBrowser.driver.findElement(By.xpath("/html/body/div[3]/div/div[1]/a[3]")).click();
 						
@@ -945,11 +878,9 @@ public class DnataTripType
 								break;
 							}
 						}
-				}
-		}
 	  }
 	
-	public static void selectDateInCalendarFlight_Hotel(String Day,String Month,String Year,String Day1,String Month1,String Year1) throws InterruptedException, ParseException
+	public static void selectDateInCalendarFlight_Hotel(String Day,String Month,String Year,String Day1,String Month1,String Year1) throws Exception
 	 {
 		Date date = new Date();
 		DateFormat d = new SimpleDateFormat("dd-MM-yyyy");
@@ -1022,48 +953,18 @@ public class DnataTripType
 		
 		QaBrowser.driver.findElement(By.xpath("//input[@id='txtDepartDateDomesticHpF']")).clear();
 		
-		if(Integer.parseInt(Day)>31)
-		{
-			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"/"+Month+"/"+Year);
-		}
-		
-		if(Month.equals("Feb") && Integer.parseInt(Day)>28)
-		{
-			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"-"+Month+"-"+Year);
-		}
-		
-		if(Integer.parseInt(Day1)>31)
-		{
-			System.out.println("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-			throw new DnataExceptionClass("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
-		}
-		
-		if(Month.equals("Feb") && Integer.parseInt(Day1)>28)
-		{
-			System.out.println("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-			throw new DnataExceptionClass("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
-		}
+		Assert.assertFalse(Integer.parseInt(Day)>31, "Invalid date provided "+Day+"-"+Month+"-"+Year);
+		Assert.assertFalse(Month.equals("Feb") && Integer.parseInt(Day)>28, "Invalid date provided "+Day+"-"+Month+"-"+Year);
+		Assert.assertFalse(Integer.parseInt(Day1)>31, "Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
+		Assert.assertFalse(Month.equals("Feb") && Integer.parseInt(Day1)>28, "Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
 		
 		String monthYear = QaBrowser.driver.findElement (By.xpath("/html/body/div[4]/div/div[2]/div[1]/div")).getText();
 		
 		String month = monthYear.split(" ")[0];
 		String year = monthYear.split(" ")[1];
 		
-		if(date2.before(date1))
-		{
-			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"-"+Month+"-"+Year);
-		}
-		else
-		{
-			while(!(month.equals(Month) && year.equals(Year)))
+		Assert.assertFalse(date2.before(date1), "Invalid date provided "+Day+"-"+Month+"-"+Year);
+		while(!(month.equals(Month) && year.equals(Year)))
 			{
 				QaBrowser.driver.findElement(By.xpath("/html/body/div[4]/div/div[1]/a[3]")).click();
 				
@@ -1096,14 +997,8 @@ public class DnataTripType
 				String month1 = monthYear1.split(" ")[0];
 				String year1 = monthYear1.split(" ")[1];
 				
-				if(date3.before(date2))
-				{
-					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Return date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-					throw new DnataExceptionClass("Invalid Return date provided "+Day1+"-"+Month1+"-"+Year1);
-				}
-				else
-				{
-					while(!(month1.equals(Month1) && year1.equals(Year1)))
+				Assert.assertFalse(date3.before(date2), "Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
+				while(!(month1.equals(Month1) && year1.equals(Year1)))
 					{
 						QaBrowser.driver.findElement(By.xpath("/html/body/div[4]/div/div[1]/a[3]")).click();
 						
@@ -1125,11 +1020,9 @@ public class DnataTripType
 								break;
 							}
 						}
-				}
-		}
 	  }
 	
-	public static void selectDateInCalendarFlight_Hotel1(String Day,String Month,String Year,String Day1,String Month1,String Year1) throws InterruptedException, ParseException
+	public static void selectDateInCalendarFlight_Hotel1(String Day,String Month,String Year,String Day1,String Month1,String Year1) throws Exception
 	 {
 		Date date = new Date();
 		DateFormat d = new SimpleDateFormat("dd-MM-yyyy");
@@ -1202,48 +1095,18 @@ public class DnataTripType
 		
 		QaBrowser.driver.findElement(By.xpath("//input[@id='txtDepartDateInternationalHpF']")).clear();
 		
-		if(Integer.parseInt(Day)>31)
-		{
-			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"/"+Month+"/"+Year);
-		}
-		
-		if(Month.equals("Feb") && Integer.parseInt(Day)>28)
-		{
-			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"-"+Month+"-"+Year);
-		}
-		
-		if(Integer.parseInt(Day1)>31)
-		{
-			System.out.println("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-			throw new DnataExceptionClass("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
-		}
-		
-		if(Month.equals("Feb") && Integer.parseInt(Day1)>28)
-		{
-			System.out.println("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-			throw new DnataExceptionClass("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
-		}
+		Assert.assertFalse(Integer.parseInt(Day)>31, "Invalid date provided "+Day+"-"+Month+"-"+Year);
+		Assert.assertFalse(Month.equals("Feb") && Integer.parseInt(Day)>28, "Invalid date provided "+Day+"-"+Month+"-"+Year);
+		Assert.assertFalse(Integer.parseInt(Day1)>31, "Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
+		Assert.assertFalse(Month.equals("Feb") && Integer.parseInt(Day1)>28, "Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
 		
 		String monthYear = QaBrowser.driver.findElement (By.xpath("/html/body/div[4]/div/div[2]/div[1]/div")).getText();
 		
 		String month = monthYear.split(" ")[0];
 		String year = monthYear.split(" ")[1];
 		
-		if(date2.before(date1))
-		{
-			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
-			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"-"+Month+"-"+Year);
-		}
-		else
-		{
-			while(!(month.equals(Month) && year.equals(Year)))
+		Assert.assertFalse(date2.before(date1), "Invalid date provided "+Day+"-"+Month+"-"+Year);
+		while(!(month.equals(Month) && year.equals(Year)))
 			{
 				QaBrowser.driver.findElement(By.xpath("/html/body/div[4]/div/div[1]/a[3]")).click();
 				
@@ -1276,14 +1139,8 @@ public class DnataTripType
 				String month1 = monthYear1.split(" ")[0];
 				String year1 = monthYear1.split(" ")[1];
 				
-				if(date3.before(date2))
-				{
-					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Return date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-					throw new DnataExceptionClass("Invalid Return date provided "+Day1+"-"+Month1+"-"+Year1);
-				}
-				else
-				{
-					while(!(month1.equals(Month1) && year1.equals(Year1)))
+				Assert.assertFalse(date3.before(date2), "Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
+				while(!(month1.equals(Month1) && year1.equals(Year1)))
 					{
 						QaBrowser.driver.findElement(By.xpath("/html/body/div[4]/div/div[1]/a[3]")).click();
 						
@@ -1306,8 +1163,6 @@ public class DnataTripType
 							}
 						}
 				}
-		}
-	  }
 	}
 
 

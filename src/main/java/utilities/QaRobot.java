@@ -6,7 +6,6 @@ import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.Duration;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -73,7 +72,7 @@ public class QaRobot extends QaExtentReport
 		
 		TakesScreenshot ts = (TakesScreenshot)QaBrowser.driver;
 		File Source = ts.getScreenshotAs(OutputType.FILE);
-		File Dest = new File("D:\\Automation\\V12StagingB2C\\Screenshot\\"+NewDate+" "+text+".jpg");
+		File Dest = new File("D:\\Automation\\Dnata\\Screenshot\\"+NewDate+" "+text+".jpg");
 		FileUtils.copyFile(Source, Dest);
 		QaExtentReport.test.log(Status.INFO, text1);
 	}

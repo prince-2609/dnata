@@ -1,7 +1,6 @@
 package dnata;
 
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -202,6 +201,9 @@ public class DnataResultPage
 		{
 			if(FareType.equalsIgnoreCase("All"))
 			{
+				JavascriptExecutor mo = (JavascriptExecutor) QaBrowser.driver;
+				mo.executeScript("window.scrollBy(0,500)", "");
+				
 				QaRobot.ClickOnElement("Refundable");
 				QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Refundable</i></b>");
 				Thread.sleep(3000);
@@ -494,42 +496,45 @@ public class DnataResultPage
 						Thread.sleep(8000);
 					}
 			}
-			else if(ModifySearch.equalsIgnoreCase("Yes"))
-			{
-				if(QaBrowser.driver.findElement(By.xpath("//div[contains(text(),'                            The fare that you have selected "
-						+ "is no longer available. Please choose from below options to continue')]")).isDisplayed()) 
-				{
-					List<WebElement> listOfAirline = QaBrowser.driver.findElements(By.xpath("/html/body/div[1]/div[1]/div/section/div[2]/div[2]/div/div[1]/div/div[3]/div[10]/div[2]/div/ul/li/label/span"));
-					
-					for (WebElement autoAirline : listOfAirline) 
-					  {
-						if (autoAirline.getText().equalsIgnoreCase(AirLine)) 
-						{
-							autoAirline.click();
-							break;
-						} 
-						else 
-						{
-							
-						}
-					  }
-					
-					JavascriptExecutor mo2 = (JavascriptExecutor) QaBrowser.driver;
-					mo2.executeScript("window.scrollBy(0,-300)", "");
-					
-					QaRobot.ClickOnElement("BookNowF");
-					QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Book Now</i></b>");
-					Thread.sleep(8000);
-				}
-			}
+//			else if(ModifySearch.equalsIgnoreCase("Yes"))
+//			{
+//				if(TripTypeM.equalsIgnoreCase("OneWay"))
+//				{
+//					if(QaBrowser.driver.findElement(By.xpath("//div[contains(text(),'                            The fare that you have selected "
+//							+ "is no longer available. Please choose from below options to continue')]")).isDisplayed()) 
+//					{
+//						List<WebElement> listOfAirline = QaBrowser.driver.findElements(By.xpath("/html/body/div[1]/div[1]/div/section/div[2]/div[2]/div/div[1]/div/div[3]/div[10]/div[2]/div/ul/li/label/span"));
+//						
+//						for (WebElement autoAirline : listOfAirline) 
+//						  {
+//							if (autoAirline.getText().equalsIgnoreCase(AirLine)) 
+//							{
+//								autoAirline.click();
+//								break;
+//							} 
+//							else 
+//							{
+//								
+//							}
+//						  }
+//						
+//						JavascriptExecutor mo2 = (JavascriptExecutor) QaBrowser.driver;
+//						mo2.executeScript("window.scrollBy(0,-300)", "");
+//						
+//						QaRobot.ClickOnElement("BookNowF");
+//						QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Book Now</i></b>");
+//						Thread.sleep(8000);
+//					}
+//				}
+//			}
 			
 				if(TravellerType.equalsIgnoreCase("Individual"))
 				{
-					DnataCheckoutPage.individualforFlight(TravellerType,TripType,adult,child,infant, ModifySearch, adultM, childM,Resultpagestep,QuoteTitle, QuoteRemark, Checkoutpagestep);
+					DnataCheckoutPage.individualforFlight(TravellerType,TripType,adult,child,infant, ModifySearch, ChangeTravellers,adultM, childM,infantM,Resultpagestep,QuoteTitle, QuoteRemark, Checkoutpagestep);
 				}
 				else if (TravellerType.equalsIgnoreCase("Dependent"))
 				{
-					DnataCheckoutPage.CheckoutForFlightDependent(TripType,adult,child,infant, ModifySearch, adultM, childM,Resultpagestep,QuoteTitle,QuoteRemark,Checkoutpagestep);
+					DnataCheckoutPage.CheckoutForFlightDependent(TripType,adult,child,infant, ModifySearch,ChangeTravellers,adultM, childM,infantM,Resultpagestep,QuoteTitle,QuoteRemark,Checkoutpagestep);
 				}
 		}
 		
@@ -539,7 +544,7 @@ public class DnataResultPage
 			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Book Now</i></b>");
 			Thread.sleep(8000);
 			
-			DnataCheckoutPage.individualforFlight(TravellerType,TripType,adult,child,infant, ModifySearch, adultM, childM,Resultpagestep,QuoteTitle, QuoteRemark, Checkoutpagestep);
+			DnataCheckoutPage.individualforFlight(TravellerType,TripType,adult,child,infant, ModifySearch,ChangeTravellers, adultM, childM,infantM,Resultpagestep,QuoteTitle, QuoteRemark, Checkoutpagestep);
 		}
 	}
 	
@@ -595,7 +600,7 @@ public class DnataResultPage
 				
 				if(room>5)
 				{
-					throw new DnataExceptionClass("Invalid Number of Rooms provided "+" : "+room);
+					throw new Exception("Invalid Number of Rooms provided "+" : "+room);
 				}
 				else
 				{
@@ -634,7 +639,7 @@ public class DnataResultPage
 								if(ac1>17)
 								{
 									QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Child Age Selection</i></b>"+" : "+ac1);
-									throw new DnataExceptionClass("Invalid Child Age Selection"+" : "+ac1);
+									throw new Exception("Invalid Child Age Selection"+" : "+ac1);
 								}
 								else
 								{
@@ -703,7 +708,7 @@ public class DnataResultPage
 		if(QaBrowser.driver.findElement(By.xpath("//div[@id='trErrHeading']/h1[contains(text(),'                                    No Results Found')]")).isDisplayed())
 		{
 				QaExtentReport.test.log(Status.FAIL, "<b><i>No Results Found</i></b>");
-				throw new DnataExceptionClass("No Results Found");
+				throw new Exception("No Results Found");
 		}
 		else
 		{
@@ -951,95 +956,6 @@ public class DnataResultPage
 				DnataCheckoutPage.individualforHotel(TravellerType,Adult,Child,Resultpagestep,QuoteTitle,QuoteRemark,Checkoutpagestep);
 			}
 		}
-		
-		
-		
-			
-			
-//		}
-//		else 
-//		{
-//			QaRobot.ClickOnElement("CancellationPolicy1");
-//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on CancellationPolicy</i></b>");
-//			Thread.sleep(3000);
-//			QaExtentReport.extentScreenshot("CancellationPolicy");
-//			QaRobot.ScreenshotMethod("CancellationPolicy","<b><i>Screenshot for Cancellation Policy</i></b>");
-//			
-//			String ParentWindow4 = QaBrowser.driver.getWindowHandle();
-//			Set<String> handles4 = QaBrowser.driver.getWindowHandles();
-//			for (String childWindow4 : handles4) 
-//			{
-//				if (!childWindow4.equals(ParentWindow4))
-//					QaBrowser.driver.switchTo().window(childWindow4);
-//			}
-//			
-//			QaRobot.ClickOnElement("CPClose1");
-//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on CancellationPolicyClose</i></b>");
-//			Thread.sleep(2000);
-//			QaBrowser.driver.switchTo().window(ParentWindow4);
-//			
-//			QaRobot.ClickOnElement("FareBreakup1");
-//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on FareBreakup</i></b>");
-//			Thread.sleep(3000);
-//			QaExtentReport.extentScreenshot("FareBreakup");
-//			QaRobot.ScreenshotMethod("FareBreakup","<b><i>Screenshot for Fare Breakup</i></b>");
-//			
-//			String ParentWindow5 = QaBrowser.driver.getWindowHandle();
-//			Set<String> handles5 = QaBrowser.driver.getWindowHandles();
-//			for (String childWindow5 : handles5) 
-//			{
-//				if (!childWindow5.equals(ParentWindow5))
-//					QaBrowser.driver.switchTo().window(childWindow5);
-//			}
-//			
-//			QaRobot.ClickOnElement("FareBreakupClose1");
-//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on FareBreakupClose</i></b>");
-//			Thread.sleep(2000);
-//			QaBrowser.driver.switchTo().window(ParentWindow5);
-//			
-//			QaRobot.ClickOnElement("Book1");
-//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Book</i></b>");
-//			Thread.sleep(20000);
-//		}
-//		QaExtentReport.extentScreenshot("Result Page");
-//		
-//		QaRobot.ClickOnElement("CFareBreakup");
-//		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on FareBreakup</i></b>");
-//		Thread.sleep(3000);
-//		QaExtentReport.extentScreenshot("FareBreakup");
-//		QaRobot.ScreenshotMethod("FareBreakup","<b><i>Screenshot for Fare Breakup</i></b>");
-//		
-//		String ParentWindow4 = QaBrowser.driver.getWindowHandle();
-//		Set<String> handles4 = QaBrowser.driver.getWindowHandles();
-//		for (String childWindow4 : handles4) 
-//		{
-//			if (!childWindow4.equals(ParentWindow4))
-//				QaBrowser.driver.switchTo().window(childWindow4);
-//		}
-//		
-//		QaRobot.ClickOnElement("CFareBreakupClose");
-//		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Fare Breakup Close</i></b>");
-//		Thread.sleep(2000);
-//		QaBrowser.driver.switchTo().window(ParentWindow4);
-//		
-//		QaRobot.ClickOnElement("MoreDetails");
-//		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on More Details</i></b>");
-//		Thread.sleep(3000);
-//		QaExtentReport.extentScreenshot("MoreDetails");
-//		QaRobot.ScreenshotMethod("MoreDetails","<b><i>Screenshot for More Details</i></b>");
-//		
-//		String ParentWindow5 = QaBrowser.driver.getWindowHandle();
-//		Set<String> handles5 = QaBrowser.driver.getWindowHandles();
-//		for (String childWindow5 : handles5) 
-//		{
-//			if (!childWindow5.equals(ParentWindow5))
-//				QaBrowser.driver.switchTo().window(childWindow5);
-//		}
-//		
-//		QaRobot.ClickOnElement("MoreDetailsClose");
-//		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on More Details Close</i></b>");
-//		Thread.sleep(2000);
-//		QaBrowser.driver.switchTo().window(ParentWindow5);
 	}
 	
 	public static void ResultPageForFlight_Hotel(String ModifySearch,String ChangeTripLocation,String MarketTypeM,String OriginCityCodeM,
@@ -1099,7 +1015,7 @@ public class DnataResultPage
 				
 				if(room>5)
 				{
-					throw new DnataExceptionClass("Invalid Number of Rooms provided "+" : "+room);
+					throw new Exception("Invalid Number of Rooms provided "+" : "+room);
 				}
 				else
 				{
@@ -1138,7 +1054,7 @@ public class DnataResultPage
 							if(ac1>11)
 							{
 								QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Child Age Selection</i></b>"+" : "+ac1);
-								throw new DnataExceptionClass("Invalid Child Age Selection"+" : "+ac1);
+								throw new Exception("Invalid Child Age Selection"+" : "+ac1);
 							}
 							else
 							{
@@ -1527,7 +1443,7 @@ public class DnataResultPage
 		Thread.sleep(15000);
 	}
 	
-	public static void selectDateInCalendarOneWay(String Day,String Month,String Year) throws ParseException
+	public static void selectDateInCalendarOneWay(String Day,String Month,String Year) throws Exception
 	 {
 		Date date = new Date();
 		DateFormat d = new SimpleDateFormat("dd-MM-yyyy");
@@ -1571,14 +1487,14 @@ public class DnataResultPage
 		{
 			System.out.println("Invalid Modified date provided "+Day+"-"+Month+"-"+Year);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Modified date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid Modified date provided "+Day+"-"+Month+"-"+Year);
+			throw new Exception("Invalid Modified date provided "+Day+"-"+Month+"-"+Year);
 		}
 		
 		if(Month.equals("Feb") && Integer.parseInt(Day)>28)
 		{
 			System.out.println("Invalid Modified date provided "+Day+"-"+Month+"-"+Year);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Modified date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid Modified date provided "+Day+"/"+Month+"/"+Year);
+			throw new Exception("Invalid Modified date provided "+Day+"/"+Month+"/"+Year);
 		}
 		String monthYear = QaBrowser.driver.findElement (By.xpath("/html/body/div[3]/div/div[2]/div[1]/div")).getText();
 		
@@ -1616,7 +1532,7 @@ public class DnataResultPage
 		{
 			System.out.println("Invalid Modified date provided "+Day+"-"+Month+"-"+Year);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Modified date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid Modified date provided "+Day+"-"+Month+"-"+Year);
+			throw new Exception("Invalid Modified date provided "+Day+"-"+Month+"-"+Year);
 		}
 		else
 		{
@@ -1659,7 +1575,7 @@ public class DnataResultPage
 		}
 	  }
 	
-	public static void selectDateInCalendarRoundTrip(String Day,String Month,String Year,String Day1,String Month1,String Year1) throws InterruptedException, ParseException
+	public static void selectDateInCalendarRoundTrip(String Day,String Month,String Year,String Day1,String Month1,String Year1) throws Exception
 	 {
 		Date date = new Date();
 		DateFormat d = new SimpleDateFormat("dd-MM-yyyy");
@@ -1734,28 +1650,28 @@ public class DnataResultPage
 		{
 			System.out.println("Invalid Modified date provided "+Day+"-"+Month+"-"+Year);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Modified date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid Modified date provided "+Day+"/"+Month+"/"+Year);
+			throw new Exception("Invalid Modified date provided "+Day+"/"+Month+"/"+Year);
 		}
 		
 		if(Month.equals("Feb") && Integer.parseInt(Day)>28)
 		{
 			System.out.println("Invalid Modified date provided "+Day+"-"+Month+"-"+Year);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Modified date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid Modified date provided "+Day+"-"+Month+"-"+Year);
+			throw new Exception("Invalid Modified date provided "+Day+"-"+Month+"-"+Year);
 		}
 		
 		if(Integer.parseInt(Day1)>31)
 		{
 			System.out.println("Invalid Modified date provided "+Day1+"-"+Month1+"-"+Year1);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Modified date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-			throw new DnataExceptionClass("Invalid Modified date provided "+Day1+"-"+Month1+"-"+Year1);
+			throw new Exception("Invalid Modified date provided "+Day1+"-"+Month1+"-"+Year1);
 		}
 		
 		if(Month.equals("Feb") && Integer.parseInt(Day1)>28)
 		{
 			System.out.println("Invalid Modified date provided "+Day1+"-"+Month1+"-"+Year1);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Modified date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-			throw new DnataExceptionClass("Invalid Modified date provided "+Day1+"-"+Month1+"-"+Year1);
+			throw new Exception("Invalid Modified date provided "+Day1+"-"+Month1+"-"+Year1);
 		}
 		
 		String monthYear = QaBrowser.driver.findElement (By.xpath("/html/body/div[3]/div/div[2]/div[1]/div")).getText();
@@ -1794,7 +1710,7 @@ public class DnataResultPage
 		{
 			System.out.println("Invalid Modified date provided "+Day+"-"+Month+"-"+Year);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Modified date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid Modified date provided "+Day+"-"+Month+"-"+Year);
+			throw new Exception("Invalid Modified date provided "+Day+"-"+Month+"-"+Year);
 		}
 		else
 		{
@@ -1847,7 +1763,7 @@ public class DnataResultPage
 				if(date3.before(date2))
 				{
 					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Return Modified date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-					throw new DnataExceptionClass("Invalid Return Modified date provided "+Day1+"-"+Month1+"-"+Year1);
+					throw new Exception("Invalid Return Modified date provided "+Day1+"-"+Month1+"-"+Year1);
 				}
 				else
 				{
@@ -1877,7 +1793,7 @@ public class DnataResultPage
 		}
 	  }
 	
-	public static void selectDateInCalendarHotel(String Day,String Month,String Year,String Day1,String Month1,String Year1) throws InterruptedException, ParseException
+	public static void selectDateInCalendarHotel(String Day,String Month,String Year,String Day1,String Month1,String Year1) throws Exception
 	 {
 		Date date = new Date();
 		DateFormat d = new SimpleDateFormat("dd-MM-yyyy");
@@ -1952,28 +1868,28 @@ public class DnataResultPage
 		{
 			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"-"+Month+"-"+Year);
+			throw new Exception("Invalid date provided "+Day+"-"+Month+"-"+Year);
 		}
 		
 		if(Month.equals("Feb") && Integer.parseInt(Day)>28)
 		{
 			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"-"+Month+"-"+Year);
+			throw new Exception("Invalid date provided "+Day+"-"+Month+"-"+Year);
 		}
 		
 		if(Integer.parseInt(Day1)>31)
 		{
 			System.out.println("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-			throw new DnataExceptionClass("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
+			throw new Exception("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
 		}
 		
 		if(Month.equals("Feb") && Integer.parseInt(Day1)>28)
 		{
 			System.out.println("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-			throw new DnataExceptionClass("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
+			throw new Exception("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
 		}
 		
 		String monthYear = QaBrowser.driver.findElement (By.xpath("/html/body/div[3]/div/div[2]/div[1]/div")).getText();
@@ -2012,7 +1928,7 @@ public class DnataResultPage
 		{
 			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"-"+Month+"-"+Year);
+			throw new Exception("Invalid date provided "+Day+"-"+Month+"-"+Year);
 		}
 		else
 		{
@@ -2092,7 +2008,7 @@ public class DnataResultPage
 				if(date3.before(date2))
 				{
 					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Check out date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-					throw new DnataExceptionClass("Invalid Check out date provided "+Day1+"-"+Month1+"-"+Year1);
+					throw new Exception("Invalid Check out date provided "+Day1+"-"+Month1+"-"+Year1);
 				}
 				else
 				{
@@ -2137,7 +2053,7 @@ public class DnataResultPage
 		}
 	  }
 	
-	public static void selectDateInCalendarFlight_Hotel(String Day,String Month,String Year,String Day1,String Month1,String Year1) throws InterruptedException, ParseException
+	public static void selectDateInCalendarFlight_Hotel(String Day,String Month,String Year,String Day1,String Month1,String Year1) throws Exception
 	 {
 		Date date = new Date();
 		DateFormat d = new SimpleDateFormat("dd-MM-yyyy");
@@ -2214,28 +2130,28 @@ public class DnataResultPage
 		{
 			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"/"+Month+"/"+Year);
+			throw new Exception("Invalid date provided "+Day+"/"+Month+"/"+Year);
 		}
 		
 		if(Month.equals("Feb") && Integer.parseInt(Day)>28)
 		{
 			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"-"+Month+"-"+Year);
+			throw new Exception("Invalid date provided "+Day+"-"+Month+"-"+Year);
 		}
 		
 		if(Integer.parseInt(Day1)>31)
 		{
 			System.out.println("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-			throw new DnataExceptionClass("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
+			throw new Exception("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
 		}
 		
 		if(Month.equals("Feb") && Integer.parseInt(Day1)>28)
 		{
 			System.out.println("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-			throw new DnataExceptionClass("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
+			throw new Exception("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
 		}
 		
 		String monthYear = QaBrowser.driver.findElement (By.xpath("/html/body/div/div/div[2]/div[1]/div")).getText();
@@ -2274,7 +2190,7 @@ public class DnataResultPage
 		{
 			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"-"+Month+"-"+Year);
+			throw new Exception("Invalid date provided "+Day+"-"+Month+"-"+Year);
 		}
 		else
 		{
@@ -2329,7 +2245,7 @@ public class DnataResultPage
 				if(date3.before(date2))
 				{
 					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Return date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-					throw new DnataExceptionClass("Invalid Return date provided "+Day1+"-"+Month1+"-"+Year1);
+					throw new Exception("Invalid Return date provided "+Day1+"-"+Month1+"-"+Year1);
 				}
 				else
 				{
@@ -2359,7 +2275,7 @@ public class DnataResultPage
 		}
 	  }
 	
-	public static void selectDateInCalendarFlight_Hotel1(String Day,String Month,String Year,String Day1,String Month1,String Year1) throws InterruptedException, ParseException
+	public static void selectDateInCalendarFlight_Hotel1(String Day,String Month,String Year,String Day1,String Month1,String Year1) throws Exception
 	 {
 		Date date = new Date();
 		DateFormat d = new SimpleDateFormat("dd-MM-yyyy");
@@ -2436,28 +2352,28 @@ public class DnataResultPage
 		{
 			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"/"+Month+"/"+Year);
+			throw new Exception("Invalid date provided "+Day+"/"+Month+"/"+Year);
 		}
 		
 		if(Month.equals("Feb") && Integer.parseInt(Day)>28)
 		{
 			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"-"+Month+"-"+Year);
+			throw new Exception("Invalid date provided "+Day+"-"+Month+"-"+Year);
 		}
 		
 		if(Integer.parseInt(Day1)>31)
 		{
 			System.out.println("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-			throw new DnataExceptionClass("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
+			throw new Exception("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
 		}
 		
 		if(Month.equals("Feb") && Integer.parseInt(Day1)>28)
 		{
 			System.out.println("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-			throw new DnataExceptionClass("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
+			throw new Exception("Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
 		}
 		
 		String monthYear = QaBrowser.driver.findElement (By.xpath("/html/body/div/div/div[2]/div[1]/div")).getText();
@@ -2496,7 +2412,7 @@ public class DnataResultPage
 		{
 			System.out.println("Invalid date provided "+Day+"-"+Month+"-"+Year);
 			QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid date provided  </i></b>"+Day+"-"+Month+"-"+Year);
-			throw new DnataExceptionClass("Invalid date provided "+Day+"-"+Month+"-"+Year);
+			throw new Exception("Invalid date provided "+Day+"-"+Month+"-"+Year);
 		}
 		else
 		{
@@ -2551,7 +2467,7 @@ public class DnataResultPage
 				if(date3.before(date2))
 				{
 					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Return date provided  </i></b>"+Day1+"-"+Month1+"-"+Year1);
-					throw new DnataExceptionClass("Invalid Return date provided "+Day1+"-"+Month1+"-"+Year1);
+					throw new Exception("Invalid Return date provided "+Day1+"-"+Month1+"-"+Year1);
 				}
 				else
 				{

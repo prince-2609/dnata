@@ -13,9 +13,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import utilities.Logger;
 import utilities.QaBrowser;
 import utilities.QaExtentReport;
 import utilities.QaRepositery;
@@ -2171,9 +2169,9 @@ public class TestBase extends QaExtentReport {
 
 		// take screenshot for result page
 
-		String resultnotfound = Logger.takeScreenshot(QaBrowser.driver, "resultnotfound");
-		QaExtentReport.test.log(Status.INFO, "Screenshot for Resultnotfound",
-				MediaEntityBuilder.createScreenCaptureFromPath(resultnotfound).build());
+//		String resultnotfound = Logger.takeScreenshot(QaBrowser.driver, "resultnotfound");
+//		QaExtentReport.test.log(Status.INFO, "Screenshot for Resultnotfound",
+//				MediaEntityBuilder.createScreenCaptureFromPath(resultnotfound).build());
 
 		// ClickOnElement("Go_Home", "clicked on Home Page");
 

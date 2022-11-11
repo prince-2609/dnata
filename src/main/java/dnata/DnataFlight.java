@@ -100,7 +100,7 @@ public class DnataFlight
 			{
 				QaRobot.ClickOnElement("Individual");
 				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Individual</i></b>");
-				Thread.sleep(15000);
+				Thread.sleep(5000);
 				
 				WebElement element = QaBrowser.driver.findElement(By.xpath("//div[@id='divTravelCategory']/div/div/div/div/div/div/select"));
 				Select s = new Select(element);

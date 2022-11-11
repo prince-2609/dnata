@@ -126,44 +126,17 @@ public class DnataHotel
 				
 				DnataResultPage.ResultPageForHotel(TravellerType,Rooms,Adult,Child,Supplier,ModifySearch,ChangeTripLocation,CityCodeM,CityTitleM,ChangeTripDate,CheckInDateM,
 						CheckOutDateM,ChangeRooms,RoomsM,AdultM,ChildM,ChildAgeM,ChangeStarRating,StarRatingM,SupplierChange,MSupplier,Resultpagestep,QuoteTitle,QuoteRemark,Checkoutpagestep);
-				
-				
-				
-//				QaRobot.ClickOnElement("Dependent");
-//				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Dependent</i></b>");
-//				Thread.sleep(5000);
-//				
-//				WebElement element = QaBrowser.driver.findElement(By.xpath("//div[@id='divTravelCategory']/div/div/div/div/div/div/select"));
-//				Select s = new Select(element);
-//				s.selectByIndex(1);
-//				QaExtentReport.test.log(Status.INFO,"<b><i>Select Policy</i></b>");
-//				
-//				DnataTripType.flightTriptype( TravellerType, TripType,OriginCityCode, OriginLocation, DestinationCityCode, DestinationLocation,
-//						 DepartureDate, ReturnDate, adult, child, infant, Class,PreAirline, PANumber, PreferredAirlineSelect, FOPType,
-//						 ShowDirectFlight,Supplier);
-//				
-//				DnataResultPage.ResultPageForFlight(TravellerType,TripType,adult,child,infant,ModifySearch, ChangeTrip, TripTypeM, OriginCityCodeM, OriginLocationM, DestinationCityCodeM,
-//						DestinationLocationM, ChangeTripDate, DepartureDateM, ReturnDateM, ChangeTravellers, adultM, childM, infantM, 
-//						ChangeClass, ClassM, PANumberM, PreferredAirlineSelectM, ShowDirectFlightM, SupplierChange, SupplierM, Applyfilter,
-//						FareType, AirLine, Resultpagestep, QuoteTitle, QuoteRemark,Checkoutpagestep);
 			}
+			
 			else if(TravellerType.equalsIgnoreCase("MultiplePassengers"))
 			{
-//				QaRobot.ClickOnElement("MultiplePassengers");
-//				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on MultiplePassengers</i></b>");
-//				
-//				DnataTripType.flightTriptype( TravellerType, TripType,OriginCityCode, OriginLocation, DestinationCityCode, DestinationLocation,
-//						 DepartureDate, ReturnDate, adult, child, infant, Class,PreAirline, PANumber, PreferredAirlineSelect, FOPType,
-//						 ShowDirectFlight,Supplier);
+				QaRobot.ClickOnElement("MultiplePassengers");
+				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on MultiplePassengers</i></b>");
 			}
 			else if(TravellerType.equalsIgnoreCase("GuestUser"))
 			{
-//				QaRobot.ClickOnElement("GuestUser");
-//				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on GuestUser</i></b>");
-//				
-//				DnataTripType.flightTriptype( TravellerType, TripType,OriginCityCode, OriginLocation, DestinationCityCode, DestinationLocation,
-//						 DepartureDate, ReturnDate, adult, child, infant, Class,PreAirline,PANumber, PreferredAirlineSelect, FOPType,
-//						 ShowDirectFlight,Supplier);
+				QaRobot.ClickOnElement("GuestUser");
+				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on GuestUser</i></b>");
 			}
 		}
 		else if(TravelType.equalsIgnoreCase("Personal"))
@@ -171,52 +144,6 @@ public class DnataHotel
 			QaRobot.ClickOnElement("Personal");
 			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Personal</i></b>");
 		}
-		
-		
-//		if(Usertype.equalsIgnoreCase("Login"))
-//		{
-//			QaRobot.ClickOnElement("SignIn");
-//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on submit</i></b>");
-//			
-//			QaRobot.PassValue("User_name",UserName);
-//			QaExtentReport.test.log(Status.INFO,"<b><i>Write Username</i></b>");
-//			
-//			QaRobot.PassValue("Password",Password);
-//			QaExtentReport.test.log(Status.INFO, "<b><i>Write Password</i></b>");
-//			QaExtentReport.extentScreenshot("Sigh In Page");
-//			
-//			QaRobot.ClickOnElement("Submit");
-//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on submit</i></b>");
-//			
-//			QaRobot.ClickOnElement("Hotels");
-//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Hotel</i></b>");
-//			
-//			DnataTripType.hotelTrip(CityCode,CityTitle,CheckInDate,CheckOutDate,Rooms,Adult,Child,ChildAge,Nationality,MoreOptions,Currency,StarRating);
-//			
-//			DnataResultPage.ResultPageForHotel(Rooms,ModifySearch,ChangeTripLocation,CityCodeM,CityTitleM,ChangeTripDate,CheckInDateM,
-//					CheckOutDateM,ChangeRooms,RoomsM,AdultM,ChildM,ChildAgeM,ChangeCurrency,CurrencyM,ChangeStarRating,StarRatingM);
-//		}
-//		
-//		else if (Usertype.equalsIgnoreCase("Guest"))
-//		{
-//			QaRobot.ClickOnElement("Hotels");
-//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Hotel</i></b>");
-//			
-//			DnataTripType.hotelTrip(CityCode,CityTitle,CheckInDate,CheckOutDate,Rooms,Adult,Child,ChildAge,Nationality,MoreOptions,Currency,StarRating);
-//			
-//			DnataResultPage.ResultPageForHotel(Rooms,ModifySearch,ChangeTripLocation,CityCodeM,CityTitleM,ChangeTripDate,CheckInDateM,
-//					CheckOutDateM,ChangeRooms,RoomsM,AdultM,ChildM,ChildAgeM,ChangeCurrency,CurrencyM,ChangeStarRating,StarRatingM);
-//			
-//			DnataCheckoutPage.GuestAdultCheckoutForHotel(Emailid,Adult,AdultTitle,AdultName,Phone);
-//			
-//			DnataCheckoutPage.GuestChildCheckoutForHotel(CheckInDate,Child,ChildAge,ChildTitle,ChildName,ChildDOBdate);
-//			
-//			DnataPaymentPage.cardPaymentForHotel(Cardtype,CardNumber,CardName,CardDate,CVV);
-//			
-//			DnataCheckoutPage.GuestBillingDetailsCheckoutForHotel(BillingTitle,BillingUserName,BillingAddress,BillingCountry,BillingCity);
-//			
-//			DnataConfirmPage.confirmpageHotel();
-//		}
 	}
 	
 	@AfterMethod

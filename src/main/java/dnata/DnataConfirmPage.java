@@ -6,6 +6,7 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import com.aventstack.extentreports.Status;
 
@@ -15,7 +16,7 @@ import utilities.QaRobot;
 
 public class DnataConfirmPage 
 {
-	public static void confirmpageFlight() throws InterruptedException, IOException
+	public static void confirmpageFlight(String adult,String child,String infant,String ChangeTravellers,String adultM,String childM,String infantM) throws Exception
 	{
 		String getT = QaBrowser.driver.findElement(By.xpath("//div[@id='ctl00_tdContent']/section/div[2]/div/div/div[1]/h2")).getText();
 		System.out.println(getT);
@@ -27,29 +28,176 @@ public class DnataConfirmPage
 		WebElement getT1 = QaBrowser.driver.findElement(By.xpath("//div[@id='ctl00_contentMain_flt_details']/div/div[1]/div[3]/p/span[1]"));
 		String getTxt2 = getT1.getText();
 		System.out.println(getTxt2);
+		
+		Assert.assertEquals(getTxt2, "Confirmed","Booking Status");
 //		String getTxt3[]= getTxt2.split(",");
 //		String number1 = getTxt3[0];
 		QaExtentReport.test.log(Status.INFO, "<b><i>Booking Status is </i></b>"+getTxt2);
 		
-			String text = QaBrowser.driver.findElement (By.xpath("//div[@id='ctl00_contentMain_flt_details']/div/div[1]/div[3]/p/span[1]")).getText();
+//			String text = QaBrowser.driver.findElement (By.xpath("//div[@id='ctl00_contentMain_flt_details']/div/div[1]/div[3]/p/span[1]")).getText();
 			
-			if(text.equalsIgnoreCase("Not Confirmed"))
-			{
-				QaExtentReport.test.log(Status.INFO, "<b><i>Booking Fail </i></b>");
-			}
-			else
-			{
+//			Assert.assertEquals("Not Confirmed", text,QaExtentReport.test.log(Status.INFO, "<b><i>Booking Fail </i></b>"));
+//			Assert.assertEquals("Not Confirmed", text, "Booking Fail");
+//			if(text.equalsIgnoreCase("Not Confirmed"))
+//			{
+//				QaExtentReport.test.log(Status.INFO, "<b><i>Booking Fail </i></b>");
+//			}
+//			else
+//			{
 				WebElement getT2 = QaBrowser.driver.findElement(By.xpath("//div[@id='ctl00_contentMain_flt_details']/div/div[1]/div[3]/p/span[2]"));
 				String getTxt4 = getT2.getText();
 				String getTxt5[]= getTxt4.split(";");
 				String number2 = getTxt5[0];
-				QaExtentReport.test.log(Status.INFO, "<b><i>Confirming Status PNR Number is </i></b>"+number2);
-			}
-			Thread.sleep(25000);
-			QaExtentReport.extentScreenshot("Confirm Page");
+				QaExtentReport.test.log(Status.INFO, "<b><i>PNR Number is </i></b>"+number2);
+				Thread.sleep(25000);
+				QaExtentReport.extentScreenshot("Confirm Page");
+				
+				WebElement OpenBooking = QaBrowser.driver.findElement(By.xpath("//a[@id='ctl00_contentMain_btnOpenBookings']"));
+				JavascriptExecutor js = (JavascriptExecutor) QaBrowser.driver;
+				js.executeScript("arguments[0].click()", OpenBooking);
+				QaExtentReport.test.log(Status.INFO, "<b><i>Click on OpenBooking</i></b>");
+				Thread.sleep(7000);
+				
+				String getT3 = QaBrowser.driver.findElement(By.xpath("/html/body/form/table/tbody/tr/td/table/tbody/tr[2]/td/div/div[2]/table/tbody/tr[1]/td/table/tbody/tr[3]/td[2]/span")).getText();
+				System.out.println(getT3);
+				
+				String getT4 = QaBrowser.driver.findElement(By.xpath("/html/body/form/table/tbody/tr/td/table/tbody/tr[2]/td/div/div[2]/table/tbody/tr[1]/td/table/tbody/tr[4]/td[2]/span")).getText();
+				System.out.println(getT4);
+				
+				String a = QaBrowser.driver.findElement(By.xpath("//td[@class='Progress1']")).getTagName();
+				System.out.println(a);
+				
+				QaRobot.ClickOnElement("Itenerary");
+				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Itenerary</i></b>");
+				
+				String getT5 = QaBrowser.driver.findElement(By.xpath("/html/body/form/table/tbody/tr/td/table/tbody/tr[2]/td/div/div[1]/div[3]/table/tbody/tr/td/div[3]/table/tbody/tr/td/table/tbody/tr[2]/td[7]/span")).getText();
+				System.out.println(getT5);
+				
+				QaExtentReport.extentScreenshot("Itinerary Page");
+				Assert.assertEquals(getT5, "HK","Booking is Confirm");
+				
+				QaRobot.ClickOnElement("FareBreakdown");
+				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Fare Breakdown</i></b>");
+				
+				JavascriptExecutor mo = (JavascriptExecutor) QaBrowser.driver;
+				mo.executeScript("window.scrollBy(0,1000)", "");
+				
+				String getT6 = QaBrowser.driver.findElement(By.xpath("/html/body/form/table/tbody/tr/td/table/tbody/tr[2]/td/div/div[1]/div[3]/table/tbody/tr/td/div[4]/table/tbody/tr[2]/td/table/tbody/tr[3]/td[2]/span")).getText();
+				System.out.println(getT6);
+				String getTxt7[]= getT6.split(" ");
+				String number3 = getTxt7[0];
+				System.out.println(number3);
+				Assert.assertEquals(number3, "HK","Booking is Confirm");
+				
+				JavascriptExecutor m1 = (JavascriptExecutor) QaBrowser.driver;
+				m1.executeScript("window.scrollBy(0,-1000)", "");
+//				getT3 == "Authorized"
+//				a=="td"
+//				String c = "Shubham";
+				
+				if(a.equalsIgnoreCase("td")&&getT3.equalsIgnoreCase("Authorized"))
+				{
+					QaRobot.ClickOnElement("Documents");
+					QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Documents</i></b>");
+					QaExtentReport.extentScreenshot("Documents");
+				}
+				else if(a.equalsIgnoreCase("td")&& getT4.equalsIgnoreCase("Ticketed/Documented"))
+				{
+					QaRobot.ClickOnElement("Documents");
+					QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Documents</i></b>");
+					
+					if(ChangeTravellers.equalsIgnoreCase("Yes"))
+					{
+						String[] adt = adultM.split(",");
+						int adtTotal = 0;
+						for (int j = 0; j <adt.length; j++) 
+						{
+							adtTotal = Integer.parseInt(adt[j]) + adtTotal;
+						}
+						
+						String[] chd = childM.split(",");
+						int chdTotal = 0;
+						for (int j = 0; j <chd.length; j++) 
+						{
+							chdTotal = Integer.parseInt(chd[j]) + chdTotal;
+						}
+						
+						String[] inf = infantM.split(",");
+						int infTotal = 0;
+						for (int j = 0; j <inf.length; j++) 
+						{
+							infTotal = Integer.parseInt(inf[j]) + infTotal;
+						}
+						
+						int PaxTotal = adtTotal+chdTotal+infTotal;
+						System.out.println(PaxTotal);
+						
+						for (int i = 1; i <= PaxTotal; i++)
+						{ 
+//							String adultTitleElement = "(//select[contains(@id,'ctl00_contentMain_ddl_titleAdt_H')])[" + i + "]";
+//							String[] adulttitle = AdultTitle.split(",");
+//							QaRobot.selectValueByLocator(adultTitleElement, adulttitle[i - 1],"<b><i>Select Title For Adult</i></b>");
+//
+//							String NameSelection[] = AdultName.split(",");
+//							String NameS[]= NameSelection[i-1].split(" ");
+//							String Faname = NameS[0];
+//							String Laname = NameS[1];
+//							
+//							String adultNameElement = "(//input[contains(@id,'txt_firstNameAdt_H')])[" + i + "]";
+//							QaRobot.PassValueByLocator(adultNameElement, Faname, "<b><i>Write Name For Adult</i></b>");
+//
+//							String adultLNameElement = "(//input[contains(@id,'txt_lastnameAdt_H')])[" + i + "]";
+//							QaRobot.PassValueByLocator(adultLNameElement, Laname, "<b><i>Write Last Name For Adult</i></b>");
+						}
+					}
+					else 
+					{
+						String[] adt = adult.split(",");
+						int adtTotal1 = 0;
+						for (int j = 0; j <adt.length; j++) 
+						{
+							adtTotal1 = Integer.parseInt(adt[j]) + adtTotal1;
+						}
+						
+						String[] chd = child.split(",");
+						int chdTotal1 = 0;
+						for (int j = 0; j <chd.length; j++) 
+						{
+							chdTotal1 = Integer.parseInt(chd[j]) + chdTotal1;
+						}
+						
+						String[] inf = infant.split(",");
+						int infTotal1 = 0;
+						for (int j = 0; j <inf.length; j++) 
+						{
+							infTotal1 = Integer.parseInt(inf[j]) + infTotal1;
+						}
+						
+						int PaxTotal1 = adtTotal1+chdTotal1+infTotal1;
+						System.out.println(PaxTotal1);
+						
+						for (int i = 1; i <= PaxTotal1; i++)
+						{ 
+//							String adultTitleElement = "(//select[contains(@id,'ctl00_contentMain_ddl_titleAdt_H')])[" + i + "]";
+//							String[] adulttitle = AdultTitle.split(",");
+//							QaRobot.selectValueByLocator(adultTitleElement, adulttitle[i - 1],"<b><i>Select Title For Adult</i></b>");
+//
+//							String NameSelection[] = AdultName.split(",");
+//							String NameS[]= NameSelection[i-1].split(" ");
+//							String Faname = NameS[0];
+//							String Laname = NameS[1];
+//							
+//							String adultNameElement = "(//input[contains(@id,'txt_firstNameAdt_H')])[" + i + "]";
+//							QaRobot.PassValueByLocator(adultNameElement, Faname, "<b><i>Write Name For Adult</i></b>");
+//
+//							String adultLNameElement = "(//input[contains(@id,'txt_lastnameAdt_H')])[" + i + "]";
+//							QaRobot.PassValueByLocator(adultLNameElement, Laname, "<b><i>Write Last Name For Adult</i></b>");
+						}
+					}
+				}
 	}
 	
-	public static void confirmpageFlightwithBookingQueue() throws Exception
+	public static void confirmpageFlightwithBookingQueue(String adult,String child,String infant,String ChangeTravellers,String adultM,String childM,String infantM) throws Exception
 	{
 		String getT = QaBrowser.driver.findElement(By.xpath("//div[@id='ctl00_tdContent']/section/div[2]/div/div/div[1]/h2")).getText();
 		System.out.println(getT);
@@ -158,7 +306,7 @@ public class DnataConfirmPage
 			
 			QaRobot.ClickOnElement("BookandQuoteBook");
 			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Book Button</i></b>");
-			Thread.sleep(10000);
+			Thread.sleep(15000);
 			
 			JavascriptExecutor mo = (JavascriptExecutor) QaBrowser.driver;
 			mo.executeScript("window.scrollBy(0,400)", "");
@@ -237,7 +385,7 @@ public class DnataConfirmPage
 			
 			DnataPaymentPage.individualForFlight();
 			
-			confirmpageFlight();
+			confirmpageFlight(adult,child,infant,ChangeTravellers,adultM,childM,infantM);
 	}
 	
 	public static void confirmpageHotel() throws IOException, InterruptedException

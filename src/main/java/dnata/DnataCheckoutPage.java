@@ -18,7 +18,7 @@ import utilities.QaRobot;
 
 public class DnataCheckoutPage 
 {
-	public static void individualforFlight(String TravellerType,String TripType,String adult,String child,String infant,String ModifySearch,String adultM,String childM,String Resultpagestep,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception
+	public static void individualforFlight(String TravellerType,String TripType,String adult,String child,String infant,String ModifySearch,String ChangeTravellers,String adultM,String childM,String infantM,String Resultpagestep,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception
 	{
 		if(TravellerType.equalsIgnoreCase("Individual"))
 		{
@@ -110,15 +110,15 @@ public class DnataCheckoutPage
 			
 			QaRobot.ClickOnElement("TermsAndConditionF");
 			
-			bookForFlight(TripType,ModifySearch,QuoteTitle,QuoteRemark,Checkoutpagestep);
+			bookForFlight(TripType,adult,child,infant,ModifySearch,ChangeTravellers,adultM,childM,infantM,QuoteTitle,QuoteRemark,Checkoutpagestep);
 		}
 		else if (TravellerType.equalsIgnoreCase("Dependent"))
 		{
-			CheckoutForFlightDependent(TripType,adult,child,infant,ModifySearch,adultM,childM,Resultpagestep,QuoteTitle,QuoteRemark,Checkoutpagestep);
+			CheckoutForFlightDependent(TripType,adult,child,infant,ModifySearch,ChangeTravellers,adultM,childM,infantM,Resultpagestep,QuoteTitle,QuoteRemark,Checkoutpagestep);
 		}
 	}
 	
-	public static void CheckoutForFlightDependent(String TripType,String adult, String child, String infant,String ModifySearch,String adultM,String childM,String Resultpagestep,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception 
+	public static void CheckoutForFlightDependent(String TripType,String adult, String child, String infant,String ModifySearch,String ChangeTravellers,String adultM,String childM,String infantM,String Resultpagestep,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception 
 	{
 		String ParentWindow = QaBrowser.driver.getWindowHandle();
 		
@@ -251,7 +251,7 @@ public class DnataCheckoutPage
 		QaExtentReport.test.log(Status.INFO, "<b><i>Click on Fare Breakup Close</i></b>");
 		Thread.sleep(5000);
 		
-		bookForFlightDependent(TripType,infant,ModifySearch,QuoteTitle,QuoteRemark,Checkoutpagestep);
+		bookForFlightDependent(TripType,adult,child,infant,ModifySearch,ChangeTravellers,adultM,childM,infantM,QuoteTitle,QuoteRemark,Checkoutpagestep);
 	}
 	
 	public static void CheckoutForHotelDependent(String adult, String child,String Resultpagestep,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception 
@@ -261,7 +261,7 @@ public class DnataCheckoutPage
 //		if(QaBrowser.driver.findElement(By.xpath("//div/span/span[contains(text(),'The hotel you have selected is no more available now!!  Kindly try another hotel room.')]")).isDisplayed())
 //		{
 //			QaExtentReport.test.log(Status.FAIL, "<b><i>The hotel you have selected is no more available now!!  Kindly try another hotel room.</i></b>");
-//			throw new DnataExceptionClass("The hotel you have selected is no more available now!!  Kindly try another hotel room.");
+//			throw new Exception("The hotel you have selected is no more available now!!  Kindly try another hotel room.");
 //		}
 //		else
 //		{
@@ -478,7 +478,7 @@ public class DnataCheckoutPage
 		}
 	}
 	
-	public static void bookForFlight(String TripType,String ModifySearch,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception
+	public static void bookForFlight(String TripType,String adult,String child,String infant,String ModifySearch,String ChangeTravellers,String adultM,String childM,String infantM,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception
 	{
 		if(Checkoutpagestep.equalsIgnoreCase("Quote"))
 		{
@@ -613,8 +613,8 @@ public class DnataCheckoutPage
 			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Book Button</i></b>");
 			Thread.sleep(13000);
 			
-			if(ModifySearch.equalsIgnoreCase("No"))
-			{
+//			if(ModifySearch.equalsIgnoreCase("No"))
+//			{
 				if(TripType.equalsIgnoreCase("OneWay"))
 					{
 					if (QaBrowser.driver.findElement(By.xpath("//div[contains(text(),'                            The fare that you have selected "
@@ -645,37 +645,37 @@ public class DnataCheckoutPage
 						Thread.sleep(8000);
 					}
 					}
-			}
-			else if(ModifySearch.equalsIgnoreCase("Yes"))
-			{
-				if (QaBrowser.driver.findElement(By.xpath("//div[contains(text(),'                            The fare that you have selected "
-						+ "is no longer available. Please choose from below options to continue')]")).isDisplayed()) 
-				{
-//				if(TripType.equalsIgnoreCase("OneWay"))
+//			}
+//			else if(ModifySearch.equalsIgnoreCase("Yes"))
+//			{
+//				if (QaBrowser.driver.findElement(By.xpath("//div[contains(text(),'                            The fare that you have selected "
+//						+ "is no longer available. Please choose from below options to continue')]")).isDisplayed()) 
 //				{
-					List<WebElement> listOfAirline = QaBrowser.driver.findElements(By.xpath("/html/body/div[1]/div[1]/div/section/div[2]/div[2]/div/div[1]/div/div[3]/div[10]/div[2]/div/ul/li/label/span"));
-					
-					for (WebElement autoAirline : listOfAirline) 
-					  {
-						if (autoAirline.getText().equalsIgnoreCase("GULF AIR")) 
-						{
-							autoAirline.click();
-							break;
-						} 
-						else 
-						{
-							
-						}
-					  }
-					
-					JavascriptExecutor mo2 = (JavascriptExecutor) QaBrowser.driver;
-					mo2.executeScript("window.scrollBy(0,-300)", "");
-					
-					QaRobot.ClickOnElement("BookNowF");
-					QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Book Now</i></b>");
-					Thread.sleep(8000);
-				}
-			}
+////				if(TripType.equalsIgnoreCase("OneWay"))
+////				{
+//					List<WebElement> listOfAirline = QaBrowser.driver.findElements(By.xpath("/html/body/div[1]/div[1]/div/section/div[2]/div[2]/div/div[1]/div/div[3]/div[10]/div[2]/div/ul/li/label/span"));
+//					
+//					for (WebElement autoAirline : listOfAirline) 
+//					  {
+//						if (autoAirline.getText().equalsIgnoreCase("GULF AIR")) 
+//						{
+//							autoAirline.click();
+//							break;
+//						} 
+//						else 
+//						{
+//							
+//						}
+//					  }
+//					
+//					JavascriptExecutor mo2 = (JavascriptExecutor) QaBrowser.driver;
+//					mo2.executeScript("window.scrollBy(0,-300)", "");
+//					
+//					QaRobot.ClickOnElement("BookNowF");
+//					QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Book Now</i></b>");
+//					Thread.sleep(8000);
+//				}
+//			}
 			
 			QaRobot.PassValue("DestinationPhoeF","9863647257");
 			
@@ -729,7 +729,7 @@ public class DnataCheckoutPage
 			
 			DnataPaymentPage.individualForFlight();
 			
-			DnataConfirmPage.confirmpageFlight();
+			DnataConfirmPage.confirmpageFlight(adult,child,infant,ChangeTravellers,adultM,childM,infantM);
 		}
 		else if (Checkoutpagestep.equalsIgnoreCase("BookAndQuote"))
 		{
@@ -739,7 +739,7 @@ public class DnataCheckoutPage
 			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on BookAndQuote Button</i></b>");
 			Thread.sleep(8000);
 			
-			DnataConfirmPage.confirmpageFlightwithBookingQueue();
+			DnataConfirmPage.confirmpageFlight(adult,child,infant,ChangeTravellers,adultM,childM,infantM);
 		}
 		else if (Checkoutpagestep.equalsIgnoreCase("Fulfilment"))
 		{
@@ -751,11 +751,11 @@ public class DnataCheckoutPage
 			
 			DnataPaymentPage.individualForFlight();
 			
-			DnataConfirmPage.confirmpageFlight();
+			DnataConfirmPage.confirmpageFlight(adult,child,infant,ChangeTravellers,adultM,childM,infantM);
 		}
 	}
 	
-	public static void bookForFlightDependent(String TripType,String infant,String ModifySearch,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception
+	public static void bookForFlightDependent(String TripType,String adult,String child,String infant,String ModifySearch,String ChangeTravellers,String adultM,String childM,String infantM,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception
 	{
 		if(Checkoutpagestep.equalsIgnoreCase("Quote"))
 		{
@@ -888,8 +888,8 @@ public class DnataCheckoutPage
 			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Book Button</i></b>");
 			Thread.sleep(20000);
 			
-			if(ModifySearch.equalsIgnoreCase("No"))
-			{
+//			if(ModifySearch.equalsIgnoreCase("No"))
+//			{
 				if(TripType.equalsIgnoreCase("OneWay"))
 					{
 					if (QaBrowser.driver.findElement(By.xpath("//div[contains(text(),'                            The fare that you have selected "
@@ -920,37 +920,37 @@ public class DnataCheckoutPage
 						Thread.sleep(8000);
 					}
 					}
-			}
-			else if(ModifySearch.equalsIgnoreCase("Yes"))
-			{
-				if (QaBrowser.driver.findElement(By.xpath("//div[contains(text(),'                            The fare that you have selected "
-						+ "is no longer available. Please choose from below options to continue')]")).isDisplayed()) 
-				{
-//				if(TripType.equalsIgnoreCase("OneWay"))
+//			}
+//			else if(ModifySearch.equalsIgnoreCase("Yes"))
+//			{
+//				if (QaBrowser.driver.findElement(By.xpath("//div[contains(text(),'                            The fare that you have selected "
+//						+ "is no longer available. Please choose from below options to continue')]")).isDisplayed()) 
 //				{
-					List<WebElement> listOfAirline = QaBrowser.driver.findElements(By.xpath("/html/body/div[1]/div[1]/div/section/div[2]/div[2]/div/div[1]/div/div[3]/div[10]/div[2]/div/ul/li/label/span"));
-					
-					for (WebElement autoAirline : listOfAirline) 
-					  {
-						if (autoAirline.getText().equalsIgnoreCase("GULF AIR")) 
-						{
-							autoAirline.click();
-							break;
-						} 
-						else 
-						{
-							
-						}
-					  }
-					
-					JavascriptExecutor mo2 = (JavascriptExecutor) QaBrowser.driver;
-					mo2.executeScript("window.scrollBy(0,-300)", "");
-					
-					QaRobot.ClickOnElement("BookNowF");
-					QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Book Now</i></b>");
-					Thread.sleep(8000);
-				}
-			}
+////				if(TripType.equalsIgnoreCase("OneWay"))
+////				{
+//					List<WebElement> listOfAirline = QaBrowser.driver.findElements(By.xpath("/html/body/div[1]/div[1]/div/section/div[2]/div[2]/div/div[1]/div/div[3]/div[10]/div[2]/div/ul/li/label/span"));
+//					
+//					for (WebElement autoAirline : listOfAirline) 
+//					  {
+//						if (autoAirline.getText().equalsIgnoreCase("GULF AIR")) 
+//						{
+//							autoAirline.click();
+//							break;
+//						} 
+//						else 
+//						{
+//							
+//						}
+//					  }
+//					
+//					JavascriptExecutor mo2 = (JavascriptExecutor) QaBrowser.driver;
+//					mo2.executeScript("window.scrollBy(0,-300)", "");
+//					
+//					QaRobot.ClickOnElement("BookNowF");
+//					QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Book Now</i></b>");
+//					Thread.sleep(8000);
+//				}
+//			}
 			
 			QaRobot.PassValue("DestinationPhoeF","9863647257");
 			
@@ -1012,7 +1012,7 @@ public class DnataCheckoutPage
 			
 			DnataPaymentPage.individualForFlight();
 			
-			DnataConfirmPage.confirmpageFlight();
+			DnataConfirmPage.confirmpageFlight(adult,child,infant,ChangeTravellers,adultM,childM,infantM);
 		}
 		else if (Checkoutpagestep.equalsIgnoreCase("BookAndQuote"))
 		{
@@ -1072,7 +1072,7 @@ public class DnataCheckoutPage
 			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on BookAndQuote Button</i></b>");
 			Thread.sleep(8000);
 			
-			DnataConfirmPage.confirmpageFlightwithBookingQueue();
+			DnataConfirmPage.confirmpageFlight(adult,child,infant,ChangeTravellers,adultM,childM,infantM);
 		}
 		else if (Checkoutpagestep.equalsIgnoreCase("Fulfilment"))
 		{
@@ -1135,7 +1135,7 @@ public class DnataCheckoutPage
 			
 			DnataPaymentPage.individualForFlight();
 			
-			DnataConfirmPage.confirmpageFlight();
+			DnataConfirmPage.confirmpageFlight(adult,child,infant,ChangeTravellers,adultM,childM,infantM);
 		}
 	}
 	
@@ -1708,7 +1708,6 @@ public class DnataCheckoutPage
 			{
 				DnataConfirmPage.confirmpageFulfilmentHotel();
 			}
-			
 		}
 	}
 	
@@ -1804,7 +1803,7 @@ public class DnataCheckoutPage
 			else
 			{
 				QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Adult Date Selection</i></b>"+" - "+Date+"-"+Month+"-"+Year);
-				throw new DnataExceptionClass("Invalid Adult Date Selection"+" : "+Date+"-"+Month+"-"+Year);
+				throw new Exception("Invalid Adult Date Selection"+" : "+Date+"-"+Month+"-"+Year);
 			}
 			
 			// Fill PhoneNumber
@@ -2001,7 +2000,7 @@ public class DnataCheckoutPage
 			else
 			{
 				QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Child Date Selection</i></b>"+" - "+Date1+"-"+Month1+"-"+Year1);
-				throw new DnataExceptionClass("Invalid Child Date Selection"+" : "+Date1+"-"+Month1+"-"+Year1);
+				throw new Exception("Invalid Child Date Selection"+" : "+Date1+"-"+Month1+"-"+Year1);
 			}
 			// fill nationality
 			String childnationalityElement = "//select[@id='ddl_nationalityChd"+i+"']";
@@ -2103,7 +2102,7 @@ public class DnataCheckoutPage
 			 	else
 				{
 			 		QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Infant Date Selection</i></b>"+" - "+Date+"-"+Month+"-"+Year);
-					throw new DnataExceptionClass("Invalid Infant Date Selection"+" : "+Date+"-"+Month+"-"+Year);
+					throw new Exception("Invalid Infant Date Selection"+" : "+Date+"-"+Month+"-"+Year);
 				}
 		
 			String infantTravellingWith = "//select[@id='ddl_travell_with" + i + "']";
@@ -2310,13 +2309,13 @@ public class DnataCheckoutPage
 				else
 				{
 					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Child Date Selection</i></b>"+" - "+Dcname+"-"+Mcname+"-"+Ycname);
-					throw new DnataExceptionClass("Invalid Child Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
+					throw new Exception("Invalid Child Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
 				}
 			}
 			else
 			{
 				QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Child Date Selection</i></b>"+" - "+Dcname+"-"+Mcname+"-"+Ycname);
-				throw new DnataExceptionClass("Invalid Child Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
+				throw new Exception("Invalid Child Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
 			}
 			
 		}
@@ -2444,7 +2443,7 @@ public class DnataCheckoutPage
 				else
 				{
 					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Adult Date Selection</i></b>"+" - "+Dcname+"-"+Mcname+"-"+Ycname);
-					throw new DnataExceptionClass("Invalid Adult Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
+					throw new Exception("Invalid Adult Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
 				}
 				
 				String adultRoomElement = "(//select[contains(@id,'ctl00_contentMain_ddl_roomNo_Adt')])[" + i + "]";
@@ -2518,7 +2517,7 @@ public class DnataCheckoutPage
 				else
 				{
 					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Adult Date Selection</i></b>"+" - "+Dcname+"-"+Mcname+"-"+Ycname);
-					throw new DnataExceptionClass("Invalid Adult Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
+					throw new Exception("Invalid Adult Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
 				}
 				
 				String adultRoomElement = "(//select[contains(@id,'ctl00_contentMain_ddl_roomNo_Adt')])[" + i + "]";
@@ -2645,7 +2644,7 @@ public class DnataCheckoutPage
 				else
 				{
 					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Child Date Selection</i></b>"+" - "+Dcname+"-"+Mcname+"-"+Ycname);
-					throw new DnataExceptionClass("Invalid Child Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
+					throw new Exception("Invalid Child Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
 				}
 				
 				String childRoomElement = "(//select[contains(@id,'ctl00_contentMain_ddl_roomNo_Chd')])[" + i + "]";
@@ -2719,7 +2718,7 @@ public class DnataCheckoutPage
 				else
 				{
 					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Child Date Selection</i></b>"+" - "+Dcname+"-"+Mcname+"-"+Ycname);
-					throw new DnataExceptionClass("Invalid Child Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
+					throw new Exception("Invalid Child Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
 				}
 				
 				String childRoomElement = "(//select[contains(@id,'ctl00_contentMain_ddl_roomNo_Chd')])[" + i + "]";
@@ -2840,7 +2839,7 @@ public class DnataCheckoutPage
 				else
 				{
 					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Infant Date Selection</i></b>"+" - "+Dcname+"-"+Mcname+"-"+Ycname);
-					throw new DnataExceptionClass("Invalid Infant Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
+					throw new Exception("Invalid Infant Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
 				}
 				
 				String infantTravellingWith = "(//select[contains(@id,'ctl00_contentMain_ddl_travell_with')])[" + i + "]";
@@ -2914,7 +2913,7 @@ public class DnataCheckoutPage
 				else
 				{
 					QaExtentReport.test.log(Status.FAIL, "<b><i>Invalid Infant Date Selection</i></b>"+" - "+Dcname+"-"+Mcname+"-"+Ycname);
-					throw new DnataExceptionClass("Invalid Infant Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
+					throw new Exception("Invalid Infant Date Selection"+" : "+Dcname+"-"+Mcname+"-"+Ycname);
 				}
 				
 				String infantTravellingWith = "(//select[contains(@id,'ctl00_contentMain_ddl_travell_with')])[" + i + "]";

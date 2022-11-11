@@ -3,12 +3,12 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="dnata.DnataHotel">
+      <class name="dnata.DnataFlight">
         <methods>
           <include name="afterMetod"/>
-          <include name="dnataforhotel" invocation-numbers="0 2 4 5 6 7 8 9"/>
+          <include name="dnataforflight" invocation-numbers="0"/>
         </methods>
-      </class> <!-- dnata.DnataHotel -->
+      </class> <!-- dnata.DnataFlight -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

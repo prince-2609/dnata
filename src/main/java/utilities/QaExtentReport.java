@@ -39,12 +39,7 @@ public class QaExtentReport
 		config.setReportName("Dnata");
 		config.setDocumentTitle("Dnata UAT");
 		
-		report.attachReporter(sparkreporter);
-		
-//		report
-//		.createTest("Pre Approval Queue for Business Trip")
-//		.assignAuthor("Shubham Natkar")
-//		.assignDevice("Chrome");		
+		report.attachReporter(sparkreporter);	
 	}	
 	
 	public static void extentScreenshot(String txt) throws IOException

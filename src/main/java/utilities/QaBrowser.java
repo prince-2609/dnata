@@ -1,19 +1,11 @@
 package utilities;
 
-import java.time.Duration;
-import java.util.concurrent.TimeUnit;
-
 import org.apache.poi.ss.formula.eval.NotImplementedException;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import Base.TestBase;
 
 public class QaBrowser extends QaRobot {
 
@@ -56,10 +48,6 @@ public class QaBrowser extends QaRobot {
 	private void launchChrome()
 	{
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\lib\\chromedriverUpdate.exe");
-//		ChromeOptions handlingSSL = new ChromeOptions();
-//		handlingSSL.setAcceptInsecureCerts(true);
-//		driver = (WebDriver)new ChromeDriver(handlingSSL);
-		
 		driver = (WebDriver) new ChromeDriver();
 	}
 	
