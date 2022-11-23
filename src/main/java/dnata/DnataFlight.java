@@ -41,32 +41,32 @@ public class DnataFlight
 		QaExtentReport.test = QaExtentReport.report.createTest(TestCaseId+"-"+TestScenario);
 		
 		QaRobot.ClickOnElement("AdvanceButton");
-		QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Advance Button</i></b>");
+//		QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Advance Button</i></b>");
 		
 		QaRobot.ClickOnElement("ProceedLink");
-		QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Proceed Link</i></b>");
+//		QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Proceed Link</i></b>");
 		
 		QaRobot.PassValue("CompanyCode",CompanyCode);
-		QaExtentReport.test.log(Status.INFO,"<b><i>Write Company Code</i></b>");
+//		QaExtentReport.test.log(Status.INFO,"<b><i>Write Company Code</i></b>");
 			
 		QaRobot.PassValue("UserName",UserName);
-		QaExtentReport.test.log(Status.INFO,"<b><i>Write Username</i></b>");
+//		QaExtentReport.test.log(Status.INFO,"<b><i>Write Username</i></b>");
 			
 		QaRobot.PassValue("PasswordFD",Password);
-		QaExtentReport.test.log(Status.INFO,"<b><i>Write Password</i></b>");
+//		QaExtentReport.test.log(Status.INFO,"<b><i>Write Password</i></b>");
 		QaExtentReport.extentScreenshot("Sigh In Page");
 			
 		QaRobot.ClickOnElement("LogIn");
-		QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on LogIn</i></b>");
+//		QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on LogIn</i></b>");
 		
 		QaRobot.switchframe("//frame[@name='login']");
 		QaRobot.switchframe("//frame[@name='leftbar']");
 		
 		QaRobot.ClickOnElement("CallCenter");
-		QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on CallCenter</i></b>");
+//		QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on CallCenter</i></b>");
 		
 		QaRobot.ClickOnElement("ProductSearchFareBranding");
-		QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Product Search Fare Branding</i></b>");
+//		QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Product Search Fare Branding</i></b>");
 		
 		QaBrowser.driver.switchTo().parentFrame();
 		
@@ -75,7 +75,7 @@ public class DnataFlight
 		QaRobot.switchframe("//frame[@id='frm2']");
 		
 		QaRobot.ClickOnElement("Flight");
-		QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Flight</i></b>");
+//		QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Flight</i></b>");
 		
 		QaRobot.PassValue("SearchCorporateTraveller",SearchCorporateTraveller);
 		QaExtentReport.test.log(Status.INFO,"<b><i>Search Corporate or Traveller Name </i></b>"+SearchCorporateTraveller);
@@ -92,20 +92,20 @@ public class DnataFlight
 		if(TravelType.equalsIgnoreCase("BusinessTravel"))
 		{
 			QaRobot.ClickOnElement("BusinessTravel");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on BusinessTravel</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on BusinessTravel</i></b>");
 			Thread.sleep(5000);
 			QaRobot.ClickOnElement("BusinessTravel");
 			
 			if(TravellerType.equalsIgnoreCase("Individual"))
 			{
 				QaRobot.ClickOnElement("Individual");
-				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Individual</i></b>");
+//				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Individual</i></b>");
 				Thread.sleep(5000);
 				
 				WebElement element = QaBrowser.driver.findElement(By.xpath("//div[@id='divTravelCategory']/div/div/div/div/div/div/select"));
 				Select s = new Select(element);
 				s.selectByIndex(1);
-				QaExtentReport.test.log(Status.INFO,"<b><i>Select Policy</i></b>");
+//				QaExtentReport.test.log(Status.INFO,"<b><i>Select Policy</i></b>");
 				
 				DnataTripType.flightTriptype( TravellerType, TripType,OriginCityCode, OriginLocation, DestinationCityCode, DestinationLocation,
 						 DepartureDate, ReturnDate, adult, child, infant, Class,PreAirline, PANumber, PreferredAirlineSelect, FOPType,
@@ -119,13 +119,13 @@ public class DnataFlight
 			else if(TravellerType.equalsIgnoreCase("Dependent"))
 			{
 				QaRobot.ClickOnElement("Dependent");
-				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Dependent</i></b>");
+//				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Dependent</i></b>");
 				Thread.sleep(15000);
 				
 				WebElement element = QaBrowser.driver.findElement(By.xpath("//div[@id='divTravelCategory']/div/div/div/div/div/div/select"));
 				Select s = new Select(element);
 				s.selectByIndex(1);
-				QaExtentReport.test.log(Status.INFO,"<b><i>Select Policy</i></b>");
+//				QaExtentReport.test.log(Status.INFO,"<b><i>Select Policy</i></b>");
 				
 				DnataTripType.flightTriptype( TravellerType, TripType,OriginCityCode, OriginLocation, DestinationCityCode, DestinationLocation,
 						 DepartureDate, ReturnDate, adult, child, infant, Class,PreAirline, PANumber, PreferredAirlineSelect, FOPType,
@@ -139,7 +139,7 @@ public class DnataFlight
 			else if(TravellerType.equalsIgnoreCase("MultiplePassengers"))
 			{
 				QaRobot.ClickOnElement("MultiplePassengers");
-				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on MultiplePassengers</i></b>");
+//				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on MultiplePassengers</i></b>");
 				
 				DnataTripType.flightTriptype( TravellerType, TripType,OriginCityCode, OriginLocation, DestinationCityCode, DestinationLocation,
 						 DepartureDate, ReturnDate, adult, child, infant, Class,PreAirline, PANumber, PreferredAirlineSelect, FOPType,
@@ -148,7 +148,7 @@ public class DnataFlight
 			else if(TravellerType.equalsIgnoreCase("GuestUser"))
 			{
 				QaRobot.ClickOnElement("GuestUser");
-				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on GuestUser</i></b>");
+//				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on GuestUser</i></b>");
 				
 				DnataTripType.flightTriptype( TravellerType, TripType,OriginCityCode, OriginLocation, DestinationCityCode, DestinationLocation,
 						 DepartureDate, ReturnDate, adult, child, infant, Class,PreAirline,PANumber, PreferredAirlineSelect, FOPType,
@@ -158,12 +158,12 @@ public class DnataFlight
 		else if(TravelType.equalsIgnoreCase("Personal"))
 		{
 			QaRobot.ClickOnElement("Personal");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Personal</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Personal</i></b>");
 		}
 	}
 	
 	@AfterMethod
-	public static void afterMetod()
+	public static void afterMethod()
 	{
 		QaExtentReport.test.getExtent().flush();
 	}

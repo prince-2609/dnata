@@ -2,6 +2,7 @@ package dnata;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -38,7 +39,10 @@ public class DnataTripType
 		if(TripType.equalsIgnoreCase("OneWay"))
 		{
 			QaRobot.ClickOnElement("OneWay");
-			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on OneWay</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on OneWay</i></b>");
+			
+			Assert.assertFalse(OriginCityCode==DestinationCityCode, "Origin And Destination City Code Can't Be Same");
+			Assert.assertFalse(OriginLocation==DestinationLocation, "Origin And Destination City Location Can't Be Same");
 			
 			TestBase.listofautosuggestion(By.xpath("//div[@id='divDepartureCity']/p"), OriginCityCode, OriginLocation,By.xpath("//input[@id='txtDepartureCity']"));
 			QaExtentReport.test.log(Status.INFO, "<b><i>Departure city : </i></b>"+OriginCityCode+" - " + OriginLocation);
@@ -54,7 +58,7 @@ public class DnataTripType
 			selectDateInCalendarOneWay(expDate,month,year);
 			
 			QaRobot.ClickOnElement("Travellers");
-			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Travellers</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Travellers</i></b>");
 			
 			if(TravellerType.equalsIgnoreCase("Individual"))
 			{
@@ -76,12 +80,12 @@ public class DnataTripType
 			QaRobot.selectTextByLocator("//select[@id='ddlClass']", Class, "<b><i>Select Class for booking </i></b>"+Class);
 			Thread.sleep(2000);
 			
-			QaRobot.ClickOnElement("PreferredAirline");
-			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on PreferredAirline</i></b>");
-			Thread.sleep(2000);
-			
 			if(PreAirline.equalsIgnoreCase("Yes"))
 			{
+				QaRobot.ClickOnElement("PreferredAirline");
+//				QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on PreferredAirline</i></b>");
+				Thread.sleep(2000);
+				
 				int pAS = Integer.parseInt(PANumber);
 				for (int i = 1; i <= pAS; i++) 
 				{
@@ -97,7 +101,7 @@ public class DnataTripType
 			if(ShowDirectFlight.equalsIgnoreCase("Yes")) 
 			{
 				QaRobot.ClickOnElement("ShowDirectFlightF");
-				QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on ShowDirectFlight</i></b>");
+//				QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on ShowDirectFlight</i></b>");
 			}
 			
 			QaRobot.ClickOnElement("SelectAll");
@@ -122,7 +126,10 @@ public class DnataTripType
 		else if(TripType.equalsIgnoreCase("RoundTrip"))
 		{
 			QaRobot.ClickOnElement("RoundTrip");
-			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on RoundTrip</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on RoundTrip</i></b>");
+			
+			Assert.assertFalse(OriginCityCode==DestinationCityCode, "Origin And Destination City Code Can't Be Same");
+			Assert.assertFalse(OriginLocation==DestinationLocation, "Origin And Destination City Location Can't Be Same");
 			
 			TestBase.listofautosuggestion(By.xpath("//div[@id='divDepartureCity']/p"), OriginCityCode, OriginLocation,By.xpath("//input[@id='txtDepartureCity']"));
 			QaExtentReport.test.log(Status.INFO, "<b><i>Departure city : </i></b>"+OriginCityCode+" - " + OriginLocation);
@@ -138,7 +145,7 @@ public class DnataTripType
 			selectDateInCalendarRoundTrip(expDate,month,year,expDate1,month1,year1);
 			
 			QaRobot.ClickOnElement("Travellers");
-			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Travellers</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Travellers</i></b>");
 			
 			if(TravellerType.equalsIgnoreCase("Individual"))
 			{
@@ -160,12 +167,12 @@ public class DnataTripType
 			QaRobot.selectTextByLocator("//select[@id='ddlClass']", Class, "<b><i>Select Class for booking </i></b>"+Class);
 			Thread.sleep(2000);
 			
-			QaRobot.ClickOnElement("PreferredAirline");
-			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on PreferredAirline</i></b>");
-			Thread.sleep(2000);
-			
 			if(PreAirline.equalsIgnoreCase("Yes"))
 			{
+				QaRobot.ClickOnElement("PreferredAirline");
+//				QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on PreferredAirline</i></b>");
+				Thread.sleep(2000);
+				
 				int pAS = Integer.parseInt(PANumber);
 				for (int i = 1; i <= pAS; i++) 
 				{
@@ -181,7 +188,7 @@ public class DnataTripType
 			if(ShowDirectFlight.equalsIgnoreCase("Yes")) 
 			{
 				QaRobot.ClickOnElement("ShowDirectFlightF");
-				QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on ShowDirectFlight</i></b>");
+//				QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on ShowDirectFlight</i></b>");
 			}
 			
 			QaRobot.ClickOnElement("SelectAll");
@@ -205,18 +212,18 @@ public class DnataTripType
 		else if(TripType.equalsIgnoreCase("MultiCity"))
 		{
 			QaRobot.ClickOnElement("Multicity");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Multicity</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Multicity</i></b>");
 		}
 		else if(TripType.equalsIgnoreCase("DirectBooking"))
 		{
 			QaRobot.ClickOnElement("DirectBooking");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on DirectBooking</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on DirectBooking</i></b>");
 		}
 		try
 		{
 			QaExtentReport.extentScreenshot("Search Page");
 			QaRobot.ClickOnElement("FinalSearchF");
-			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on FinalSearch</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on FinalSearch</i></b>");
 			QaRobot.ScreenshotMethod("FlightTrip","<b><i>Screenshot for Flight Trip</i></b>");
 		}
 		catch(Exception e)
@@ -330,13 +337,107 @@ public class DnataTripType
 			{
 				QaExtentReport.extentScreenshot("Search Page");
 				QaRobot.ClickOnElement("FinalSearchH");
-				QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on FinalSearch</i></b>");
+//				QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on FinalSearch</i></b>");
 				QaRobot.ScreenshotMethod("HotelTrip","<b><i>Screenshot for Hotel Trip</i></b>");
 			}
 			catch(Exception e)
 			{
 				throw(e);
 			}
+	}
+	
+	public static void InsuranceTriptype(String TravellerType,String OriginCityCode,String OriginLocation,String DestinationCityCode,String DestinationLocation,
+			String StartDate,String EndDate,String PolicyFor,String SelectPax,String PaxDOB,String FOPType) throws Exception 
+	{
+		String DateSelection[]= StartDate.split("-");
+		String year = DateSelection[2];
+		String month = DateSelection[1];
+		String expDate = DateSelection[0];
+		
+		String DateSelection1[]= EndDate.split("-");
+		String year1 = DateSelection1[2];
+		String month1 = DateSelection1[1];
+		String expDate1= DateSelection1[0];
+		
+		String DateSelection2[]= PaxDOB.split("-");
+		String Year = DateSelection2[2];
+		String Month = DateSelection2[1];
+		String Day = DateSelection2[0];
+		
+		Assert.assertFalse(OriginCityCode==DestinationCityCode, "Origin And Destination City Code Can't Be Same");
+		Assert.assertFalse(OriginLocation==DestinationLocation, "Origin And Destination City Location Can't Be Same");
+		
+		TestBase.listofautosuggestion(By.xpath("//div[@id='divIDepartureCity']/p"), OriginCityCode, OriginLocation,By.xpath("//input[@id='txtINSDepartureCity']"));
+		QaExtentReport.test.log(Status.INFO, "<b><i>Origin city : </i></b>"+OriginCityCode+" - " + OriginLocation);
+		Thread.sleep(2000);
+				
+		TestBase.listofautosuggestion(By.xpath("//div[@id='divIDestinationCity']/p"), DestinationCityCode, DestinationLocation,By.xpath("//input[@id='txtINSDestinationCity']"));
+		QaExtentReport.test.log(Status.INFO, "<b><i>Destination city : </i></b>"+DestinationCityCode+" - " + DestinationLocation);
+		Thread.sleep(2000);
+			
+		QaBrowser.driver.findElement(By.xpath("//div[@id='flight_way1']/div[2]/div[1]/label/span[2]/div/span[1]/img")).click();
+		Thread.sleep(2000);
+			
+		selectDateInCalendarInsurance(expDate,month,year,expDate1,month1,year1);
+		
+		if(TravellerType.equalsIgnoreCase("Individual"))
+		{
+		}
+		else
+		{
+			WebElement element = QaBrowser.driver.findElement(By.xpath("//select[@id='policyfor']"));
+			Select s = new Select(element);
+			s.selectByVisibleText(PolicyFor);
+			QaExtentReport.test.log(Status.INFO, "<b><i>Select Policy for</i></b>"+" - "+PolicyFor);
+			Thread.sleep(2000);
+		}
+		
+		if(TravellerType.equalsIgnoreCase("Individual"))
+		{
+		}
+		else
+		{
+			if(PolicyFor.equalsIgnoreCase("Individual")||PolicyFor.equalsIgnoreCase("Family"))
+			{
+				Assert.assertFalse(Integer.parseInt(SelectPax)>9, "Invalid Pax Selected "+"-"+SelectPax);
+				
+				WebElement PaxNo = QaBrowser.driver.findElement(By.xpath("//select[@id='pax']"));
+				Select s = new Select(PaxNo);                                  
+				s.selectByVisibleText(SelectPax);
+				
+				for(int i=2;i<=Integer.parseInt(SelectPax);i++)
+				{
+					QaBrowser.driver.findElement(By.xpath("//img[@id='imgDOB"+i+"']")).click();
+					Thread.sleep(2000);
+					
+					selectDateInCalendarPassenger(Day,Month,Year);
+				}
+			}
+			else if(PolicyFor.equalsIgnoreCase("Couple"))
+			{
+				Assert.assertFalse(Integer.parseInt(SelectPax)>2, "Invalid Pax Selected "+"-"+SelectPax);
+				
+				QaBrowser.driver.findElement(By.xpath("//img[@id='imgDOB2']")).click();
+				Thread.sleep(2000);
+				
+				selectDateInCalendarPassenger(Day,Month,Year);
+			}
+		}
+		Thread.sleep(3000);
+		
+		WebElement FOP = QaBrowser.driver.findElement(By.xpath("//select[@id='ddlSearchFopINS']"));
+		Select s1 = new Select(FOP);                                  
+		s1.selectByVisibleText(FOPType);
+		
+		try
+		{
+			QaExtentReport.extentScreenshot("Search Page");
+			QaRobot.ClickOnElement("SearchInsurance");
+		}
+		catch(Exception e)
+		{
+			throw(e);
+		}
 	}
 	
 	public static void flight_HotelTrip(String Trip,String OriginCityCode,String OriginLocation,String DestinationCityCode,String DestinationLocation,
@@ -514,7 +615,7 @@ public class DnataTripType
 		DateFormat d = new SimpleDateFormat("dd-MM-yyyy");
 		String NewDate = d.format(date);
 		Date date1 = d.parse(NewDate);
-		System.out.println(date1);
+//		System.out.println(date1);
 		
 		String currentMonthNumber ="00";
 		 if (Month.equalsIgnoreCase("Jan")) {
@@ -544,7 +645,7 @@ public class DnataTripType
          }
 		 
 		Date date2 = d.parse(Day+"-"+Integer.parseInt(currentMonthNumber)+"-"+Year);
-		System.out.println(date2);
+//		System.out.println(date2);
 		
 		QaExtentReport.test.log(Status.INFO, "<b><i>Select Date  </i></b>"+Day+"-"+Month+"-"+Year);
 		
@@ -612,7 +713,7 @@ public class DnataTripType
 		DateFormat d = new SimpleDateFormat("dd-MM-yyyy");
 		String NewDate = d.format(date);
 		Date date1 = d.parse(NewDate);
-		System.out.println(date1);
+//		System.out.println(date1);
 		
 		String currentMonthNumber ="00";
 		 if (Month.equalsIgnoreCase("Jan")) {
@@ -642,7 +743,7 @@ public class DnataTripType
          }
 		 
 		Date date2 = d.parse(Day+"-"+Integer.parseInt(currentMonthNumber)+"-"+Year);
-		System.out.println(date2);
+//		System.out.println(date2);
 		
 		String currentMonthNumber1 ="00";
 		 if (Month1.equalsIgnoreCase("Jan")) {
@@ -672,7 +773,7 @@ public class DnataTripType
         }
 		 
 		Date date3 = d.parse(Day1+"-"+Integer.parseInt(currentMonthNumber1)+"-"+Year1);
-		System.out.println(date3);
+//		System.out.println(date3);
 		
 		QaExtentReport.test.log(Status.INFO, "<b><i>Select Departure Date  </i></b>"+Day+"-"+Month+"-"+Year);
 		QaExtentReport.test.log(Status.INFO, "<b><i>Select Return Date  </i></b>"+Day1+"-"+Month1+"-"+Year1);
@@ -750,7 +851,7 @@ public class DnataTripType
 		DateFormat d = new SimpleDateFormat("dd-MM-yyyy");
 		String NewDate = d.format(date);
 		Date date1 = d.parse(NewDate);
-		System.out.println(date1);
+//		System.out.println(date1);
 		
 		String currentMonthNumber ="00";
 		 if (Month.equalsIgnoreCase("Jan")) {
@@ -780,7 +881,7 @@ public class DnataTripType
         }
 		 
 		Date date2 = d.parse(Day+"-"+Integer.parseInt(currentMonthNumber)+"-"+Year);
-		System.out.println(date2);
+//		System.out.println(date2);
 		
 		String currentMonthNumber1 ="00";
 		 if (Month1.equalsIgnoreCase("Jan")) {
@@ -810,7 +911,7 @@ public class DnataTripType
        }
 		 
 		Date date3 = d.parse(Day1+"-"+Integer.parseInt(currentMonthNumber1)+"-"+Year1);
-		System.out.println(date3);
+//		System.out.println(date3);
 		
 		QaExtentReport.test.log(Status.INFO, "<b><i>Select Departure Date  </i></b>"+Day+"-"+Month+"-"+Year);
 		QaExtentReport.test.log(Status.INFO, "<b><i>Select Return Date  </i></b>"+Day1+"-"+Month1+"-"+Year1);
@@ -851,7 +952,7 @@ public class DnataTripType
 				Thread.sleep(2000);
 				String monthYear1 = QaBrowser.driver.findElement (By.xpath("/html/body/div[3]/div/div[2]/div[1]/div")).getText();
 				Thread.sleep(2000);
-				System.out.println(monthYear1);
+//				System.out.println(monthYear1);
 				String month1 = monthYear1.split(" ")[0];
 				String year1 = monthYear1.split(" ")[1];
 				
@@ -878,6 +979,214 @@ public class DnataTripType
 								break;
 							}
 						}
+	  }
+	
+	public static void selectDateInCalendarInsurance(String Day,String Month,String Year,String Day1,String Month1,String Year1) throws Exception
+	 {
+		Date date = new Date();
+		DateFormat d = new SimpleDateFormat("dd-MM-yyyy");
+		String NewDate = d.format(date);
+		Date date1 = d.parse(NewDate);
+//		System.out.println(date1);
+		
+		String currentMonthNumber ="00";
+		 if (Month.equalsIgnoreCase("January")) {
+            currentMonthNumber = "01";
+        } else if (Month.equalsIgnoreCase("February")) {
+            currentMonthNumber = "02";
+        } else if (Month.equalsIgnoreCase("March")) {
+            currentMonthNumber = "03";
+        } else if (Month.equalsIgnoreCase("April")) {
+            currentMonthNumber = "04";
+        } else if (Month.equalsIgnoreCase("May")) {
+            currentMonthNumber = "05";
+        } else if (Month.equalsIgnoreCase("June")) {
+            currentMonthNumber = "06";
+        } else if (Month.equalsIgnoreCase("July")) {
+            currentMonthNumber = "07";
+        } else if (Month.equalsIgnoreCase("August")) {
+            currentMonthNumber = "08";
+        } else if (Month.equalsIgnoreCase("September")) {
+            currentMonthNumber = "09";
+        } else if (Month.equalsIgnoreCase("October")) {
+            currentMonthNumber = "10";
+        } else if (Month.equalsIgnoreCase("November")) {
+            currentMonthNumber = "11";
+        } else if (Month.equalsIgnoreCase("December")) {
+            currentMonthNumber = "12";
+        }
+		 
+		Date date2 = d.parse(Day+"-"+Integer.parseInt(currentMonthNumber)+"-"+Year);
+//		System.out.println(date2);
+		
+		String currentMonthNumber1 ="00";
+		 if (Month1.equalsIgnoreCase("January")) {
+           currentMonthNumber1 = "01";
+       } else if (Month1.equalsIgnoreCase("February")) {
+           currentMonthNumber1 = "02";
+       } else if (Month1.equalsIgnoreCase("March")) {
+           currentMonthNumber1 = "03";
+       } else if (Month1.equalsIgnoreCase("April")) {
+           currentMonthNumber1 = "04";
+       } else if (Month1.equalsIgnoreCase("May")) {
+           currentMonthNumber1 = "05";
+       } else if (Month1.equalsIgnoreCase("June")) {
+           currentMonthNumber1 = "06";
+       } else if (Month1.equalsIgnoreCase("July")) {
+           currentMonthNumber1 = "07";
+       } else if (Month1.equalsIgnoreCase("August")) {
+           currentMonthNumber1 = "08";
+       } else if (Month1.equalsIgnoreCase("September")) {
+           currentMonthNumber1 = "09";
+       } else if (Month1.equalsIgnoreCase("October")) {
+           currentMonthNumber1 = "10";
+       } else if (Month1.equalsIgnoreCase("November")) {
+           currentMonthNumber1 = "11";
+       } else if (Month1.equalsIgnoreCase("December")) {
+           currentMonthNumber1 = "12";
+       }
+		 
+		Date date3 = d.parse(Day1+"-"+Integer.parseInt(currentMonthNumber1)+"-"+Year1);
+//		System.out.println(date3);
+		
+		QaExtentReport.test.log(Status.INFO, "<b><i>Select Start Date  </i></b>"+Day+"-"+Month+"-"+Year);
+		QaExtentReport.test.log(Status.INFO, "<b><i>Select End Date  </i></b>"+Day1+"-"+Month1+"-"+Year1);
+		
+		Assert.assertFalse(Integer.parseInt(Day)>31, "Invalid date provided "+Day+"-"+Month+"-"+Year);
+		Assert.assertFalse(Month.equals("Feb") && Integer.parseInt(Day)>28, "Invalid date provided "+Day+"-"+Month+"-"+Year);
+		Assert.assertFalse(Integer.parseInt(Day1)>31, "Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
+		Assert.assertFalse(Month.equals("Feb") && Integer.parseInt(Day1)>28, "Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
+
+		String monthYear = QaBrowser.driver.findElement (By.xpath("/html/body/div[3]/div/div[2]/div[1]/div")).getText();
+		
+		String month = monthYear.split(" ")[0];
+		String year = monthYear.split(" ")[1];
+		
+		Assert.assertFalse(date2.before(date1), "Invalid date provided "+Day+"-"+Month+"-"+Year);
+		while(!(month.equals(Month) && year.equals(Year)))
+		{
+			QaBrowser.driver.findElement(By.xpath("/html/body/div[3]/div/div[1]/a[3]")).click();
+			
+			monthYear = QaBrowser.driver.findElement (By.xpath("/html/body/div[3]/div/div[2]/div[1]/div")).getText();
+			
+			month = monthYear.split(" ")[0];
+			year = monthYear.split(" ")[1];
+		}
+		
+			List<WebElement> allDates = QaBrowser.driver.findElements(By.xpath("/html/body/div[3]/div/div[2]/div[1]/table/tbody/tr/td"));
+			
+			for(WebElement ele : allDates)
+			{
+				String dt = ele.getText();
+				
+				if(dt.equalsIgnoreCase(Day))
+				{
+					ele.click();
+					break;
+				}
+			}
+			
+			QaBrowser.driver.findElement(By.xpath("//div[@id='divINSReturnDate']/div/span/div/span[1]/img")).click();
+			Thread.sleep(2000);
+			
+			String monthYear1 = QaBrowser.driver.findElement (By.xpath("/html/body/div[3]/div/div[2]/div[1]/div")).getText();
+			
+			String month1 = monthYear1.split(" ")[0];
+			String year1 = monthYear1.split(" ")[1];
+			
+			Assert.assertFalse(date3.before(date2), "Invalid date provided "+Day1+"-"+Month1+"-"+Year1);
+			
+			while(!(month1.equals(Month1) && year1.equals(Year1)))
+			{
+				QaBrowser.driver.findElement(By.xpath("/html/body/div[3]/div/div[1]/a[3]")).click();
+				
+				monthYear1 = QaBrowser.driver.findElement (By.xpath("/html/body/div[3]/div/div[2]/div[1]/div")).getText();
+				
+				month1 = monthYear1.split(" ")[0];
+				year1 = monthYear1.split(" ")[1];
+			}
+			
+				List<WebElement> allDates1 = QaBrowser.driver.findElements(By.xpath("/html/body/div[3]/div/div[2]/div[1]/table/tbody/tr/td"));
+				
+				for(WebElement ele1 : allDates1)
+				{
+					String dt1 = ele1.getText();
+					
+					if(dt1.equalsIgnoreCase(Day1))
+					{
+						ele1.click();
+						break;
+					}
+				}
+	  }
+	
+	public static void selectDateInCalendarPassenger(String Day,String Month,String Year) throws Exception
+	 {
+		Date date = new Date();
+		DateFormat d = new SimpleDateFormat("dd-MM-yyyy");
+		String NewDate = d.format(date);
+		Date date1 = d.parse(NewDate);
+//		System.out.println(date1);
+		
+		String currentMonthNumber ="00";
+		 if (Month.equalsIgnoreCase("Jan")) {
+            currentMonthNumber = "01";
+        } else if (Month.equalsIgnoreCase("Feb")) {
+            currentMonthNumber = "02";
+        } else if (Month.equalsIgnoreCase("Mar")) {
+            currentMonthNumber = "03";
+        } else if (Month.equalsIgnoreCase("Apr")) {
+            currentMonthNumber = "04";
+        } else if (Month.equalsIgnoreCase("May")) {
+            currentMonthNumber = "05";
+        } else if (Month.equalsIgnoreCase("Jun")) {
+            currentMonthNumber = "06";
+        } else if (Month.equalsIgnoreCase("Jul")) {
+            currentMonthNumber = "07";
+        } else if (Month.equalsIgnoreCase("Aug")) {
+            currentMonthNumber = "08";
+        } else if (Month.equalsIgnoreCase("Sep")) {
+            currentMonthNumber = "09";
+        } else if (Month.equalsIgnoreCase("Oct")) {
+            currentMonthNumber = "10";
+        } else if (Month.equalsIgnoreCase("Nov")) {
+            currentMonthNumber = "11";
+        } else if (Month.equalsIgnoreCase("Dec")) {
+            currentMonthNumber = "12";
+        }
+		 
+		Date date2 = d.parse(Day+"-"+Integer.parseInt(currentMonthNumber)+"-"+Year);
+//		System.out.println(date2);
+		LocalDate date3 = LocalDate.of(Integer.parseInt(Year), Integer.parseInt(currentMonthNumber), Integer.parseInt(Day));
+		LocalDate today = LocalDate.now();
+		
+		QaExtentReport.test.log(Status.INFO, "<b><i>Select Date  </i></b>"+Day+"-"+Month+"-"+Year);
+		
+		Assert.assertFalse(Integer.parseInt(Day)>31, "Invalid date provided "+Day+"-"+Month+"-"+Year);
+		Assert.assertFalse(Month.equals("Feb") && Integer.parseInt(Day)>28, "Invalid date provided "+Day+"-"+Month+"-"+Year);
+		Assert.assertTrue(date2.before(date1), "Invalid date provided "+Day+"-"+Month+"-"+Year);
+		Assert.assertTrue(date3.isBefore(today.minusYears(1)), "Invalid date provided "+Day+"-"+Month+"-"+Year);
+		
+		WebElement SelectMonth=QaBrowser.driver.findElement(By.xpath("(//select[@class='datepick-month-year'])[1]"));
+		Select M=new Select(SelectMonth);
+		M.selectByVisibleText(Month);
+		
+		WebElement SelectYear=QaBrowser.driver.findElement(By.xpath("(//select[@class='datepick-month-year'])[2]"));
+		Select Y=new Select(SelectYear);
+		Y.selectByVisibleText(Year);
+		
+		List<WebElement> allDates = QaBrowser.driver.findElements(By.xpath("/html/body/div[3]/div/div[2]/div[1]/table/tbody/tr/td"));
+		
+		for(WebElement ele : allDates)
+		{
+			String dt = ele.getText();
+			
+			if(dt.equalsIgnoreCase(Day))
+			{
+				ele.click();
+				break;
+			}
+		}
 	  }
 	
 	public static void selectDateInCalendarFlight_Hotel(String Day,String Month,String Year,String Day1,String Month1,String Year1) throws Exception

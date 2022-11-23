@@ -17,25 +17,37 @@ public class DnataPaymentPage
 		Thread.sleep(5000);
 		
 		QaRobot.ClickOnElement("OKF");
-		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on OK Button</i></b>");
+//		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on OK Button</i></b>");
 		
 		QaRobot.PassValue("ReceiptNoF","9863647");
-		QaExtentReport.test.log(Status.INFO, "<b><i>Pass Receipt No</i></b>");
+//		QaExtentReport.test.log(Status.INFO, "<b><i>Pass Receipt No</i></b>");
 		
 		QaRobot.ClickOnElement("ProceedF");
-		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Proceed Button</i></b>");
+//		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Proceed Button</i></b>");
 	}
 	
 	public static void individualForHotel() throws Exception
 	{
 		QaRobot.ClickOnElement("OKF");
-		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on OK Button</i></b>");
+//		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on OK Button</i></b>");
 		
 		QaRobot.PassValue("ReceiptNoF","9863647");
-		QaExtentReport.test.log(Status.INFO, "<b><i>Pass Receipt No</i></b>");
+//		QaExtentReport.test.log(Status.INFO, "<b><i>Pass Receipt No</i></b>");
 		
 		QaRobot.ClickOnElement("ProceedF");
-		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Proceed Button</i></b>");
+//		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Proceed Button</i></b>");
+	}
+	
+	public static void individualForInsurance() throws Exception
+	{
+		QaRobot.ClickOnElement("OKF");
+//		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on OK Button</i></b>");
+		
+		QaRobot.PassValue("ReceiptNoF","9863647");
+//		QaExtentReport.test.log(Status.INFO, "<b><i>Pass Receipt No</i></b>");
+		
+		QaRobot.ClickOnElement("ProceedF");
+//		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Proceed Button</i></b>");
 	}
 	
 	public static void cardPayment(String CardType,String CreditCardNumber,String CardHolderName,String CardExpiryDate,String CVV,String BillingAddress,String BillingState,String CardCity) throws Exception

@@ -27,44 +27,44 @@ public class DnataCheckoutPage
 			JavascriptExecutor mo = (JavascriptExecutor) QaBrowser.driver;
 			mo.executeScript("window.scrollBy(0,300)", "");
 			
-			WebElement MoreDetails = QaBrowser.driver.findElement(By.xpath("//div[@id='ctl00_contentMain_incartDiv']/div[7]/div[3]/div[10]/ul/li[1]/a"));
-			JavascriptExecutor js3 = (JavascriptExecutor) QaBrowser.driver;
-			js3.executeScript("arguments[0].click()", MoreDetails);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Click on More Details</i></b>");
-			Thread.sleep(5000);
-			QaExtentReport.extentScreenshot("MoreDetails");
-			
-			WebElement MoreDetailsClose = QaBrowser.driver.findElement(By.xpath("//body[@id='ctl00_btnMstr']/div/div/div/a"));
-			JavascriptExecutor js4 = (JavascriptExecutor) QaBrowser.driver;
-			js4.executeScript("arguments[0].click()", MoreDetailsClose);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Click on More Details Close</i></b>");
-			Thread.sleep(5000);
-			
-			WebElement FareBreakup = QaBrowser.driver.findElement(By.xpath("//div[@id='ctl00_contentMain_incartDiv']/div[7]/div[3]/div[10]/ul/li[2]/a"));
-			JavascriptExecutor js2 = (JavascriptExecutor) QaBrowser.driver;
-			js2.executeScript("arguments[0].click()", FareBreakup);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Fare Breakup</i></b>");
-			Thread.sleep(2000);
-			
-			WebElement CustomerCost = QaBrowser.driver.findElement(By.xpath("//ul[@id='DivINSfareBreakup']/li[1]/a"));
-			JavascriptExecutor js5 = (JavascriptExecutor) QaBrowser.driver;
-			js5.executeScript("arguments[0].click()", CustomerCost);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Customer Cost</i></b>");
-			Thread.sleep(3000);
-			QaExtentReport.extentScreenshot("CustomerCost");
-			
-			WebElement CompanyCost = QaBrowser.driver.findElement(By.xpath("//ul[@id='DivINSfareBreakup']/li[2]/a"));
-			JavascriptExecutor js6 = (JavascriptExecutor) QaBrowser.driver;
-			js6.executeScript("arguments[0].click()", CompanyCost);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Company Cost</i></b>");
-			Thread.sleep(3000);
-			QaExtentReport.extentScreenshot("CompanyCost");
-			
-			WebElement FareBreakupClose = QaBrowser.driver.findElement(By.xpath("//div[@id='DivfarebrekupIN']/div/div/div[1]/button"));
-			JavascriptExecutor js7 = (JavascriptExecutor) QaBrowser.driver;
-			js7.executeScript("arguments[0].click()", FareBreakupClose);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Fare Breakup Close</i></b>");
-			Thread.sleep(5000);
+//			WebElement MoreDetails = QaBrowser.driver.findElement(By.xpath("//div[@id='ctl00_contentMain_incartDiv']/div[7]/div[3]/div[10]/ul/li[1]/a"));
+//			JavascriptExecutor js3 = (JavascriptExecutor) QaBrowser.driver; 
+//			js3.executeScript("arguments[0].click()", MoreDetails);
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Click on More Details</i></b>");
+//			Thread.sleep(5000);
+//			QaExtentReport.extentScreenshot("MoreDetails");
+//			
+//			WebElement MoreDetailsClose = QaBrowser.driver.findElement(By.xpath("//body[@id='ctl00_btnMstr']/div/div/div/a"));
+//			JavascriptExecutor js4 = (JavascriptExecutor) QaBrowser.driver;
+//			js4.executeScript("arguments[0].click()", MoreDetailsClose);
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Click on More Details Close</i></b>");
+//			Thread.sleep(5000);
+//			
+//			WebElement FareBreakup = QaBrowser.driver.findElement(By.xpath("//div[@id='ctl00_contentMain_incartDiv']/div[7]/div[3]/div[10]/ul/li[2]/a"));
+//			JavascriptExecutor js2 = (JavascriptExecutor) QaBrowser.driver;
+//			js2.executeScript("arguments[0].click()", FareBreakup);
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Fare Breakup</i></b>");
+//			Thread.sleep(2000);
+//			
+//			WebElement CustomerCost = QaBrowser.driver.findElement(By.xpath("//ul[@id='DivINSfareBreakup']/li[1]/a"));
+//			JavascriptExecutor js5 = (JavascriptExecutor) QaBrowser.driver;
+//			js5.executeScript("arguments[0].click()", CustomerCost);
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Customer Cost</i></b>");
+//			Thread.sleep(3000);
+//			QaExtentReport.extentScreenshot("CustomerCost");
+//			
+//			WebElement CompanyCost = QaBrowser.driver.findElement(By.xpath("//ul[@id='DivINSfareBreakup']/li[2]/a"));
+//			JavascriptExecutor js6 = (JavascriptExecutor) QaBrowser.driver;
+//			js6.executeScript("arguments[0].click()", CompanyCost);
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Company Cost</i></b>");
+//			Thread.sleep(3000);
+//			QaExtentReport.extentScreenshot("CompanyCost");
+//			
+//			WebElement FareBreakupClose = QaBrowser.driver.findElement(By.xpath("//div[@id='DivfarebrekupIN']/div/div/div[1]/button"));
+//			JavascriptExecutor js7 = (JavascriptExecutor) QaBrowser.driver;
+//			js7.executeScript("arguments[0].click()", FareBreakupClose);
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Fare Breakup Close</i></b>");
+//			Thread.sleep(5000);
 			
 //			WebElement element = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_CorporateFDReasonDDL']"));
 //			Select s = new Select(element);
@@ -110,20 +110,20 @@ public class DnataCheckoutPage
 			
 			QaRobot.ClickOnElement("TermsAndConditionF");
 			
-			bookForFlight(TripType,adult,child,infant,ModifySearch,ChangeTravellers,adultM,childM,infantM,QuoteTitle,QuoteRemark,Checkoutpagestep);
+			bookForFlight(TravellerType,TripType,adult,child,infant,ModifySearch,ChangeTravellers,adultM,childM,infantM,QuoteTitle,QuoteRemark,Checkoutpagestep);
 		}
 		else if (TravellerType.equalsIgnoreCase("Dependent"))
 		{
-			CheckoutForFlightDependent(TripType,adult,child,infant,ModifySearch,ChangeTravellers,adultM,childM,infantM,Resultpagestep,QuoteTitle,QuoteRemark,Checkoutpagestep);
+			CheckoutForFlightDependent(TravellerType,TripType,adult,child,infant,ModifySearch,ChangeTravellers,adultM,childM,infantM,Resultpagestep,QuoteTitle,QuoteRemark,Checkoutpagestep);
 		}
 	}
 	
-	public static void CheckoutForFlightDependent(String TripType,String adult, String child, String infant,String ModifySearch,String ChangeTravellers,String adultM,String childM,String infantM,String Resultpagestep,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception 
+	public static void CheckoutForFlightDependent(String TravellerType,String TripType,String adult, String child, String infant,String ModifySearch,String ChangeTravellers,String adultM,String childM,String infantM,String Resultpagestep,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception 
 	{
 		String ParentWindow = QaBrowser.driver.getWindowHandle();
 		
 		QaRobot.ClickOnElement("dept_AssociatePax");
-		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Associate pax</i></b>");
+//		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Associate pax</i></b>");
 		Thread.sleep(3000);
 		QaExtentReport.extentScreenshot("Associate Pax");
 		Set<String> handles = QaBrowser.driver.getWindowHandles();
@@ -163,7 +163,7 @@ public class DnataCheckoutPage
 			selectDependentPax(adtsum1, chdsum1, infant);
 			
 			QaRobot.ClickOnElement("dept_AddToList");
-			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on add to list button</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on add to list button</i></b>");
 
 			selectDependentPriority(adtsum1, chdsum1, infant);
 		}
@@ -188,13 +188,13 @@ public class DnataCheckoutPage
 			selectDependentPax(adtsum, chdsum, infant);
 			
 			QaRobot.ClickOnElement("dept_AddToList");
-			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on add to list button</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on add to list button</i></b>");
 
 			selectDependentPriority(adtsum, chdsum, infant);
 		}
 		
 		QaRobot.ClickOnElement("dept_AssociateButton");
-		QaExtentReport.test.log(Status.INFO, "<b><i>clicked on Associate button</i></b>");
+//		QaExtentReport.test.log(Status.INFO, "<b><i>clicked on Associate button</i></b>");
 		Thread.sleep(3000);
 		
 		QaBrowser.driver.switchTo().window(ParentWindow);
@@ -215,58 +215,58 @@ public class DnataCheckoutPage
 		WebElement MoreDetails = QaBrowser.driver.findElement(By.xpath("//div[@id='ctl00_contentMain_incartDiv']/div[7]/div[3]/div[10]/ul/li[1]/a"));
 		JavascriptExecutor js3 = (JavascriptExecutor) QaBrowser.driver;
 		js3.executeScript("arguments[0].click()", MoreDetails);
-		QaExtentReport.test.log(Status.INFO, "<b><i>Click on More Details</i></b>");
+//		QaExtentReport.test.log(Status.INFO, "<b><i>Click on More Details</i></b>");
 		Thread.sleep(5000);
 		QaExtentReport.extentScreenshot("MoreDetails");
 		
 		WebElement MoreDetailsClose = QaBrowser.driver.findElement(By.xpath("//body[@id='ctl00_btnMstr']/div/div/div/a"));
 		JavascriptExecutor js4 = (JavascriptExecutor) QaBrowser.driver;
 		js4.executeScript("arguments[0].click()", MoreDetailsClose);
-		QaExtentReport.test.log(Status.INFO, "<b><i>Click on More Details Close</i></b>");
+//		QaExtentReport.test.log(Status.INFO, "<b><i>Click on More Details Close</i></b>");
 		Thread.sleep(5000);
 		
 		WebElement FareBreakup = QaBrowser.driver.findElement(By.xpath("//div[@id='ctl00_contentMain_incartDiv']/div[7]/div[3]/div[10]/ul/li[2]/a"));
 		JavascriptExecutor js2 = (JavascriptExecutor) QaBrowser.driver;
 		js2.executeScript("arguments[0].click()", FareBreakup);
-		QaExtentReport.test.log(Status.INFO, "<b><i>Click on Fare Breakup</i></b>");
+//		QaExtentReport.test.log(Status.INFO, "<b><i>Click on Fare Breakup</i></b>");
 		Thread.sleep(2000);
 		
 		WebElement CustomerCost = QaBrowser.driver.findElement(By.xpath("//ul[@id='DivINSfareBreakup']/li[1]/a"));
 		JavascriptExecutor js5 = (JavascriptExecutor) QaBrowser.driver;
 		js5.executeScript("arguments[0].click()", CustomerCost);
-		QaExtentReport.test.log(Status.INFO, "<b><i>Click on Customer Cost</i></b>");
+//		QaExtentReport.test.log(Status.INFO, "<b><i>Click on Customer Cost</i></b>");
 		Thread.sleep(3000);
 		QaExtentReport.extentScreenshot("CustomerCost");
 		
 		WebElement CompanyCost = QaBrowser.driver.findElement(By.xpath("//ul[@id='DivINSfareBreakup']/li[2]/a"));
 		JavascriptExecutor js6 = (JavascriptExecutor) QaBrowser.driver;
 		js6.executeScript("arguments[0].click()", CompanyCost);
-		QaExtentReport.test.log(Status.INFO, "<b><i>Click on Company Cost</i></b>");
+//		QaExtentReport.test.log(Status.INFO, "<b><i>Click on Company Cost</i></b>");
 		Thread.sleep(3000);
 		QaExtentReport.extentScreenshot("CompanyCost");
 		
 		WebElement FareBreakupClose = QaBrowser.driver.findElement(By.xpath("//div[@id='DivfarebrekupIN']/div/div/div[1]/button"));
 		JavascriptExecutor js7 = (JavascriptExecutor) QaBrowser.driver;
 		js7.executeScript("arguments[0].click()", FareBreakupClose);
-		QaExtentReport.test.log(Status.INFO, "<b><i>Click on Fare Breakup Close</i></b>");
+//		QaExtentReport.test.log(Status.INFO, "<b><i>Click on Fare Breakup Close</i></b>");
 		Thread.sleep(5000);
 		
-		bookForFlightDependent(TripType,adult,child,infant,ModifySearch,ChangeTravellers,adultM,childM,infantM,QuoteTitle,QuoteRemark,Checkoutpagestep);
+		bookForFlightDependent(TravellerType,TripType,adult,child,infant,ModifySearch,ChangeTravellers,adultM,childM,infantM,QuoteTitle,QuoteRemark,Checkoutpagestep);
 	}
 	
-	public static void CheckoutForHotelDependent(String adult, String child,String Resultpagestep,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception 
+	public static void CheckoutForHotelDependent(String Adult,String Child,String ModifySearch,String ChangeRooms,String AdultM,String ChildM,String Resultpagestep,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception 
 	{
 		String ParentWindow = QaBrowser.driver.getWindowHandle();
 		
-//		if(QaBrowser.driver.findElement(By.xpath("//div/span/span[contains(text(),'The hotel you have selected is no more available now!!  Kindly try another hotel room.')]")).isDisplayed())
-//		{
-//			QaExtentReport.test.log(Status.FAIL, "<b><i>The hotel you have selected is no more available now!!  Kindly try another hotel room.</i></b>");
-//			throw new Exception("The hotel you have selected is no more available now!!  Kindly try another hotel room.");
-//		}
-//		else
-//		{
+		if(QaBrowser.driver.findElement(By.xpath("//div/span/span[contains(text(),'The hotel you have selected is no more available now!!  Kindly try another hotel room.')]")).isDisplayed())
+		{
+			QaExtentReport.test.log(Status.FAIL, "<b><i>The hotel you have selected is no more available now!!  Kindly try another hotel room.</i></b>");
+			throw new Exception("The hotel you have selected is no more available now!!  Kindly try another hotel room.");
+		}
+		else
+		{
 			QaRobot.ClickOnElement("dept_AssociatePax");
-			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Associate pax</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Associate pax</i></b>");
 			Thread.sleep(3000);
 			QaExtentReport.extentScreenshot("Associate Pax");
 			Set<String> handles = QaBrowser.driver.getWindowHandles();
@@ -285,7 +285,7 @@ public class DnataCheckoutPage
 			Select select1 = new Select(DocumentNo);                                  
 			select1.selectByIndex(1);
 			
-			String[] adtcount = adult.split(",");
+			String[] adtcount = Adult.split(",");
 			int adultsum = 0;
 			for (String adt : adtcount) {
 				int a = Integer.parseInt(adt);
@@ -293,7 +293,7 @@ public class DnataCheckoutPage
 			}
 			String adtsum = String.valueOf(adultsum);
 			// total of child
-			String[] chdcount = child.split(",");
+			String[] chdcount = Child.split(",");
 			int childsum = 0;
 			for (String chd : chdcount) {
 				int a = Integer.parseInt(chd);
@@ -304,12 +304,12 @@ public class DnataCheckoutPage
 			selectDependentPaxHotel(adtsum, chdsum);
 			
 			QaRobot.ClickOnElement("dept_AddToList");
-			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on add to list button</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on add to list button</i></b>");
 
 			selectDependentPriorityHotel(adtsum,chdsum);
 			
 			QaRobot.ClickOnElement("dept_AssociateButton");
-			QaExtentReport.test.log(Status.INFO, "<b><i>clicked on Associate button</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>clicked on Associate button</i></b>");
 			Thread.sleep(3000);
 			
 			QaBrowser.driver.switchTo().window(ParentWindow);
@@ -331,31 +331,30 @@ public class DnataCheckoutPage
 			WebElement FareBreakup = QaBrowser.driver.findElement(By.xpath("//div[@id='ctl00_contentMain_incartDiv']/div[7]/div[4]/ul/li/a"));
 			JavascriptExecutor js2 = (JavascriptExecutor) QaBrowser.driver;
 			js2.executeScript("arguments[0].click()", FareBreakup);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Fare Breakup</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Fare Breakup</i></b>");
 			Thread.sleep(3000);
 			
 			WebElement CustomerCost = QaBrowser.driver.findElement(By.xpath("//li[@id='liCustomer']/a"));
 			JavascriptExecutor js5 = (JavascriptExecutor) QaBrowser.driver;
 			js5.executeScript("arguments[0].click()", CustomerCost);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Customer Cost</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Customer Cost</i></b>");
 			QaExtentReport.extentScreenshot("CustomerCost");
 			
 			WebElement CompanyCost = QaBrowser.driver.findElement(By.xpath("//li[@id='liCompany']/a"));
 			JavascriptExecutor js6 = (JavascriptExecutor) QaBrowser.driver;
 			js6.executeScript("arguments[0].click()", CompanyCost);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Company Cost</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Company Cost</i></b>");
 			Thread.sleep(3000);
 			QaExtentReport.extentScreenshot("CompanyCost");
 			
 			WebElement FareBreakupClose = QaBrowser.driver.findElement(By.xpath("//body[@id='ctl00_btnMstr']/div/div/div/a"));
 			JavascriptExecutor js7 = (JavascriptExecutor) QaBrowser.driver;
 			js7.executeScript("arguments[0].click()", FareBreakupClose);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Fare Breakup Close</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Fare Breakup Close</i></b>");
 			Thread.sleep(5000);
 			
-			bookForHotelDependent(Resultpagestep,QuoteTitle,QuoteRemark,Checkoutpagestep);
-//		}
-		
+			bookForHotelDependent(Adult,Child,ModifySearch,ChangeRooms,AdultM,ChildM,Resultpagestep,QuoteTitle,QuoteRemark,Checkoutpagestep);
+		}
 	}
 	
 	public static void selectDependentPax(String adult, String child, String infant) 
@@ -478,12 +477,280 @@ public class DnataCheckoutPage
 		}
 	}
 	
-	public static void bookForFlight(String TripType,String adult,String child,String infant,String ModifySearch,String ChangeTravellers,String adultM,String childM,String infantM,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception
+	public static void selectDependentPaxInsurance(String SelectPax,String PaxDOB,String ModifySearch,String PaxDOBM) 
+	{
+		int pax = Integer.parseInt(SelectPax);
+		for(int i = 1; i < pax; i++)
+		{
+			if(ModifySearch.equalsIgnoreCase("Yes"))
+			{
+				String DateSelection1[] = PaxDOBM.split(",");
+				String DateS1[]= DateSelection1[0].split("-");
+				String Date1 = DateS1[0];
+				String Month1 = DateS1[1];
+				String Year1 = DateS1[2];
+				
+				String currentMonthNumber1 = "0";
+				 if (Month1.equalsIgnoreCase("Jan")) {
+					 currentMonthNumber1 = "01";
+		          } else if (Month1.equalsIgnoreCase("Feb")) {
+		        	  currentMonthNumber1 = "02";
+		          } else if (Month1.equalsIgnoreCase("Mar")) {
+		        	  currentMonthNumber1 = "03";
+		          } else if (Month1.equalsIgnoreCase("Apr")) {
+		        	  currentMonthNumber1 = "04";
+		          } else if (Month1.equalsIgnoreCase("May")) {
+		        	  currentMonthNumber1 = "05";
+		          } else if (Month1.equalsIgnoreCase("Jun")) {
+		        	  currentMonthNumber1 = "06";
+		          } else if (Month1.equalsIgnoreCase("Jul")) {
+		        	  currentMonthNumber1 = "07";
+		          } else if (Month1.equalsIgnoreCase("Aug")) {
+		        	  currentMonthNumber1 = "08";
+		          } else if (Month1.equalsIgnoreCase("Sep")) {
+		        	  currentMonthNumber1 = "09";
+		          } else if (Month1.equalsIgnoreCase("Oct")) {
+		        	  currentMonthNumber1 = "10";
+		          } else if (Month1.equalsIgnoreCase("Nov")) {
+		        	  currentMonthNumber1 = "11";
+		          } else if (Month1.equalsIgnoreCase("Dec")) {
+		        	  currentMonthNumber1 = "12";
+		          }
+				 
+				LocalDate date1 = LocalDate.of(Integer.parseInt(Year1), Integer.parseInt(currentMonthNumber1), Integer.parseInt(Date1));
+				LocalDate today1 = LocalDate.now();
+				
+				if(date1.isBefore(today1.minusYears(12)))
+				{
+					QaBrowser.driver.findElement(By.xpath("//input[@id='rptPaxDetails_ctl01_rptDetails_ctl0" + i + "_chk']")).click();
+					WebElement AFFNumber = QaBrowser.driver.findElement(By.xpath("//select[@id='rptPaxDetails_ctl01_rptDetails_ctl0" + i + "_DDLFFNumber']"));
+					Select select = new Select(AFFNumber);                                  
+					select.selectByIndex(1);
+					
+					WebElement ADocumentNo = QaBrowser.driver.findElement(By.xpath("//select[@id='rptPaxDetails_ctl01_rptDetails_ctl0" + i + "_ddlDocNumber']"));
+					Select select1 = new Select(ADocumentNo);                                  
+					select1.selectByIndex(1);
+				}
+				else if(date1.isBefore(today1.minusYears(2))&& date1.isAfter(today1.minusYears(12)))
+				{
+					QaBrowser.driver.findElement(By.xpath("//input[@id='rptPaxDetails_ctl02_rptDetails_ctl0" + i + "_chk']")).click();
+					WebElement CFFNumber = QaBrowser.driver.findElement(By.xpath("//select[@id='rptPaxDetails_ctl02_rptDetails_ctl0" + i + "_DDLFFNumber']"));
+					Select select = new Select(CFFNumber);                                  
+					select.selectByIndex(1);
+					
+					WebElement CDocumentNo = QaBrowser.driver.findElement(By.xpath("//select[@id='rptPaxDetails_ctl02_rptDetails_ctl0" + i + "_ddlDocNumber']"));
+					Select select1 = new Select(CDocumentNo);                                  
+					select1.selectByIndex(1);
+				}
+				else if(date1.isAfter(today1.minusYears(2)))
+				{
+					QaBrowser.driver.findElement(By.xpath("//input[@id='rptPaxDetails_ctl03_rptDetails_ctl0" + i + "_chk']")).click();
+					
+					WebElement CDocumentNo = QaBrowser.driver.findElement(By.xpath("//select[@id='rptPaxDetails_ctl03_rptDetails_ctl0" + i + "_ddlDocNumber']"));
+					Select select1 = new Select(CDocumentNo);                                  
+					select1.selectByIndex(1);
+				}
+			}
+			else if(ModifySearch.equalsIgnoreCase("No"))
+			{
+				String DateSelection[] = PaxDOB.split(",");
+				String DateS[]= DateSelection[0].split("-");
+				String Date = DateS[0];
+				String Month = DateS[1];
+				String Year = DateS[2];
+				
+				String currentMonthNumber = "0";
+				 if (Month.equalsIgnoreCase("Jan")) {
+					 currentMonthNumber = "01";
+		          } else if (Month.equalsIgnoreCase("Feb")) {
+		        	  currentMonthNumber = "02";
+		          } else if (Month.equalsIgnoreCase("Mar")) {
+		        	  currentMonthNumber = "03";
+		          } else if (Month.equalsIgnoreCase("Apr")) {
+		        	  currentMonthNumber = "04";
+		          } else if (Month.equalsIgnoreCase("May")) {
+		        	  currentMonthNumber = "05";
+		          } else if (Month.equalsIgnoreCase("Jun")) {
+		        	  currentMonthNumber = "06";
+		          } else if (Month.equalsIgnoreCase("Jul")) {
+		        	  currentMonthNumber = "07";
+		          } else if (Month.equalsIgnoreCase("Aug")) {
+		        	  currentMonthNumber = "08";
+		          } else if (Month.equalsIgnoreCase("Sep")) {
+		        	  currentMonthNumber = "09";
+		          } else if (Month.equalsIgnoreCase("Oct")) {
+		        	  currentMonthNumber = "10";
+		          } else if (Month.equalsIgnoreCase("Nov")) {
+		        	  currentMonthNumber = "11";
+		          } else if (Month.equalsIgnoreCase("Dec")) {
+		        	  currentMonthNumber = "12";
+		          }
+				 
+				LocalDate date = LocalDate.of(Integer.parseInt(Year), Integer.parseInt(currentMonthNumber), Integer.parseInt(Date));
+				LocalDate today = LocalDate.now();
+				
+				if(date.isBefore(today.minusYears(12)))
+				{
+					QaBrowser.driver.findElement(By.xpath("//input[@id='rptPaxDetails_ctl01_rptDetails_ctl0" + i + "_chk']")).click();
+					WebElement AFFNumber = QaBrowser.driver.findElement(By.xpath("//select[@id='rptPaxDetails_ctl01_rptDetails_ctl0" + i + "_DDLFFNumber']"));
+					Select select = new Select(AFFNumber);                                  
+					select.selectByIndex(1);
+					
+					WebElement ADocumentNo = QaBrowser.driver.findElement(By.xpath("//select[@id='rptPaxDetails_ctl01_rptDetails_ctl0" + i + "_ddlDocNumber']"));
+					Select select1 = new Select(ADocumentNo);                                  
+					select1.selectByIndex(1);
+				}
+				else if(date.isBefore(today.minusYears(2))&& date.isAfter(today.minusYears(12)))
+				{
+					QaBrowser.driver.findElement(By.xpath("//input[@id='rptPaxDetails_ctl02_rptDetails_ctl0" + i + "_chk']")).click();
+					WebElement CFFNumber = QaBrowser.driver.findElement(By.xpath("//select[@id='rptPaxDetails_ctl02_rptDetails_ctl0" + i + "_DDLFFNumber']"));
+					Select select = new Select(CFFNumber);                                  
+					select.selectByIndex(1);
+					
+					WebElement CDocumentNo = QaBrowser.driver.findElement(By.xpath("//select[@id='rptPaxDetails_ctl02_rptDetails_ctl0" + i + "_ddlDocNumber']"));
+					Select select1 = new Select(CDocumentNo);                                  
+					select1.selectByIndex(1);
+				}
+				else if(date.isAfter(today.minusYears(2)))
+				{
+					QaBrowser.driver.findElement(By.xpath("//input[@id='rptPaxDetails_ctl03_rptDetails_ctl0" + i + "_chk']")).click();
+					
+					WebElement CDocumentNo = QaBrowser.driver.findElement(By.xpath("//select[@id='rptPaxDetails_ctl03_rptDetails_ctl0" + i + "_ddlDocNumber']"));
+					Select select1 = new Select(CDocumentNo);                                  
+					select1.selectByIndex(1);
+				}
+			}
+		}
+	}
+	
+	public static void selectDependentPriorityInsurance(String SelectPax,String PaxDOB,String ModifySearch,String PaxDOBM) 
+	{
+		int pax = Integer.parseInt(SelectPax);
+		for(int i = 1; i < pax; i++)
+		{
+			if(ModifySearch.equalsIgnoreCase("Yes"))
+			{
+				String DateSelection1[] = PaxDOBM.split(",");
+				String DateS1[]= DateSelection1[0].split("-");
+				String Date1 = DateS1[0];
+				String Month1 = DateS1[1];
+				String Year1 = DateS1[2];
+				
+				String currentMonthNumber1 = "0";
+				 if (Month1.equalsIgnoreCase("Jan")) {
+					 currentMonthNumber1 = "01";
+		          } else if (Month1.equalsIgnoreCase("Feb")) {
+		        	  currentMonthNumber1 = "02";
+		          } else if (Month1.equalsIgnoreCase("Mar")) {
+		        	  currentMonthNumber1 = "03";
+		          } else if (Month1.equalsIgnoreCase("Apr")) {
+		        	  currentMonthNumber1 = "04";
+		          } else if (Month1.equalsIgnoreCase("May")) {
+		        	  currentMonthNumber1 = "05";
+		          } else if (Month1.equalsIgnoreCase("Jun")) {
+		        	  currentMonthNumber1 = "06";
+		          } else if (Month1.equalsIgnoreCase("Jul")) {
+		        	  currentMonthNumber1 = "07";
+		          } else if (Month1.equalsIgnoreCase("Aug")) {
+		        	  currentMonthNumber1 = "08";
+		          } else if (Month1.equalsIgnoreCase("Sep")) {
+		        	  currentMonthNumber1 = "09";
+		          } else if (Month1.equalsIgnoreCase("Oct")) {
+		        	  currentMonthNumber1 = "10";
+		          } else if (Month1.equalsIgnoreCase("Nov")) {
+		        	  currentMonthNumber1 = "11";
+		          } else if (Month1.equalsIgnoreCase("Dec")) {
+		        	  currentMonthNumber1 = "12";
+		          }
+				 
+				LocalDate date1 = LocalDate.of(Integer.parseInt(Year1), Integer.parseInt(currentMonthNumber1), Integer.parseInt(Date1));
+				LocalDate today1 = LocalDate.now();
+				
+				if(date1.isBefore(today1.minusYears(12)))
+				{
+					WebElement webelement = QaBrowser.driver.findElement(By.xpath("//select[@id='rptSelectionList_ctl01_rptSelection_ctl0" + i + "_ddlPriority']"));
+					Select select = new Select(webelement);                                     
+					select.selectByIndex(i);
+				}
+				else if(date1.isBefore(today1.minusYears(2))&& date1.isAfter(today1.minusYears(12)))
+				{
+					WebElement webelement = QaBrowser.driver.findElement(By.xpath("//select[@id='rptSelectionList_ctl02_rptSelection_ctl0" + i + "_ddlPriority']"));
+					Select select = new Select(webelement);
+					select.selectByIndex(i);
+				}
+				else if(date1.isAfter(today1.minusYears(2)))
+				{
+					WebElement webelement = QaBrowser.driver.findElement(By.xpath("//select[@id='rptSelectionList_ctl03_rptSelection_ctl0" + i + "_ddlPriority']"));
+					Select select = new Select(webelement);
+					select.selectByIndex(i);
+				}
+			}
+			else if(ModifySearch.equalsIgnoreCase("No"))
+			{
+				String DateSelection[] = PaxDOB.split(",");
+				String DateS[]= DateSelection[0].split("-");
+				String Date = DateS[0];
+				String Month = DateS[1];
+				String Year = DateS[2];
+				
+				String currentMonthNumber = "0";
+				 if (Month.equalsIgnoreCase("Jan")) {
+					 currentMonthNumber = "01";
+		          } else if (Month.equalsIgnoreCase("Feb")) {
+		        	  currentMonthNumber = "02";
+		          } else if (Month.equalsIgnoreCase("Mar")) {
+		        	  currentMonthNumber = "03";
+		          } else if (Month.equalsIgnoreCase("Apr")) {
+		        	  currentMonthNumber = "04";
+		          } else if (Month.equalsIgnoreCase("May")) {
+		        	  currentMonthNumber = "05";
+		          } else if (Month.equalsIgnoreCase("Jun")) {
+		        	  currentMonthNumber = "06";
+		          } else if (Month.equalsIgnoreCase("Jul")) {
+		        	  currentMonthNumber = "07";
+		          } else if (Month.equalsIgnoreCase("Aug")) {
+		        	  currentMonthNumber = "08";
+		          } else if (Month.equalsIgnoreCase("Sep")) {
+		        	  currentMonthNumber = "09";
+		          } else if (Month.equalsIgnoreCase("Oct")) {
+		        	  currentMonthNumber = "10";
+		          } else if (Month.equalsIgnoreCase("Nov")) {
+		        	  currentMonthNumber = "11";
+		          } else if (Month.equalsIgnoreCase("Dec")) {
+		        	  currentMonthNumber = "12";
+		          }
+				 
+				LocalDate date = LocalDate.of(Integer.parseInt(Year), Integer.parseInt(currentMonthNumber), Integer.parseInt(Date));
+				LocalDate today = LocalDate.now();
+				
+				if(date.isBefore(today.minusYears(12)))
+				{
+					WebElement webelement = QaBrowser.driver.findElement(By.xpath("//select[@id='rptSelectionList_ctl01_rptSelection_ctl0" + i + "_ddlPriority']"));
+					Select select = new Select(webelement);                                     
+					select.selectByIndex(i);
+				}
+				else if(date.isBefore(today.minusYears(2))&& date.isAfter(today.minusYears(12)))
+				{
+					WebElement webelement = QaBrowser.driver.findElement(By.xpath("//select[@id='rptSelectionList_ctl02_rptSelection_ctl0" + i + "_ddlPriority']"));
+					Select select = new Select(webelement);
+					select.selectByIndex(i);
+				}
+				else if(date.isAfter(today.minusYears(2)))
+				{
+					WebElement webelement = QaBrowser.driver.findElement(By.xpath("//select[@id='rptSelectionList_ctl03_rptSelection_ctl0" + i + "_ddlPriority']"));
+					Select select = new Select(webelement);
+					select.selectByIndex(i);
+				}
+			}
+		}
+	}
+	
+	public static void bookForFlight(String TravellerType,String TripType,String adult,String child,String infant,String ModifySearch,String ChangeTravellers,String adultM,String childM,String infantM,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception
 	{
 		if(Checkoutpagestep.equalsIgnoreCase("Quote"))
 		{
 			QaRobot.ClickOnElement("QuoteF");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Quote Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Quote Button</i></b>");
 			Thread.sleep(4000);
 			
 			String ParentWindow6 = QaBrowser.driver.getWindowHandle();
@@ -497,7 +764,7 @@ public class DnataCheckoutPage
 			QaRobot.switchframe("//iframe[@id='iframeQuoteAIR']");
 			
 			QaRobot.PassValue("QuotationTitle",QuoteTitle);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Pass Quotation Title</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Pass Quotation Title</i></b>");
 			QaExtentReport.extentScreenshot("Quotation");
 			
 			QaRobot.PassValue("RemarkTitle",QuoteRemark);
@@ -506,7 +773,7 @@ public class DnataCheckoutPage
 			WebElement SendQuote = QaBrowser.driver.findElement(By.xpath("//a[@id='lnksendAIREnqFromCorp']"));
 			JavascriptExecutor js1 = (JavascriptExecutor) QaBrowser.driver;
 			js1.executeScript("arguments[0].click()", SendQuote);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Send Quote</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Send Quote</i></b>");
 			Thread.sleep(7000);
 			
 			String alertMessage = QaBrowser.driver.switchTo().alert().getText();
@@ -523,10 +790,10 @@ public class DnataCheckoutPage
 			QaRobot.switchframe("//frame[@name='leftbar']");
 			
 			QaRobot.ClickOnElement("Bookings");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Bookings</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Bookings</i></b>");
 			
 			QaRobot.ClickOnElement("BookingQueues");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Booking Queues</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Booking Queues</i></b>");
 			
 			QaBrowser.driver.switchTo().parentFrame();
 			
@@ -544,15 +811,15 @@ public class DnataCheckoutPage
 			Thread.sleep(3000);
 			
 			QaRobot.PassValue("EnterEnquiryId",number);
-			QaExtentReport.test.log(Status.INFO,"<b><i>Enter Enquiry Id</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Enter Enquiry Id</i></b>");
 			
 			QaRobot.ClickOnElement("SearchEnquiryId");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Search Enquiry Id </i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Search Enquiry Id </i></b>");
 			Thread.sleep(3000);
 			QaExtentReport.extentScreenshot("Search Enquiry Id");
 			
 			QaRobot.ClickOnElement("EnquiryView");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Enquiry View Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Enquiry View Button</i></b>");
 			Thread.sleep(5000);
 			
 			String ParentWindow7 = QaBrowser.driver.getWindowHandle();
@@ -575,7 +842,7 @@ public class DnataCheckoutPage
 			QaRobot.switchframe("//frame[@id='frm2']");
 			
 			QaRobot.ClickOnElement("ApproveButton");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Approve Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Approve Button</i></b>");
 			Thread.sleep(15000);
 			
 			String ParentWindow8 = QaBrowser.driver.getWindowHandle();
@@ -588,7 +855,7 @@ public class DnataCheckoutPage
 			Thread.sleep(3000);
 			
 			QaRobot.ClickOnElement("SelectItinerary");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Select Itinerary</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Select Itinerary</i></b>");
 			
 			QaExtentReport.extentScreenshot("Itinerary View");
 			
@@ -596,13 +863,13 @@ public class DnataCheckoutPage
 			mo1.executeScript("window.scrollBy(0,500)", "");
 			
 			QaRobot.ClickOnElement("FinalApproveButton");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Approve Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Approve Button</i></b>");
 			
 			QaRobot.PassValue("TextArea","Ok");
 			QaExtentReport.test.log(Status.INFO,"<b><i>Click on Text Area</i></b>");
 			
 			QaRobot.ClickOnElement("OKButton");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on OK Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on OK Button</i></b>");
 			Thread.sleep(13000);
 			QaBrowser.driver.switchTo().window(ParentWindow8);
 			QaRobot.switchframe("//frame[@name='login']");
@@ -610,7 +877,7 @@ public class DnataCheckoutPage
 			QaRobot.switchframe("//frame[@id='frm2']");
 			
 			QaRobot.ClickOnElement("FinalBookButton");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Book Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Book Button</i></b>");
 			Thread.sleep(13000);
 			
 //			if(ModifySearch.equalsIgnoreCase("No"))
@@ -641,7 +908,7 @@ public class DnataCheckoutPage
 						mo2.executeScript("window.scrollBy(0,-300)", "");
 						
 						QaRobot.ClickOnElement("BookNowF");
-						QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Book Now</i></b>");
+//						QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Book Now</i></b>");
 						Thread.sleep(8000);
 					}
 					}
@@ -724,43 +991,43 @@ public class DnataCheckoutPage
 			QaRobot.ClickOnElement("TermsAndConditionF");
 			
 			QaRobot.ClickOnElement("FulfilmentF");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on FulfilmentF Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on FulfilmentF Button</i></b>");
 			Thread.sleep(3000);
 			
 			DnataPaymentPage.individualForFlight();
 			
-			DnataConfirmPage.confirmpageFlight(adult,child,infant,ChangeTravellers,adultM,childM,infantM);
+			DnataConfirmPage.confirmpageFlight(TravellerType,adult,child,infant,ModifySearch,ChangeTravellers,adultM,childM,infantM);
 		}
 		else if (Checkoutpagestep.equalsIgnoreCase("BookAndQuote"))
 		{
 			QaRobot.PassValue("DestinationPhoeF","9863647257");
 			
 			QaRobot.ClickOnElement("BookAndQuoteF");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on BookAndQuote Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on BookAndQuote Button</i></b>");
 			Thread.sleep(8000);
 			
-			DnataConfirmPage.confirmpageFlight(adult,child,infant,ChangeTravellers,adultM,childM,infantM);
+			DnataConfirmPage.confirmpageFlight(TravellerType,adult,child,infant,ModifySearch,ChangeTravellers,adultM,childM,infantM);
 		}
 		else if (Checkoutpagestep.equalsIgnoreCase("Fulfilment"))
 		{
 			QaRobot.PassValue("DestinationPhoeF","9863647257");
 			
 			QaRobot.ClickOnElement("FulfilmentF");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on FulfilmentF Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on FulfilmentF Button</i></b>");
 			Thread.sleep(3000);
 			
 			DnataPaymentPage.individualForFlight();
 			
-			DnataConfirmPage.confirmpageFlight(adult,child,infant,ChangeTravellers,adultM,childM,infantM);
+			DnataConfirmPage.confirmpageFlight(TravellerType,adult,child,infant,ModifySearch,ChangeTravellers,adultM,childM,infantM);
 		}
 	}
 	
-	public static void bookForFlightDependent(String TripType,String adult,String child,String infant,String ModifySearch,String ChangeTravellers,String adultM,String childM,String infantM,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception
+	public static void bookForFlightDependent(String TravellerType,String TripType,String adult,String child,String infant,String ModifySearch,String ChangeTravellers,String adultM,String childM,String infantM,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception
 	{
 		if(Checkoutpagestep.equalsIgnoreCase("Quote"))
 		{
 			QaRobot.ClickOnElement("QuoteF");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Quote Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Quote Button</i></b>");
 			Thread.sleep(4000);
 			
 			String ParentWindow6 = QaBrowser.driver.getWindowHandle();
@@ -774,7 +1041,7 @@ public class DnataCheckoutPage
 			QaRobot.switchframe("//iframe[@id='iframeQuoteAIR']");
 			
 			QaRobot.PassValue("QuotationTitle",QuoteTitle);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Pass Quotation Title</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Pass Quotation Title</i></b>");
 			QaExtentReport.extentScreenshot("Quotation");
 			
 			QaRobot.PassValue("RemarkTitle",QuoteRemark);
@@ -783,7 +1050,7 @@ public class DnataCheckoutPage
 			WebElement SendQuote = QaBrowser.driver.findElement(By.xpath("//a[@id='lnksendAIREnqFromCorp']"));
 			JavascriptExecutor js1 = (JavascriptExecutor) QaBrowser.driver;
 			js1.executeScript("arguments[0].click()", SendQuote);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Send Quote</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Send Quote</i></b>");
 			Thread.sleep(7000);
 			
 			String alertMessage = QaBrowser.driver.switchTo().alert().getText();
@@ -800,10 +1067,10 @@ public class DnataCheckoutPage
 			QaRobot.switchframe("//frame[@name='leftbar']");
 			
 			QaRobot.ClickOnElement("Bookings");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Bookings</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Bookings</i></b>");
 			
 			QaRobot.ClickOnElement("BookingQueues");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Booking Queues</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Booking Queues</i></b>");
 			
 			QaBrowser.driver.switchTo().parentFrame();
 			
@@ -821,15 +1088,15 @@ public class DnataCheckoutPage
 			Thread.sleep(3000);
 			
 			QaRobot.PassValue("EnterEnquiryId",number);
-			QaExtentReport.test.log(Status.INFO,"<b><i>Enter Enquiry Id</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Enter Enquiry Id</i></b>");
 			
 			QaRobot.ClickOnElement("SearchEnquiryId");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Search Enquiry Id </i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Search Enquiry Id </i></b>");
 			Thread.sleep(3000);
 			QaExtentReport.extentScreenshot("Search Enquiry Id");
 			
 			QaRobot.ClickOnElement("EnquiryView");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Enquiry View Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Enquiry View Button</i></b>");
 			Thread.sleep(5000);
 			
 			String ParentWindow7 = QaBrowser.driver.getWindowHandle();
@@ -851,7 +1118,7 @@ public class DnataCheckoutPage
 			QaRobot.switchframe("//frame[@id='frm2']");
 			
 			QaRobot.ClickOnElement("ApproveButton");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Approve Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Approve Button</i></b>");
 			Thread.sleep(15000);
 			
 			String ParentWindow8 = QaBrowser.driver.getWindowHandle();
@@ -863,7 +1130,7 @@ public class DnataCheckoutPage
 			}
 			Thread.sleep(2000);
 			QaRobot.ClickOnElement("SelectItinerary");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Select Itinerary</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Select Itinerary</i></b>");
 			
 			QaExtentReport.extentScreenshot("Itinerary View");
 			
@@ -871,13 +1138,13 @@ public class DnataCheckoutPage
 			mo1.executeScript("window.scrollBy(0,500)", "");
 			
 			QaRobot.ClickOnElement("FinalApproveButton");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Approve Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Approve Button</i></b>");
 			
 			QaRobot.PassValue("TextArea","Ok");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Click on Text Area</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Click on Text Area</i></b>");
 			
 			QaRobot.ClickOnElement("OKButton");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on OK Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on OK Button</i></b>");
 			Thread.sleep(13000);
 			QaBrowser.driver.switchTo().window(ParentWindow8);
 			QaRobot.switchframe("//frame[@name='login']");
@@ -885,8 +1152,23 @@ public class DnataCheckoutPage
 			QaRobot.switchframe("//frame[@id='frm2']");
 			
 			QaRobot.ClickOnElement("FinalBookButton");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Book Button</i></b>");
-			Thread.sleep(20000);
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Book Button</i></b>");
+			Thread.sleep(5000);
+			
+			String ParentWindow9 = QaBrowser.driver.getWindowHandle();
+			Set<String> handles9 = QaBrowser.driver.getWindowHandles();
+			for (String childWindow9 : handles9) 
+			{
+				if (!childWindow9.equals(ParentWindow9))
+					QaBrowser.driver.switchTo().window(childWindow9);
+			}
+			
+			QaRobot.ClickOnElement("EnquiryProcced");
+			Thread.sleep(30000);
+			QaBrowser.driver.switchTo().window(ParentWindow9);
+			QaRobot.switchframe("//frame[@name='login']");
+			QaRobot.switchframe("//frame[@name='main']");
+			QaRobot.switchframe("//frame[@id='frm2']");
 			
 //			if(ModifySearch.equalsIgnoreCase("No"))
 //			{
@@ -916,7 +1198,7 @@ public class DnataCheckoutPage
 						mo2.executeScript("window.scrollBy(0,-300)", "");
 						
 						QaRobot.ClickOnElement("BookNowF");
-						QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Book Now</i></b>");
+//						QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Book Now</i></b>");
 						Thread.sleep(8000);
 					}
 					}
@@ -1007,12 +1289,12 @@ public class DnataCheckoutPage
 			QaRobot.ClickOnElement("TermsAndConditionF");
 			
 			QaRobot.ClickOnElement("FulfilmentF");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on FulfilmentF Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on FulfilmentF Button</i></b>");
 			Thread.sleep(3000);
 			
 			DnataPaymentPage.individualForFlight();
 			
-			DnataConfirmPage.confirmpageFlight(adult,child,infant,ChangeTravellers,adultM,childM,infantM);
+			DnataConfirmPage.confirmpageFlight(TravellerType,adult,child,infant,ModifySearch,ChangeTravellers,adultM,childM,infantM);
 		}
 		else if (Checkoutpagestep.equalsIgnoreCase("BookAndQuote"))
 		{
@@ -1069,10 +1351,10 @@ public class DnataCheckoutPage
 			
 			QaRobot.ClickOnElement("TermsAndConditionF");
 			QaRobot.ClickOnElement("BookAndQuoteF");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on BookAndQuote Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on BookAndQuote Button</i></b>");
 			Thread.sleep(8000);
 			
-			DnataConfirmPage.confirmpageFlight(adult,child,infant,ChangeTravellers,adultM,childM,infantM);
+			DnataConfirmPage.confirmpageFlight(TravellerType,adult,child,infant,ModifySearch,ChangeTravellers,adultM,childM,infantM);
 		}
 		else if (Checkoutpagestep.equalsIgnoreCase("Fulfilment"))
 		{
@@ -1130,16 +1412,16 @@ public class DnataCheckoutPage
 			
 			QaRobot.ClickOnElement("TermsAndConditionF");
 			QaRobot.ClickOnElement("FulfilmentF");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on FulfilmentF Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on FulfilmentF Button</i></b>");
 			Thread.sleep(3000);
 			
 			DnataPaymentPage.individualForFlight();
 			
-			DnataConfirmPage.confirmpageFlight(adult,child,infant,ChangeTravellers,adultM,childM,infantM);
+			DnataConfirmPage.confirmpageFlight(TravellerType,adult,child,infant,ModifySearch,ChangeTravellers,adultM,childM,infantM);
 		}
 	}
 	
-	public static void individualforHotel(String TravellerType,String Adult,String Child,String Resultpagestep,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception
+	public static void individualforHotel(String TravellerType,String Adult,String Child,String ModifySearch,String ChangeRooms,String AdultM,String ChildM,String Resultpagestep,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception
 	{
 		if(TravellerType.equalsIgnoreCase("Individual"))
 		{
@@ -1151,26 +1433,26 @@ public class DnataCheckoutPage
 			WebElement FareBreakup = QaBrowser.driver.findElement(By.xpath("//div[@id='ctl00_contentMain_incartDiv']/div[7]/div[4]/ul/li/a"));
 			JavascriptExecutor js2 = (JavascriptExecutor) QaBrowser.driver;
 			js2.executeScript("arguments[0].click()", FareBreakup);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Fare Breakup</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Fare Breakup</i></b>");
 			Thread.sleep(3000);
 			
 			WebElement CustomerCost = QaBrowser.driver.findElement(By.xpath("//li[@id='liCustomer']/a"));
 			JavascriptExecutor js5 = (JavascriptExecutor) QaBrowser.driver;
 			js5.executeScript("arguments[0].click()", CustomerCost);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Customer Cost</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Customer Cost</i></b>");
 			QaExtentReport.extentScreenshot("CustomerCost");
 			
 			WebElement CompanyCost = QaBrowser.driver.findElement(By.xpath("//li[@id='liCompany']/a"));
 			JavascriptExecutor js6 = (JavascriptExecutor) QaBrowser.driver;
 			js6.executeScript("arguments[0].click()", CompanyCost);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Company Cost</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Company Cost</i></b>");
 			Thread.sleep(3000);
 			QaExtentReport.extentScreenshot("CompanyCost");
 			
 			WebElement FareBreakupClose = QaBrowser.driver.findElement(By.xpath("//body[@id='ctl00_btnMstr']/div/div/div/a"));
 			JavascriptExecutor js7 = (JavascriptExecutor) QaBrowser.driver;
 			js7.executeScript("arguments[0].click()", FareBreakupClose);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Fare Breakup Close</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Click on Fare Breakup Close</i></b>");
 			Thread.sleep(5000);
 			
 //			WebElement element = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_CorporateFDReasonDDLH']"));
@@ -1217,20 +1499,20 @@ public class DnataCheckoutPage
 			
 			QaRobot.ClickOnElement("TermsAndConditionF");
 			
-			bookForHotel(Resultpagestep,QuoteTitle,QuoteRemark,Checkoutpagestep);
+			bookForHotel(Adult,Child,ModifySearch,ChangeRooms,AdultM,ChildM,Resultpagestep,QuoteTitle,QuoteRemark,Checkoutpagestep);
 		}
 		else if (TravellerType.equalsIgnoreCase("Dependent"))
 		{
-			CheckoutForHotelDependent(Adult,Child,Resultpagestep,QuoteTitle,QuoteRemark,Checkoutpagestep);
+			CheckoutForHotelDependent(Adult,Child,ModifySearch,ChangeRooms,AdultM,ChildM,Resultpagestep,QuoteTitle,QuoteRemark,Checkoutpagestep);
 		}
 	}
 	
-	public static void bookForHotel(String Resultpagestep,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception
+	public static void bookForHotel(String Adult,String Child,String ModifySearch,String ChangeRooms,String AdultM,String ChildM,String Resultpagestep,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception
 	{
 		if(Checkoutpagestep.equalsIgnoreCase("Quote"))
 		{
 			QaRobot.ClickOnElement("QuoteH");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Quote Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Quote Button</i></b>");
 			Thread.sleep(4000);
 			
 			String ParentWindow6 = QaBrowser.driver.getWindowHandle();
@@ -1244,7 +1526,7 @@ public class DnataCheckoutPage
 			QaRobot.switchframe("//iframe[@id='iframeQuoteHHL']");
 			
 			QaRobot.PassValue("QuotationTitle",QuoteTitle);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Pass Quotation Title</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Pass Quotation Title</i></b>");
 			QaExtentReport.extentScreenshot("Quotation");
 			
 			QaRobot.PassValue("RemarkTitle",QuoteRemark);
@@ -1253,7 +1535,7 @@ public class DnataCheckoutPage
 			WebElement SendQuote = QaBrowser.driver.findElement(By.xpath("(//a[@id='lnksendHHLEnqFromCorp'])[1]"));
 			JavascriptExecutor js1 = (JavascriptExecutor) QaBrowser.driver;
 			js1.executeScript("arguments[0].click()", SendQuote);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Send Quote</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Send Quote</i></b>");
 			Thread.sleep(10000);
 			
 			String alertMessage = QaBrowser.driver.switchTo().alert().getText();
@@ -1270,10 +1552,10 @@ public class DnataCheckoutPage
 			QaRobot.switchframe("//frame[@name='leftbar']");
 			
 			QaRobot.ClickOnElement("Bookings");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Bookings</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Bookings</i></b>");
 			
 			QaRobot.ClickOnElement("BookingQueues");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Booking Queues</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Booking Queues</i></b>");
 			
 			QaBrowser.driver.switchTo().parentFrame();
 			
@@ -1291,15 +1573,15 @@ public class DnataCheckoutPage
 			Thread.sleep(3000);
 			
 			QaRobot.PassValue("EnterEnquiryId",number);
-			QaExtentReport.test.log(Status.INFO,"<b><i>Enter Enquiry Id</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Enter Enquiry Id</i></b>");
 			
 			QaRobot.ClickOnElement("SearchEnquiryId");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Search Enquiry Id </i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Search Enquiry Id </i></b>");
 			Thread.sleep(3000);
 			QaExtentReport.extentScreenshot("Search Enquiry Id");
 			
 			QaRobot.ClickOnElement("EnquiryView");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Enquiry View Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Enquiry View Button</i></b>");
 			Thread.sleep(5000);
 			
 			String ParentWindow7 = QaBrowser.driver.getWindowHandle();
@@ -1321,7 +1603,7 @@ public class DnataCheckoutPage
 			QaRobot.switchframe("//frame[@id='frm2']");
 			
 			QaRobot.ClickOnElement("ApproveButton");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Approve Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Approve Button</i></b>");
 			Thread.sleep(13000);
 			
 			String ParentWindow8 = QaBrowser.driver.getWindowHandle();
@@ -1334,7 +1616,7 @@ public class DnataCheckoutPage
 			Thread.sleep(5000);
 			
 			QaRobot.ClickOnElement("SelectItineraryH");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Select Itinerary</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Select Itinerary</i></b>");
 			
 			QaExtentReport.extentScreenshot("Itinerary View");
 			
@@ -1342,13 +1624,13 @@ public class DnataCheckoutPage
 			mo1.executeScript("window.scrollBy(0,500)", "");
 			
 			QaRobot.ClickOnElement("FinalApproveButton");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Approve Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Approve Button</i></b>");
 			
 			QaRobot.PassValue("TextArea","Ok");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Click on Text Area</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Click on Text Area</i></b>");
 			
 			QaRobot.ClickOnElement("OKButton");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on OK Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on OK Button</i></b>");
 			Thread.sleep(13000);
 			
 			QaBrowser.driver.switchTo().window(ParentWindow8);
@@ -1358,7 +1640,7 @@ public class DnataCheckoutPage
 			QaRobot.switchframe("//frame[@id='frm2']");
 			
 			QaRobot.ClickOnElement("FinalBookButton");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Book Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Book Button</i></b>");
 			Thread.sleep(15000);
 			
 			if (QaBrowser.driver.findElement(By.xpath("//div[contains(text(),'Selected hotel room is no longer available or the "
@@ -1366,11 +1648,11 @@ public class DnataCheckoutPage
 					.isDisplayed()) 
 			{
 				QaRobot.ClickOnElement("SelectRoom");
-				QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on SelectRoom</i></b>");
+//				QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on SelectRoom</i></b>");
 				Thread.sleep(3000);
 				
 				QaRobot.ClickOnElement("BookH");
-				QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Book</i></b>");
+//				QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Book</i></b>");
 				Thread.sleep(6000);
 			}
 			
@@ -1419,39 +1701,39 @@ public class DnataCheckoutPage
 			QaRobot.ClickOnElement("TermsAndConditionF");
 			
 			QaRobot.ClickOnElement("FulfilmentF");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on FulfilmentF Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on FulfilmentF Button</i></b>");
 			Thread.sleep(3000);
 			
 			DnataPaymentPage.individualForHotel();
 			
-			DnataConfirmPage.confirmpageHotel();
+			DnataConfirmPage.confirmpageHotel(Adult,Child,ModifySearch,ChangeRooms,AdultM,ChildM);
 		}
 		
 		else if (Checkoutpagestep.equalsIgnoreCase("Fulfilment"))
 		{
 			QaRobot.ClickOnElement("FulfilmentH");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on FulfilmentF Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on FulfilmentF Button</i></b>");
 			Thread.sleep(5000);
 			
 			DnataPaymentPage.individualForHotel();
 			
 			if(Resultpagestep.equalsIgnoreCase("Add to Cart"))
 			{
-				DnataConfirmPage.confirmpageHotel();
+				DnataConfirmPage.confirmpageHotel(Adult,Child,ModifySearch,ChangeRooms,AdultM,ChildM);
 			}
 			else
 			{
-				DnataConfirmPage.confirmpageFulfilmentHotel();
+				DnataConfirmPage.confirmpageFulfilmentHotel(Adult,Child,ModifySearch,ChangeRooms,AdultM,ChildM);
 			}
 		}
 	}
 	
-	public static void bookForHotelDependent(String Resultpagestep,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception
+	public static void bookForHotelDependent(String Adult,String Child,String ModifySearch,String ChangeRooms,String AdultM,String ChildM,String Resultpagestep,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception
 	{
 		if(Checkoutpagestep.equalsIgnoreCase("Quote"))
 		{
 			QaRobot.ClickOnElement("QuoteH");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Quote Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Quote Button</i></b>");
 			Thread.sleep(4000);
 			
 			String ParentWindow6 = QaBrowser.driver.getWindowHandle();
@@ -1465,20 +1747,20 @@ public class DnataCheckoutPage
 			QaRobot.switchframe("//iframe[@id='iframeQuoteHHL']");
 			
 			QaRobot.PassValue("QuotationTitle",QuoteTitle);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Pass Quotation Title</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Pass Quotation Title</i></b>");
 			QaExtentReport.extentScreenshot("Quotation");
 			
 			QaRobot.PassValue("RemarkTitle",QuoteRemark);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Pass Remark Title</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Pass Remark Title</i></b>");
 			
 			WebElement SendQuote = QaBrowser.driver.findElement(By.xpath("//a[@id='lnksendHHLEnqFromCorp']"));
 			JavascriptExecutor js1 = (JavascriptExecutor) QaBrowser.driver;
 			js1.executeScript("arguments[0].click()", SendQuote);
-			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Send Quote</i></b>");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Send Quote</i></b>");
 			Thread.sleep(7000);
 			
 			String alertMessage = QaBrowser.driver.switchTo().alert().getText();
-			System.out.println(alertMessage);
+//			System.out.println(alertMessage);
 			String getTxt1[]= alertMessage.split(" ");
 			String number = getTxt1[10];
 			System.out.println(number);
@@ -1491,10 +1773,10 @@ public class DnataCheckoutPage
 			QaRobot.switchframe("//frame[@name='leftbar']");
 			
 			QaRobot.ClickOnElement("Bookings");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Bookings</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Bookings</i></b>");
 			
 			QaRobot.ClickOnElement("BookingQueues");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Booking Queues</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Booking Queues</i></b>");
 			
 			QaBrowser.driver.switchTo().parentFrame();
 			
@@ -1512,15 +1794,15 @@ public class DnataCheckoutPage
 			Thread.sleep(3000);
 			
 			QaRobot.PassValue("EnterEnquiryId",number);
-			QaExtentReport.test.log(Status.INFO,"<b><i>Enter Enquiry Id</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Enter Enquiry Id</i></b>");
 			
 			QaRobot.ClickOnElement("SearchEnquiryId");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Search Enquiry Id </i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Search Enquiry Id </i></b>");
 			Thread.sleep(3000);
 			QaExtentReport.extentScreenshot("Search Enquiry Id");
 			
 			QaRobot.ClickOnElement("EnquiryView");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Enquiry View Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Enquiry View Button</i></b>");
 			Thread.sleep(5000);
 			
 			String ParentWindow7 = QaBrowser.driver.getWindowHandle();
@@ -1542,7 +1824,7 @@ public class DnataCheckoutPage
 			QaRobot.switchframe("//frame[@id='frm2']");
 			
 			QaRobot.ClickOnElement("ApproveButton");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Approve Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Approve Button</i></b>");
 			Thread.sleep(15000);
 			
 			String ParentWindow8 = QaBrowser.driver.getWindowHandle();
@@ -1554,10 +1836,10 @@ public class DnataCheckoutPage
 			}
 			Thread.sleep(2000);
 			QaRobot.ClickOnElement("SelectItineraryDH1");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Select Itinerary</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Select Itinerary</i></b>");
 			
 			QaRobot.ClickOnElement("SelectItineraryDH2");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Select Itinerary</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Select Itinerary</i></b>");
 			
 			QaExtentReport.extentScreenshot("Itinerary View");
 			
@@ -1565,13 +1847,13 @@ public class DnataCheckoutPage
 			mo1.executeScript("window.scrollBy(0,500)", "");
 			
 			QaRobot.ClickOnElement("FinalApproveButton");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Approve Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Approve Button</i></b>");
 			
 			QaRobot.PassValue("TextArea","Ok");
 			QaExtentReport.test.log(Status.INFO,"<b><i>Click on Text Area</i></b>");
 			
 			QaRobot.ClickOnElement("OKButton");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on OK Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on OK Button</i></b>");
 			Thread.sleep(13000);
 			QaBrowser.driver.switchTo().window(ParentWindow8);
 			QaRobot.switchframe("//frame[@name='login']");
@@ -1579,7 +1861,7 @@ public class DnataCheckoutPage
 			QaRobot.switchframe("//frame[@id='frm2']");
 			
 			QaRobot.ClickOnElement("FinalBookButton");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Book Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Book Button</i></b>");
 			Thread.sleep(20000);
 			
 			if (QaBrowser.driver.findElement(By.xpath("//div[contains(text(),'Selected hotel room is no longer available or the "
@@ -1587,11 +1869,11 @@ public class DnataCheckoutPage
 					.isDisplayed()) 
 			{
 				QaRobot.ClickOnElement("SelectRoom");
-				QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on SelectRoom</i></b>");
+//				QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on SelectRoom</i></b>");
 				Thread.sleep(3000);
 				
 				QaRobot.ClickOnElement("BookH");
-				QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Book</i></b>");
+//				QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Book</i></b>");
 				Thread.sleep(6000);
 			}
 			
@@ -1640,12 +1922,12 @@ public class DnataCheckoutPage
 			QaRobot.ClickOnElement("TermsAndConditionF");
 			
 			QaRobot.ClickOnElement("FulfilmentF");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on FulfilmentF Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on FulfilmentF Button</i></b>");
 			Thread.sleep(3000);
 			
 			DnataPaymentPage.individualForHotel();
 			
-			DnataConfirmPage.confirmpageHotel();
+			DnataConfirmPage.confirmpageHotel(Adult,Child,ModifySearch,ChangeRooms,AdultM,ChildM);
 		}
 		
 		else if (Checkoutpagestep.equalsIgnoreCase("Fulfilment"))
@@ -1695,19 +1977,735 @@ public class DnataCheckoutPage
 			QaRobot.ClickOnElement("TermsAndConditionF");
 			
 			QaRobot.ClickOnElement("FulfilmentF");
-			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on FulfilmentF Button</i></b>");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on FulfilmentF Button</i></b>");
 			Thread.sleep(3000);
 			
 			DnataPaymentPage.individualForHotel();
 			
 			if(Resultpagestep.equalsIgnoreCase("Add to Cart"))
 			{
-				DnataConfirmPage.confirmpageHotel();
+				DnataConfirmPage.confirmpageHotel(Adult,Child,ModifySearch,ChangeRooms,AdultM,ChildM);
 			}
 			else
 			{
-				DnataConfirmPage.confirmpageFulfilmentHotel();
+				DnataConfirmPage.confirmpageFulfilmentHotel(Adult,Child,ModifySearch,ChangeRooms,AdultM,ChildM);
 			}
+		}
+	}
+	
+	public static void individualforInsurance(String TravellerType,String SelectPax,String PaxDOB,String ModifySearch,String SelectPaxM,String PaxDOBM,
+			String Resultpagestep,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception
+	{
+		if(TravellerType.equalsIgnoreCase("Individual"))
+		{
+			Thread.sleep(7000);
+			QaRobot.PassValue("DestinationPhoneI","9856236523");
+			
+			QaRobot.PassValue("Street","720");
+			
+			QaRobot.PassValue("Address","Gurgaon");
+			
+			QaExtentReport.extentScreenshot("Checkout Page");
+			
+			WebElement element1 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_CostCenterDDL']"));
+			Select s1 = new Select(element1);
+			s1.selectByIndex(1);
+			
+			WebElement element2 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_CorporateDivisionDDL']"));
+			Select s2 = new Select(element2);
+			s2.selectByIndex(1);
+			
+//			WebElement element3 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture84']"));
+//			Select s3 = new Select(element3);
+//			s3.selectByIndex(1);
+			
+			WebElement element3 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture86']"));
+			Select s3 = new Select(element3);
+			s3.selectByIndex(1);
+			
+			WebElement element4 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture127']"));
+			Select s4 = new Select(element4);
+			s4.selectByIndex(1);
+			
+			WebElement element5 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture128']"));
+			Select s5 = new Select(element5);
+			s5.selectByIndex(1);
+			
+			WebElement element6 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture126']"));
+			Select s6 = new Select(element6);
+			s6.selectByIndex(1);
+			
+			QaRobot.PassValue("OrderedBy","Test");
+			
+			QaRobot.PassValue("TravellerEmail","Test");
+			
+			QaRobot.PassValue("ArrangerEmail","Test"); 
+			
+			QaExtentReport.extentScreenshot("Checkout page");
+			
+			QaRobot.ClickOnElement("TermsAndConditionF");
+			
+			if(Checkoutpagestep.equalsIgnoreCase("Quote"))
+			{
+				QaRobot.ClickOnElement("QuoteRI");
+				Thread.sleep(7000);
+				
+				String ParentWindow1 = QaBrowser.driver.getWindowHandle();
+				Set<String> handles1 = QaBrowser.driver.getWindowHandles();
+				for (String childWindow1 : handles1) 
+				{
+					if (!childWindow1.equals(ParentWindow1))
+						QaBrowser.driver.switchTo().window(childWindow1);
+				}
+				QaRobot.switchframe("//iframe[@id='iframeQuoteINS']");
+				QaRobot.PassValue("QuotationTitle",QuoteTitle);
+//				QaExtentReport.test.log(Status.INFO, "<b><i>Pass Quotation Title</i></b>");
+				QaExtentReport.extentScreenshot("Quotation");
+				
+				QaRobot.PassValue("RemarkTitle",QuoteRemark);
+//				QaExtentReport.test.log(Status.INFO, "<b><i>Pass Remark Title</i></b>");
+				
+				WebElement SendQuote = QaBrowser.driver.findElement(By.xpath("/html/body/div/div/div[2]/div/div[2]/div[2]/div/div/div/div[5]/div/a[1]"));
+				JavascriptExecutor js1 = (JavascriptExecutor) QaBrowser.driver;
+				js1.executeScript("arguments[0].click()", SendQuote);
+//				QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Send Quote</i></b>");
+				Thread.sleep(5000);
+				
+				String alertMessage = QaBrowser.driver.switchTo().alert().getText();
+//				System.out.println(alertMessage);
+				String getTxt1[]= alertMessage.split(" ");
+				String number = getTxt1[8];
+//				System.out.println(number);
+				QaExtentReport.test.log(Status.INFO, "<b><i>Enquiry id is </i></b>"+number);
+				QaBrowser.driver.switchTo().alert().accept();
+				QaBrowser.driver.switchTo().defaultContent();
+				QaRobot.switchframe("//frame[@name='login']");
+				QaRobot.switchframe("//frame[@name='leftbar']");
+				
+				QaRobot.ClickOnElement("Bookings");
+//				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Bookings</i></b>");
+				
+				QaRobot.ClickOnElement("BookingQueues");
+//				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Booking Queues</i></b>");
+				
+				QaBrowser.driver.switchTo().parentFrame();
+				QaRobot.switchframe("//frame[@name='main']");
+				QaRobot.switchframe("//frame[@id='toolHeader']");
+				QaRobot.ClickOnElement("CorporateQueue");
+				QaBrowser.driver.switchTo().parentFrame();
+				QaRobot.switchframe("//frame[@id='frm2']");
+				
+				QaRobot.ClickOnElement("EnquiryQueue");
+				Thread.sleep(3000);
+				
+				QaRobot.PassValue("EnterEnquiryId",number);
+//				QaExtentReport.test.log(Status.INFO,"<b><i>Enter Enquiry Id</i></b>");
+				
+				QaRobot.ClickOnElement("SearchEnquiryId");
+//				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Search Enquiry Id </i></b>");
+				Thread.sleep(3000);
+				QaExtentReport.extentScreenshot("Search Enquiry Id");
+				
+				QaRobot.ClickOnElement("EnquiryView");
+//				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Enquiry View Button</i></b>");
+				Thread.sleep(8000);
+				
+				String ParentWindow7 = QaBrowser.driver.getWindowHandle();
+				Set<String> handles7 = QaBrowser.driver.getWindowHandles();
+				for (String childWindow7 : handles7) 
+				{
+					if (!childWindow7.equals(ParentWindow7))
+						QaBrowser.driver.switchTo().window(childWindow7);
+				}
+				QaExtentReport.extentScreenshot("Quotation View");
+				QaBrowser.driver.close();
+				Thread.sleep(7000);
+				
+				QaBrowser.driver.switchTo().window(ParentWindow7);
+				
+				QaRobot.switchframe("//frame[@name='login']");
+				QaRobot.switchframe("//frame[@name='main']");
+				QaRobot.switchframe("//frame[@id='frm2']");
+				
+				QaRobot.ClickOnElement("ApproveButton");
+//				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Approve Button</i></b>");
+				Thread.sleep(13000);
+				
+				String ParentWindow8 = QaBrowser.driver.getWindowHandle();
+				Set<String> handles8 = QaBrowser.driver.getWindowHandles();
+				for (String childWindow8 : handles8) 
+				{
+					if (!childWindow8.equals(ParentWindow8))
+						QaBrowser.driver.switchTo().window(childWindow8);
+				}
+				Thread.sleep(3000);
+				QaRobot.ClickOnElement("SelectItineraryI");
+//				QaExtentReport.test.log(Status.INFO,"<b><i>Select Itinerary</i></b>");
+				QaExtentReport.extentScreenshot("Itinerary View");
+				
+				JavascriptExecutor mo1 = (JavascriptExecutor) QaBrowser.driver;
+				mo1.executeScript("window.scrollBy(0,500)", "");
+				
+				QaRobot.ClickOnElement("FinalApproveButton");
+//				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Approve Button</i></b>");
+				
+				QaRobot.PassValue("TextArea","Ok");
+//				QaExtentReport.test.log(Status.INFO,"<b><i>Click on Text Area</i></b>");
+				
+				QaRobot.ClickOnElement("OKButton");
+//				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on OK Button</i></b>");
+				Thread.sleep(13000);
+				QaBrowser.driver.switchTo().window(ParentWindow8);
+				QaRobot.switchframe("//frame[@name='login']");
+				QaRobot.switchframe("//frame[@name='main']");
+				QaRobot.switchframe("//frame[@id='frm2']");
+				
+				QaRobot.ClickOnElement("FinalBookButton");
+//				QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Book Button</i></b>");
+				Thread.sleep(8000);
+				
+				String ParentWindow9 = QaBrowser.driver.getWindowHandle();
+				Set<String> handles9 = QaBrowser.driver.getWindowHandles();
+				for (String childWindow9 : handles9) 
+				{
+					if (!childWindow9.equals(ParentWindow9))
+						QaBrowser.driver.switchTo().window(childWindow9);
+				}
+				 
+				QaRobot.ClickOnElement("EnquiryProcced");
+				Thread.sleep(30000);
+				
+				QaRobot.PassValue("DestinationPhoneI","9856236523");
+				
+				QaRobot.PassValue("Street","720");
+				
+				QaRobot.PassValue("Address","Gurgaon");
+				
+				QaExtentReport.extentScreenshot("Checkout Page");
+				
+				WebElement elemen1 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_CostCenterDDL']"));
+				Select s10 = new Select(elemen1);
+				s10.selectByIndex(1);
+				
+				WebElement elemen2 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_CorporateDivisionDDL']"));
+				Select s20 = new Select(elemen2);
+				s20.selectByIndex(1);
+				
+//				WebElement element3 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture84']"));
+//				Select s3 = new Select(element3);
+//				s3.selectByIndex(1);
+				
+				WebElement elemen3 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture86']"));
+				Select s30 = new Select(elemen3);
+				s30.selectByIndex(1);
+				
+				WebElement elemen4 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture127']"));
+				Select s40 = new Select(elemen4);
+				s40.selectByIndex(1);
+				
+				WebElement elemen5 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture128']"));
+				Select s50 = new Select(elemen5);
+				s50.selectByIndex(1);
+				
+				WebElement elemen6 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture126']"));
+				Select s60 = new Select(elemen6);
+				s60.selectByIndex(1);
+				
+				QaRobot.PassValue("OrderedBy","Test");
+				
+				QaRobot.PassValue("TravellerEmail","Test");
+				
+				QaRobot.PassValue("ArrangerEmail","Test"); 
+				
+				QaExtentReport.extentScreenshot("Checkout page");
+				
+				QaRobot.ClickOnElement("TermsAndConditionF");
+				
+				QaRobot.ClickOnElement("FulfilmentF");
+				Thread.sleep(7000);	
+			}
+			else if(Checkoutpagestep.equalsIgnoreCase("Fulfilment"))
+			{
+				QaRobot.ClickOnElement("FulfilmentF");
+				Thread.sleep(7000);
+			}
+			
+			DnataPaymentPage.individualForInsurance();
+			
+			DnataConfirmPage.confirmpageInsurance(TravellerType);
+		}
+		else if (TravellerType.equalsIgnoreCase("Dependent"))
+		{
+			CheckoutForInsuranceDependent(TravellerType,SelectPax,PaxDOB,ModifySearch,SelectPaxM,PaxDOBM,Resultpagestep,QuoteTitle,QuoteRemark,Checkoutpagestep);
+		}
+	}
+	
+	public static void CheckoutForInsuranceDependent(String TravellerType,String SelectPax,String PaxDOB,String ModifySearch,String SelectPaxM,String PaxDOBM,
+			String Resultpagestep,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception 
+	{
+		String ParentWindow = QaBrowser.driver.getWindowHandle();
+		
+		QaRobot.ClickOnElement("dept_AssociatePax");
+//		QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Associate pax</i></b>");
+		Thread.sleep(3000);
+		QaExtentReport.extentScreenshot("Associate Pax");
+		Set<String> handles = QaBrowser.driver.getWindowHandles();
+		for (String childWindow : handles) 
+		{
+			if (!childWindow.equals(ParentWindow))
+				QaBrowser.driver.switchTo().window(childWindow);
+		}
+		Thread.sleep(1000);
+
+		WebElement DocumentNo = QaBrowser.driver.findElement(By.xpath("//select[@id='ddltravellerDocNumber']"));
+		Select select1 = new Select(DocumentNo);                                  
+		select1.selectByIndex(1);
+		
+		if(ModifySearch.equalsIgnoreCase("Yes"))
+		{
+			selectDependentPaxInsurance(SelectPax,PaxDOB,ModifySearch,PaxDOBM);
+			
+			QaRobot.ClickOnElement("dept_AddToList");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on add to list button</i></b>");
+
+			WebElement webelement = QaBrowser.driver.findElement(By.xpath("//select[@id='rptSelectionList_ctl01_rptSelection_ctl01_ddlPriority']"));
+			Select select = new Select(webelement);                                              
+			select.selectByIndex(1);
+			
+			selectDependentPriorityInsurance(SelectPax,PaxDOB,ModifySearch,PaxDOBM);
+		}
+		else
+		{
+			selectDependentPaxInsurance(SelectPax,PaxDOB,ModifySearch,PaxDOBM);
+			
+			QaRobot.ClickOnElement("dept_AddToList");
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on add to list button</i></b>");
+			
+			WebElement webelement = QaBrowser.driver.findElement(By.xpath("//select[@id='rptSelectionList_ctl01_rptSelection_ctl01_ddlPriority']"));
+			Select select = new Select(webelement);                                              
+			select.selectByIndex(1);
+			
+			selectDependentPriorityInsurance(SelectPax,PaxDOB,ModifySearch,PaxDOBM);
+		}
+		
+		QaRobot.ClickOnElement("dept_AssociateButton");
+//		QaExtentReport.test.log(Status.INFO, "<b><i>clicked on Associate button</i></b>");
+		Thread.sleep(3000);
+		
+		QaBrowser.driver.switchTo().window(ParentWindow);
+		
+		QaRobot.switchframe("//frame[@name='login']");
+		QaRobot.switchframe("//frame[@name='main']");
+		
+		if(Resultpagestep.equalsIgnoreCase("Add to Cart"))
+		{
+			QaRobot.switchframe("//frame[@id='frm2']");
+		}
+		QaExtentReport.extentScreenshot("Checkout Page");
+		
+		JavascriptExecutor mo = (JavascriptExecutor) QaBrowser.driver;
+		mo.executeScript("window.scrollBy(0,400)", "");
+		Thread.sleep(2000);
+		
+//		bookForFlightDependent(TravellerType,TripType,adult,child,infant,ModifySearch,ChangeTravellers,adultM,childM,infantM,QuoteTitle,QuoteRemark,Checkoutpagestep);
+	}
+	
+	public static void bookForInsuranceDependent(String TravellerType,String TripType,String adult,String child,String infant,String ModifySearch,String ChangeTravellers,String adultM,String childM,String infantM,String QuoteTitle,String QuoteRemark,String Checkoutpagestep) throws Exception
+	{
+		if(Checkoutpagestep.equalsIgnoreCase("Quote"))
+		{
+			QaRobot.ClickOnElement("QuoteF");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Quote Button</i></b>");
+			Thread.sleep(4000);
+			
+			String ParentWindow6 = QaBrowser.driver.getWindowHandle();
+			Set<String> handles6 = QaBrowser.driver.getWindowHandles();
+			for (String childWindow6 : handles6) 
+			{
+				if (!childWindow6.equals(ParentWindow6))
+					QaBrowser.driver.switchTo().window(childWindow6);
+			}
+			
+			QaRobot.switchframe("//iframe[@id='iframeQuoteAIR']");
+			
+			QaRobot.PassValue("QuotationTitle",QuoteTitle);
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Pass Quotation Title</i></b>");
+			QaExtentReport.extentScreenshot("Quotation");
+			
+			QaRobot.PassValue("RemarkTitle",QuoteRemark);
+			QaExtentReport.test.log(Status.INFO, "<b><i>Pass Remark Title</i></b>");
+			
+			WebElement SendQuote = QaBrowser.driver.findElement(By.xpath("//a[@id='lnksendAIREnqFromCorp']"));
+			JavascriptExecutor js1 = (JavascriptExecutor) QaBrowser.driver;
+			js1.executeScript("arguments[0].click()", SendQuote);
+//			QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Send Quote</i></b>");
+			Thread.sleep(7000);
+			
+			String alertMessage = QaBrowser.driver.switchTo().alert().getText();
+			System.out.println(alertMessage);
+			String getTxt1[]= alertMessage.split(" ");
+			String number = getTxt1[8];
+			System.out.println(number);
+			QaExtentReport.test.log(Status.INFO, "<b><i>Enquiry id is </i></b>"+number);
+			QaBrowser.driver.switchTo().alert().accept();
+			
+			QaBrowser.driver.switchTo().defaultContent();
+			
+			QaRobot.switchframe("//frame[@name='login']");
+			QaRobot.switchframe("//frame[@name='leftbar']");
+			
+			QaRobot.ClickOnElement("Bookings");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Bookings</i></b>");
+			
+			QaRobot.ClickOnElement("BookingQueues");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Booking Queues</i></b>");
+			
+			QaBrowser.driver.switchTo().parentFrame();
+			
+			QaRobot.switchframe("//frame[@name='main']");
+			
+			QaRobot.switchframe("//frame[@id='toolHeader']");
+			
+			QaRobot.ClickOnElement("CorporateQueue");
+			
+			QaBrowser.driver.switchTo().parentFrame();
+			
+			QaRobot.switchframe("//frame[@id='frm2']");
+			
+			QaRobot.ClickOnElement("EnquiryQueue");
+			Thread.sleep(3000);
+			
+			QaRobot.PassValue("EnterEnquiryId",number);
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Enter Enquiry Id</i></b>");
+			
+			QaRobot.ClickOnElement("SearchEnquiryId");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Search Enquiry Id </i></b>");
+			Thread.sleep(3000);
+			QaExtentReport.extentScreenshot("Search Enquiry Id");
+			
+			QaRobot.ClickOnElement("EnquiryView");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Enquiry View Button</i></b>");
+			Thread.sleep(5000);
+			
+			String ParentWindow7 = QaBrowser.driver.getWindowHandle();
+			Set<String> handles7 = QaBrowser.driver.getWindowHandles();
+			for (String childWindow7 : handles7) 
+			{
+				if (!childWindow7.equals(ParentWindow7))
+					QaBrowser.driver.switchTo().window(childWindow7);
+			}
+			
+			QaExtentReport.extentScreenshot("Quotation View");
+			
+			QaBrowser.driver.close();
+			
+			QaBrowser.driver.switchTo().window(ParentWindow7);
+			
+			QaRobot.switchframe("//frame[@name='login']");
+			QaRobot.switchframe("//frame[@name='main']");
+			QaRobot.switchframe("//frame[@id='frm2']");
+			
+			QaRobot.ClickOnElement("ApproveButton");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Approve Button</i></b>");
+			Thread.sleep(15000);
+			
+			String ParentWindow8 = QaBrowser.driver.getWindowHandle();
+			Set<String> handles8 = QaBrowser.driver.getWindowHandles();
+			for (String childWindow8 : handles8) 
+			{
+				if (!childWindow8.equals(ParentWindow8))
+					QaBrowser.driver.switchTo().window(childWindow8);
+			}
+			Thread.sleep(2000);
+			QaRobot.ClickOnElement("SelectItinerary");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Select Itinerary</i></b>");
+			
+			QaExtentReport.extentScreenshot("Itinerary View");
+			
+			JavascriptExecutor mo1 = (JavascriptExecutor) QaBrowser.driver;
+			mo1.executeScript("window.scrollBy(0,500)", "");
+			
+			QaRobot.ClickOnElement("FinalApproveButton");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Approve Button</i></b>");
+			
+			QaRobot.PassValue("TextArea","Ok");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Click on Text Area</i></b>");
+			
+			QaRobot.ClickOnElement("OKButton");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on OK Button</i></b>");
+			Thread.sleep(13000);
+			QaBrowser.driver.switchTo().window(ParentWindow8);
+			QaRobot.switchframe("//frame[@name='login']");
+			QaRobot.switchframe("//frame[@name='main']");
+			QaRobot.switchframe("//frame[@id='frm2']");
+			
+			QaRobot.ClickOnElement("FinalBookButton");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on Final Book Button</i></b>");
+			Thread.sleep(5000);
+			
+			String ParentWindow9 = QaBrowser.driver.getWindowHandle();
+			Set<String> handles9 = QaBrowser.driver.getWindowHandles();
+			for (String childWindow9 : handles9) 
+			{
+				if (!childWindow9.equals(ParentWindow9))
+					QaBrowser.driver.switchTo().window(childWindow9);
+			}
+			
+			QaRobot.ClickOnElement("EnquiryProcced");
+			Thread.sleep(30000);
+			QaBrowser.driver.switchTo().window(ParentWindow9);
+			QaRobot.switchframe("//frame[@name='login']");
+			QaRobot.switchframe("//frame[@name='main']");
+			QaRobot.switchframe("//frame[@id='frm2']");
+			
+//			if(ModifySearch.equalsIgnoreCase("No"))
+//			{
+				if(TripType.equalsIgnoreCase("OneWay"))
+					{
+					if (QaBrowser.driver.findElement(By.xpath("//div[contains(text(),'                            The fare that you have selected "
+							+ "is no longer available. Please choose from below options to continue')]")).isDisplayed()) 
+					{
+//					if(TripType.equalsIgnoreCase("OneWay"))
+//					{
+						List<WebElement> listOfAirline = QaBrowser.driver.findElements(By.xpath("/html/body/div[1]/div[1]/div/section/div[2]/div[2]/div/div[1]/div/div[3]/div[10]/div[2]/div/ul/li/label/span"));
+						
+						for (WebElement autoAirline : listOfAirline) 
+						  {
+							if (autoAirline.getText().equalsIgnoreCase("GULF AIR")) 
+							{
+								autoAirline.click();
+								break;
+							} 
+							else 
+							{
+								
+							}
+						  }
+						
+						JavascriptExecutor mo2 = (JavascriptExecutor) QaBrowser.driver;
+						mo2.executeScript("window.scrollBy(0,-300)", "");
+						
+						QaRobot.ClickOnElement("BookNowF");
+//						QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Book Now</i></b>");
+						Thread.sleep(8000);
+					}
+					}
+//			}
+//			else if(ModifySearch.equalsIgnoreCase("Yes"))
+//			{
+//				if (QaBrowser.driver.findElement(By.xpath("//div[contains(text(),'                            The fare that you have selected "
+//						+ "is no longer available. Please choose from below options to continue')]")).isDisplayed()) 
+//				{
+////				if(TripType.equalsIgnoreCase("OneWay"))
+////				{
+//					List<WebElement> listOfAirline = QaBrowser.driver.findElements(By.xpath("/html/body/div[1]/div[1]/div/section/div[2]/div[2]/div/div[1]/div/div[3]/div[10]/div[2]/div/ul/li/label/span"));
+//					
+//					for (WebElement autoAirline : listOfAirline) 
+//					  {
+//						if (autoAirline.getText().equalsIgnoreCase("GULF AIR")) 
+//						{
+//							autoAirline.click();
+//							break;
+//						} 
+//						else 
+//						{
+//							
+//						}
+//					  }
+//					
+//					JavascriptExecutor mo2 = (JavascriptExecutor) QaBrowser.driver;
+//					mo2.executeScript("window.scrollBy(0,-300)", "");
+//					
+//					QaRobot.ClickOnElement("BookNowF");
+//					QaExtentReport.test.log(Status.INFO, "<b><i>Clicked on Book Now</i></b>");
+//					Thread.sleep(8000);
+//				}
+//			}
+			
+			QaRobot.PassValue("DestinationPhoeF","9863647257");
+			
+			int inf = Integer.parseInt(infant);
+			for (int i = 1; i <= inf; i++) 
+			{
+				WebElement webelement = QaBrowser.driver.findElement(By.xpath("(//select[@id='ctl00_contentMain_ddl_travell_with'])[" + i + "]"));
+				Select sel = new Select(webelement);                              
+				sel.selectByIndex(i);
+			}
+			
+//			WebElement element = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_CorporateFDReasonDDL']"));
+//			Select s = new Select(element);
+//			s.selectByIndex(1);
+			
+			WebElement ele1 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_CostCenterDDL']"));
+			Select s11 = new Select(ele1);
+			s11.selectByIndex(1);
+			
+			WebElement ele2 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_CorporateDivisionDDL']"));
+			Select s22 = new Select(ele2);
+			s22.selectByIndex(1);
+			
+//			WebElement ele3 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture84']"));
+//			Select s33 = new Select(ele3);
+//			s33.selectByIndex(1);
+			
+			WebElement ele44 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture127']"));
+			Select s44 = new Select(ele44);
+			s44.selectByIndex(1);
+			
+			WebElement ele5 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture128']"));
+			Select s55 = new Select(ele5);
+			s55.selectByIndex(1);
+			
+			WebElement ele6 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture126']"));
+			Select s66 = new Select(ele6);
+			s66.selectByIndex(1);
+			
+			QaRobot.PassValue("BookerName","Test");
+			
+			QaRobot.PassValue("TripApprover","Test");
+			
+			QaRobot.PassValue("SuppplierCode","Test");
+			
+			QaRobot.PassValue("OrderedBy","Test");
+			
+			QaRobot.PassValue("TravellerEmail","Test");
+			
+			QaRobot.PassValue("ArrangerEmail","Test"); 
+			
+			QaExtentReport.extentScreenshot("Checkout page");
+			
+			QaRobot.ClickOnElement("TermsAndConditionF");
+			
+			QaRobot.ClickOnElement("FulfilmentF");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on FulfilmentF Button</i></b>");
+			Thread.sleep(3000);
+			
+			DnataPaymentPage.individualForFlight();
+			
+			DnataConfirmPage.confirmpageFlight(TravellerType,adult,child,infant,ModifySearch,ChangeTravellers,adultM,childM,infantM);
+		}
+		else if (Checkoutpagestep.equalsIgnoreCase("BookAndQuote"))
+		{
+			QaRobot.PassValue("DestinationPhoeF","9863647257");
+			
+			int inf = Integer.parseInt(infant);
+			for (int i = 1; i <= inf; i++) 
+			{
+				WebElement webelement = QaBrowser.driver.findElement(By.xpath("(//select[@id='ctl00_contentMain_ddl_travell_with'])[" + i + "]"));
+				Select sel = new Select(webelement);                              
+				sel.selectByIndex(i);
+			}
+//			WebElement element = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_CorporateFDReasonDDL']"));
+//			Select s = new Select(element);
+//			s.selectByIndex(1);
+			
+			WebElement ele1 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_CostCenterDDL']"));
+			Select s11 = new Select(ele1);
+			s11.selectByIndex(1);
+			
+			WebElement ele2 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_CorporateDivisionDDL']"));
+			Select s22 = new Select(ele2);
+			s22.selectByIndex(1);
+			
+//			WebElement ele3 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture84']"));
+//			Select s33 = new Select(ele3);
+//			s33.selectByIndex(1);
+			
+			WebElement ele44 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture127']"));
+			Select s44 = new Select(ele44);
+			s44.selectByIndex(1);
+			
+			WebElement ele5 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture128']"));
+			Select s55 = new Select(ele5);
+			s55.selectByIndex(1);
+			
+			WebElement ele6 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture126']"));
+			Select s66 = new Select(ele6);
+			s66.selectByIndex(1);
+			
+			QaRobot.PassValue("BookerName","Test");
+			
+			QaRobot.PassValue("TripApprover","Test");
+			
+			QaRobot.PassValue("SuppplierCode","Test");
+			
+			QaRobot.PassValue("OrderedBy","Test");
+			
+			QaRobot.PassValue("TravellerEmail","Test");
+			
+			QaRobot.PassValue("ArrangerEmail","Test"); 
+			
+			QaExtentReport.extentScreenshot("Checkout page");
+			
+			QaRobot.ClickOnElement("TermsAndConditionF");
+			QaRobot.ClickOnElement("BookAndQuoteF");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on BookAndQuote Button</i></b>");
+			Thread.sleep(8000);
+			
+			DnataConfirmPage.confirmpageFlight(TravellerType,adult,child,infant,ModifySearch,ChangeTravellers,adultM,childM,infantM);
+		}
+		else if (Checkoutpagestep.equalsIgnoreCase("Fulfilment"))
+		{
+			QaRobot.PassValue("DestinationPhoeF","9863647257");
+			
+			int inf = Integer.parseInt(infant);
+			for (int i = 1; i <= inf; i++) 
+			{
+				WebElement webelement = QaBrowser.driver.findElement(By.xpath("(//select[@id='ctl00_contentMain_ddl_travell_with'])[" + i + "]"));
+				Select sel = new Select(webelement);                              
+				sel.selectByIndex(i);
+			}
+
+//			WebElement element = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_CorporateFDReasonDDL']"));
+//			Select s = new Select(element);
+//			s.selectByIndex(1);
+			
+			WebElement ele1 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_CostCenterDDL']"));
+			Select s11 = new Select(ele1);
+			s11.selectByIndex(1);
+			
+			WebElement ele2 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_CorporateDivisionDDL']"));
+			Select s22 = new Select(ele2);
+			s22.selectByIndex(1);
+			
+//			WebElement ele3 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture84']"));
+//			Select s33 = new Select(ele3);
+//			s33.selectByIndex(1);
+			
+			WebElement ele44 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture127']"));
+			Select s44 = new Select(ele44);
+			s44.selectByIndex(1);
+			
+			WebElement ele5 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture128']"));
+			Select s55 = new Select(ele5);
+			s55.selectByIndex(1);
+			
+			WebElement ele6 = QaBrowser.driver.findElement(By.xpath("//select[@id='ctl00_contentMain_dynamicdatacapture126']"));
+			Select s66 = new Select(ele6);
+			s66.selectByIndex(1);
+			
+			QaRobot.PassValue("BookerName","Test");
+			
+			QaRobot.PassValue("TripApprover","Test");
+			
+			QaRobot.PassValue("SuppplierCode","Test");
+			
+			QaRobot.PassValue("OrderedBy","Test");
+			
+			QaRobot.PassValue("TravellerEmail","Test");
+			
+			QaRobot.PassValue("ArrangerEmail","Test"); 
+			
+			QaExtentReport.extentScreenshot("Checkout page");
+			
+			QaRobot.ClickOnElement("TermsAndConditionF");
+			QaRobot.ClickOnElement("FulfilmentF");
+//			QaExtentReport.test.log(Status.INFO,"<b><i>Clicked on FulfilmentF Button</i></b>");
+			Thread.sleep(3000);
+			
+			DnataPaymentPage.individualForFlight();
+			
+			DnataConfirmPage.confirmpageFlight(TravellerType,adult,child,infant,ModifySearch,ChangeTravellers,adultM,childM,infantM);
 		}
 	}
 	

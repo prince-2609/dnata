@@ -19,7 +19,6 @@ import com.aventstack.extentreports.Status;
 import Base.TestBase;
 import utilities.QaBrowser;
 import utilities.QaExtentReport;
-import utilities.QaRobot;
 
 public class Listener extends TestBase implements ITestListener
 {
@@ -34,7 +33,7 @@ public class Listener extends TestBase implements ITestListener
 
 			if (result.getStatus() == ITestResult.SUCCESS)
 			{
-				QaRobot.ScreenshotMethod("Successful Test","<b><i>Screenshot for Successful Test</i></b>");
+//				QaRobot.ScreenshotMethod("Successful Test","<b><i>Screenshot for Successful Test</i></b>");
 				QaExtentReport.test.log(Status.PASS, "<b><i>Successful Test</i></b>");
 				test.pass(MediaEntityBuilder.createScreenCaptureFromPath(captureScreenshot("Successful Test")).build());
 			}
@@ -61,7 +60,7 @@ public class Listener extends TestBase implements ITestListener
 				File Source = ts.getScreenshotAs(OutputType.FILE);
 				File Dest = new File("D:\\Automation\\Dnata\\Screenshot\\"+NewDate+" "+text+".jpg");
 				FileUtils.copyFile(Source, Dest);
-				QaExtentReport.test.log(Status.FAIL, "<b><i>Screenshot for Fail Test</i></b>");
+//				QaExtentReport.test.log(Status.FAIL, "<b><i>Screenshot for Fail Test</i></b>");
 				QaExtentReport.test.log(Status.FAIL, "<b><i>Fail Test</i></b>");
 				test.fail(MediaEntityBuilder.createScreenCaptureFromPath(captureScreenshot("Fail Test")).build());
 			}
@@ -75,7 +74,7 @@ public class Listener extends TestBase implements ITestListener
 	public void onTestSkipped(ITestResult result) {
 		try {
 			if (result.getStatus() == ITestResult.SKIP) {
-				QaRobot.ScreenshotMethod("SKIP Test","<b><i>Screenshot for SKIP Test</i></b>");
+//				QaRobot.ScreenshotMethod("SKIP Test","<b><i>Screenshot for SKIP Test</i></b>");
 				QaExtentReport.test.log(Status.SKIP, result.getThrowable());
 				test.skip(MediaEntityBuilder.createScreenCaptureFromPath(captureScreenshot("SKIP Test")).build());
 				System.out.println("********* Skipped *********");
