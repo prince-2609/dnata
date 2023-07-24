@@ -100,12 +100,10 @@ public class QaRobot extends QaExtentReport
 	// click on element
 	public static void ClickOnElement(String locator2) throws Exception {
 	
-		//QaBrowser.driver.findElement(By.xpath(TestBase.obj.getProperty(locator2))).click();
+//		QaBrowser.driver.findElement(By.xpath(TestBase.obj.getProperty(locator2))).click();
 		WebElement element= getWebElement(locator2);
 		element.click();
-		
-	
-//		QaExtentReport.test.log(Status.INFO, text);
+//		QaExtentReport.test.log(Status.INFO, text);	
 	
 	}
 
@@ -119,7 +117,7 @@ public class QaRobot extends QaExtentReport
 	}
 
 	public static void PassValueByLocator(String Locator, String value, String text) throws Exception {
-	
+		QaBrowser.driver.findElement(By.xpath(Locator)).clear();
 		QaBrowser.driver.findElement(By.xpath(Locator)).sendKeys(value);
 		QaExtentReport.test.log(Status.INFO, text);
 	}
@@ -245,6 +243,25 @@ public class QaRobot extends QaExtentReport
 	
 	}
 
+	public static void selectValueFromDropdown(String locator1, String value) throws Exception {
+		WebElement element = getWebElement(locator1);
+        Select s = new Select(element);
+        s.selectByValue(value);
+    }
+
+    public static void selectIndexFromDropdown(String locator1, int index) throws Exception {
+    	WebElement element = getWebElement(locator1);
+        Select s = new Select(element);
+        s.selectByIndex(index);
+    }
+
+    public static void selectTextFromDropdown(String locator1, String text) throws Exception
+    {
+    	WebElement element = getWebElement(locator1);
+        Select s = new Select(element);
+        s.selectByVisibleText(text);
+    }
+    
 	// select locator
 	public static void selectDropdownValue(String locator1, String value, String text) throws Exception {
 	

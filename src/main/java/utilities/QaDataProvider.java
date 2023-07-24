@@ -3,27 +3,12 @@ package utilities;
 public class QaDataProvider {
 	public static QaExcelRead reader;
 
-	/**
-	 * 
-	 * @param excelFileName
-	 * @param Sheetname
-	 * @return
-	 * @throws Exception
-	 */
 	public static Object[][] getTestdata(String excelFileName, String Sheetname) throws Exception 
 	{
 		String excelFilePath = System.getProperty("user.dir") + "\\data\\excel\\" + excelFileName + ".xlsx";
 		return getExceldata(excelFilePath, Sheetname);
 	}
 
-	/**
-	 * excel reading common method
-	 * 
-	 * @param excelFilePath
-	 * @param Sheetname
-	 * @return
-	 * @throws Exception
-	 */
 	private static Object[][] getExceldata(String excelFilePath, String Sheetname) throws Exception 
 	{
 		reader = new QaExcelRead(excelFilePath);
